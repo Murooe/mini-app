@@ -1,17 +1,12 @@
 "use client";
 
 import { MiniKit } from "@worldcoin/minikit-js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
 import { useWallet } from "@/components/contexts/WalletContext";
 import { useToast } from "./ui/Toast";
 import { useTranslations } from "@/hooks/useTranslations";
-
-interface WalletAuthProps {
-  lang: string;
-  onError?: (error: string) => void;
-  onSuccess?: (walletAddress: string, username: string) => void;
-}
+import type { WalletAuthProps } from "@/lib/types";
 
 async function fetchWithRetry(
   url: string,
@@ -53,9 +48,7 @@ export function WalletAuth({ lang, onError, onSuccess }: WalletAuthProps) {
   };
 
   const signInWithWallet = async () => {
-    console.log("signInWithWallet: Button clicked");
     if (!MiniKit.isInstalled()) {
-      console.warn("signInWithWallet: MiniKit is not installed");
       handleError("MiniKit is not installed");
       showToast(
         "Please open this app in the World App to connect your wallet.",
@@ -201,7 +194,12 @@ export function WalletAuth({ lang, onError, onSuccess }: WalletAuthProps) {
   };
 
   return (
-    <Button onClick={signInWithWallet} isLoading={isLoading} fullWidth>
+    <Button
+      onClick={signInWithWallet}
+      isLoading={isLoading}
+      fullWidth
+      disabled={isLoading}
+    >
       {dictionary?.components?.walletAuth?.connect || "Connect Wallet"}
     </Button>
   );

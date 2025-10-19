@@ -3,10 +3,14 @@
     "walletAuth": {
       "connect": "ウォレットを接続"
     },
-    "verifyButton": {
-      "verify": "認証して受け取る"
+    "banners": {
+      "dalgona": {
+        "title": "ダルゴナを彫って稼ぐ",
+        "description": "キャンディーカットチャレンジに参加してDAL報酬を獲得しましょう。",
+        "cta": "今すぐプレイ"
+      }
     },
-    "pollOfTheDay": {
+    "pollOfTheWeek": {
       "previousPolls": "過去の投票",
       "vote": "投票する"
     },
@@ -59,7 +63,6 @@
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "一部の政党の読み込みに問題が発生していることを認識しています。修正に取り組んでいますので、しばらくお待ちください。",
       "myParty": "私の政党",
       "createParty": "新しい政党を作成",
       "noParty": "まだ政党を作成したり参加したりしていません。",
@@ -71,6 +74,7 @@
       "website": "ウェブサイト",
       "members": "メンバー",
       "noMembers": "まだメンバーがいません",
+      "approvalNote": "公式リンクが機能しており、かつ/または会員数が増加している政党は承認の優先順位が高くなります。",
       "bannedMembers": "禁止されたメンバー",
       "errorLoading": "政党の読み込みエラー",
       "partyNotFound": "政党が見つかりません",
@@ -244,6 +248,11 @@
           "subtitle": "サインインしてベーシックインカムを受け取る",
           "setupSubtitle": "ベーシックインカムを設定",
           "claimableSubtitle": "請求可能なドラクマ",
+          "claimableTooltip1": "私たちの",
+          "claimableTooltip2": "バイバックプログラム",
+          "claimableTooltip3": "の一環として、コミュニティに持続可能な長期的利益をもたらすために基本所得のレベルを微調整しています。現在のレートについては、",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "をご参照ください。",
           "activateButton": "ベーシックインカムを有効化",
           "claimButton": "請求",
           "plus": {
@@ -256,13 +265,10 @@
               "subtitle": "認証済みユーザー向けの追加収入",
               "features": {
                 "rate": {
-                  "title": "1日あたり追加10 WDD"
+                  "title": "1日あたり追加0.19 WDD"
                 },
                 "verification": {
                   "title": "公平な配布を確保するため、Orb認証済みユーザーのみ"
-                },
-                "rewards": {
-                  "title": "報酬は時間とともにベーシックインカムプラスに移行し、合計は11 WDD/日を維持"
                 }
               },
               "activateButton": "ベーシックインカムプラスを有効化",
@@ -279,8 +285,8 @@
         },
         "invite": {
           "title": "招待",
-          "subtitle": "参加する友達1人につき50 WDDを獲得",
-          "tooltip": "友達はOrbまたはパスポートで認証される必要があります。",
+          "subtitle": "参加した友達1人につき10 WDDを獲得",
+          "tooltip": "友達は新しいWebアプリに参加する必要があります。",
           "learnMore": "詳細を見る",
           "stats": {
             "title": "招待統計",
@@ -291,146 +297,49 @@
             "copyLink": "紹介リンクをコピー",
             "copied": "紹介リンクをクリップボードにコピーしました！",
             "connectWallet": "紹介リンクを生成するにはウォレットを接続してください",
-            "rewardReferrer": "紹介者に報酬を送る",
             "share": "招待リンクを共有"
-          },
-          "drawer": {
-            "title": "紹介者に報酬を送る",
-            "subtitle": "紹介者に無料で50 WDDの報酬を送信",
-            "passportSubtitle": "パスポート認証を証明し、紹介者に無料で50 WDDの報酬を送信",
-            "invitedBy": "あなたは{{username}}に招待されました",
-            "input": {
-              "placeholder": "ユーザー名を入力（例：username.0000）",
-              "lookupButton": "ユーザーを検索",
-              "sendingTo": "報酬を送信先：",
-              "editButton": "編集",
-              "sendButton": "報酬を送信",
-              "proveReward": "証明して報酬を送る"
-            },
-            "errors": {
-              "enterUsername": "ユーザー名を入力してください",
-              "usernameNotFound": "ユーザーが見つかりません",
-              "lookupFailed": "ユーザー検索に失敗しました。もう一度お試しください。",
-              "installMiniKit": "ユーザー名を検索するにはMiniKitをインストールしてください",
-              "connectWallet": "先にウォレットを接続してください",
-              "transactionCanceled": "取引がキャンセルされました"
-            },
-            "success": {
-              "rewardSent": "{{username}}に報酬を正常に送信しました！"
-            }
           },
           "share": {
             "title": "世界共和国に参加しましょう",
             "text": "私の招待リンクを使って世界共和国に参加し、一緒に報酬を獲得しましょう！"
-          },
-          "passportDrawer": {
-            "title": "パスポート認証紹介プログラム",
-            "subtitle": "パスポート所持者を招待して50 WDDを獲得",
-            "features": {
-              "countries": {
-                "title": "パスポート認証は現在、アルゼンチン、オーストラリア、チリ、コロンビア、クロアチア、日本、フィリピン、ポルトガル、韓国、およびアメリカ合衆国で利用可能です"
-              },
-              "rewards": {
-                "title": "友達はWorld Appでパスポートを認証することでWLDを受け取ります"
-              },
-              "basicIncome": {
-                "title": "パスポート認証済みの人々向けの追加ベーシックインカムがまもなく登場します"
-              }
-            },
-            "trigger": {
-              "titleText": "パスポート認証済みの友人の後でも利用可能になりました！",
-              "titleDetails": "詳細"
-            }
           }
         },
         "contribute": {
           "title": "貢献",
           "subtitle": "参加して報酬を獲得",
-          "contests": {
-            "ended": "終了",
-            "weekly": "週間",
-            "topPrize": "最高賞",
-            "xPost": {
-              "title": "X投稿コンテスト",
-              "description": "魅力的な投稿を書いて賞品を獲得"
-            },
-            "poll": {
-              "title": "投票コンテスト",
-              "description": "コミュニティのフィードバックを集めて報酬を獲得"
-            },
-            "pollContest": {
-              "title": "投票コンテスト",
-              "weeklyTitle": "週間投票コンテスト",
-              "description": "コミュニティのフィードバックを集めて賞品を獲得",
-              "prizes": {
-                "title": "賞品",
-                "viewWinners": "過去の受賞者を見る",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "参加方法",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "世界共和国やグローバルガバナンスに関する投票を作成"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "認証済みユーザーのみが投票できるように設定"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "投票を",
-                    "link": {
-                      "text": "投票コンテストTelegramチャンネル",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "コンテストルール",
-                "list": {
-                  "rule1": "当週開始の投票のみ参加可能",
-                  "rule2": "コンテストは毎週日曜日23:59 UTCまで",
-                  "rule3": "総投票数に基づいて受賞者を選出し、24時間以内にTelegramで連絡"
-                }
-              },
-              "cta": {
-                "create": "投票を作成",
-                "submit": "投票を提出"
-              },
-              "winners": {
-                "title": "コンテスト受賞者",
-                "weekOf": "週",
-                "votes": "票"
-              }
-            },
-            "testing": {
-              "title": "新機能テスト",
-              "description": "パスポート認証済みでOrbによる認証がないメンバー向け。"
-            },
-            "oneOff": "一回限り",
-            "limited": "50枠限定"
-          },
-          "earlyAccess": {
-            "title": "アーリーアクセスプログラム",
-            "description": "今後の機能をテストしてWDDを獲得"
-          },
           "buybackProgram": {
-            "topnav": "買い戻しプログラム",
-            "title": "トークン買い戻しプログラム",
+            "topnav": "バイバックプログラム",
+            "title": "トークンバイバックプログラム",
             "subtitle": "共にWDDの価値を強化する",
             "sections": {
-              "devRewards": {
-                "title": "開発者報酬プログラム",
-                "startDate": "2025年4月1日開始",
-                "description": "Worldは認証済みユーザーのアプリ使用に基づく開発者報酬を試験的に実施しています。",
-                "learnMore": "プログラムの詳細を見る"
+              "fundingSources": {
+                "title": "資金源",
+                "devRewards": {
+                  "title": "World Developer Rewards",
+                  "weekProgress": "7/12週目"
+                },
+                "worldRetro": {
+                  "title": "World Retro資金"
+                },
+                "optimism": {
+                  "title": "Optimism Retro資金"
+                },
+                "affiliate": {
+                  "title": "アフィリエイト報酬"
+                }
               },
               "commitment": {
-                "title": "50%の誓約",
-                "body": "プログラムからの報酬の少なくとも50%をWDDの買い戻しに使用することを約束します。"
+                "title": "私たちの誓約",
+                "description": "これらの資金の少なくとも50%をWDDのバイバックに使用することを約束します。",
+                "viewAccount": "バイバックアカウントを表示"
+              },
+              "valueCycle": {
+                "title": "ポジティブな価値サイクル",
+                "steps": {
+                  "step1": "より多くのユーザーとアプリ使用",
+                  "step2": "より多くの報酬",
+                  "step3": "より多くのトークンバイバック"
+                }
               },
               "helpSection": {
                 "title": "あなたができること",
@@ -445,70 +354,29 @@
                     "description": "好循環の経済サイクルを推進する"
                   }
                 }
-              },
-              "valueCycle": {
-                "title": "ポジティブな価値サイクル",
-                "steps": {
-                  "step1": "より多くのユーザーとアプリ使用",
-                  "step2": "より高い開発者報酬",
-                  "step3": "より多くのトークン買い戻し"
-                }
               }
             },
             "actions": {
               "share": "招待をシェアする"
             },
-            "cta": "ミニアプリの統計を見る"
+            "cta": "ミニアプリの報酬を見る"
           },
           "buybackLink": {
             "title": "バイバックプログラム",
             "description": "コミュニティ主導のWDD価値成長"
-          },
-          "xContest": {
-            "title": "X投稿コンテスト",
-            "weeklyTitle": "週間X投稿コンテスト",
-            "description": "魅力的な投稿を書いて賞品を獲得",
-            "prizes": {
-              "title": "賞品",
-              "viewWinners": "過去の受賞者を見る",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "参加方法",
-              "step1": "ワールドリパブリックについてXに投稿",
-              "step2": "@WorldRepublicENをタグ付け",
-              "step3": {
-                "prefix": "投稿のリンクを",
-                "link": "X投稿コンテストTelegramチャンネル"
-              }
-            },
-            "rules": {
-              "title": "コンテストルール",
-              "rule1": "現在の週に公開された投稿のみが対象",
-              "rule2": "コンテストは毎週日曜日UTC 23:59に終了",
-              "rule3": "受賞者は総オーガニックエンゲージメント（いいね+リポスト+コメント）に基づいて選出され、24時間以内にTelegramで連絡"
-            },
-            "cta": {
-              "post": "今すぐ投稿を開始",
-              "submit": "投稿を提出"
-            },
-            "winners": {
-              "title": "コンテスト受賞者",
-              "weekOf": "週",
-              "engagements": "エンゲージメント"
-            }
           },
           "partySubsidy": {
             "topnav": "補助金プログラム",
             "title": "政党補助金プログラム",
             "subtitle": "政治運動を構築して報酬を得る",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "固定週間プール"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "固定プール"
             },
             "devRewards": {
               "title": "開発者報酬の10%",
-              "subtitle": "変動報酬プール",
+              "subtitle": "変動プール",
               "tooltip": "Worldは認証された人間によるアプリ使用に基づいて開発者報酬を配布しています。",
               "checkOutRewards": "報酬を確認する"
             },
@@ -520,18 +388,23 @@
                   "description": "World Republicアプリで政治運動を始める"
                 },
                 "growMembership": {
-                  "title": "メンバーシップを拡大する",
-                  "description": "メンバーを募集しコミュニティを構築する"
+                  "title": "投票用紙に載る",
+                  "description": "メンバーシップを拡大して、週ごとの選挙の資格を得る"
                 },
                 "earnRewards": {
-                  "title": "報酬を獲得",
-                  "description": "上位50政党のリーダーは毎週補助金を受け取ります"
+                  "title": "資金を受け取る",
+                  "description": "あなたの党が受け取る票に比例した補助金を獲得する"
                 }
               }
             },
             "cta": {
               "createJoin": "政党を作成または参加する",
               "leaderGroup": "政党リーダーグループに参加する"
+            },
+            "payouts": {
+              "title": "支払い",
+              "week": "週",
+              "showAll": "すべて表示"
             }
           }
         }
@@ -547,12 +420,19 @@
       },
       "sections": {
         "polls": {
-          "title": "今日の投票",
-          "description": "現在のトピックに関するクイック投票",
+          "title": "今週の投票",
+          "description": "最新のトピックに関する迅速な投票",
           "previous": {
             "title": "過去の投票",
             "backToGovern": "ガバナンスに戻る",
             "polls": {
+              "digitalGovernance": "人工知能とデジタル技術が急速に進歩する中、広範な社会の混乱を防ぐために、各国は責任ある開発とガバナンスを集合的に確保すべきでしょうか？",
+              "nuclearEscalationRisk": "地政学的緊張が高まっている地域での核エスカレーションのリスクを低減するために、世界的な枠組みを確立すべきか？",
+              "nuclearDisarmamentTalks": "最近の核物質生産増加の報告を受けて、世界の大国は包括的な軍縮交渉を再開すべきでしょうか？",
+              "pandemicPreparednessFund": "将来のパンデミック対策と対応のための資源への継続的かつ公平なアクセスを確保するために、恒久的なグローバル基金を設立すべきでしょうか？",
+              "globalAidCuts": "エイズやマラリアなどの病気に対する数十年の進歩を覆す可能性のある対外援助の削減を見直すべきでしょうか？",
+              "coralCrisisAction": "各国は、記録史上最悪のサンゴ白化イベントの中で、サンゴ礁を保護するための調整されたグローバル戦略にコミットすべきでしょうか？",
+              "aiSafetyTreaty": "各国は執行可能なグローバルAI安全条約に合意すべきでしょうか？",
               "heatAdaptation": "極端な熱波イベント中に脆弱な人口を保護するため、各国は熱波の早期警告と共同救済活動のためのグローバルな調整メカニズムを確立すべきでしょうか？",
               "globalMilitaryExerciseProtocol": "紛争地域の近くでの大規模な軍事演習に関して、エスカレーションのリスクを減らすため、各国は国際的な通知と監視のプロトコルに合意すべきでしょうか？",
               "globalMaritimeSecurity": "国際水域における商業船舶を武装攻撃から保護するため、国際海上安全保障タスクフォースを設立すべきですか？",
@@ -619,7 +499,9 @@
               "sovereignDebtRestructuring": "持続不可能な債務レベルに直面している国々に適時の救済を提供するため、国際的に調整された主権債務再編メカニズムが必要ですか？",
               "wildlifeTrafficking": "各国は、昆虫やその他の種の新興バイオパイラシーを含む、違法な野生生物取引と闘うための専用の国際的枠組みで協力すべきでしょうか？",
               "criticalMineralsExport": "サプライチェーンの混乱や地政学的な強制を防ぐために、レアアースや戦略的金属などの重要鉱物の輸出管理について、国際的に調整された枠組みが必要ですか？",
-              "tradePolicyStability": "世界貿易における予測可能性と安定性を高めるために、各国は関税政策に関する調整された国際行動規範を採用すべきでしょうか？"
+              "tradePolicyStability": "世界貿易における予測可能性と安定性を高めるために、各国は関税政策に関する調整された国際行動規範を採用すべきでしょうか？",
+              "cyberResilienceProtocol": "各国は、AIによるサイバー攻撃から世界中の重要インフラを守るために、協調的なグローバルサイバーセキュリティ対応プロトコルを確立すべきでしょうか？",
+              "middleEastEscalation": "独立した国家コンソーシアムが中東での地域紛争のリスクを低減するための中立的なデエスカーレーション・イニシアチブを支援すべきか？"
             }
           }
         },
@@ -648,11 +530,91 @@
         },
         "elections": {
           "title": "選挙",
-          "description": "代表を選ぶ",
-          "worldConstituent": {
-            "title": "世界制憲議会選挙",
-            "description": "最初の民主的に選ばれたグローバル議会の代表を選出します。",
-            "button": "近日公開"
+          "description": "あなたの代表者を選びましょう",
+          "testElections": {
+            "title": "テスト選挙",
+            "description": "政党助成金の分配とガバナンスシステムの改善にご協力ください",
+            "button": "テスト選挙を開く"
+          },
+          "currentElectionPage": {
+            "title": "現在の選挙",
+            "testElectionTitle": "テスト選挙",
+            "testElectionSubtitle": "投票システムのテストにご協力ください",
+            "testElectionTooltip1": "詳細については、",
+            "testElectionTooltip2": "選挙に関するよくある質問",
+            "testElectionTooltip3": "をお読みください。",
+            "politicalParties": "政党",
+            "searchPlaceholder": "政党を検索...",
+            "leaderPrefix": "リーダー：",
+            "noActiveElection": "有効な選挙はありません",
+            "noActiveElectionDescription": "現在、選挙は行われていません",
+            "backToOverview": "概要に戻る",
+            "buttons": {
+              "voted": "投票済み",
+              "vote": "投票",
+              "processing": "処理中...",
+              "cancel": "キャンセル"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "投票を確認",
+                "description": "{{partyName}}に投票しようとしています。この操作はブロックチェーンに記録されます。",
+                "confirmText": "投票を確認"
+              },
+              "change": {
+                "title": "投票を変更",
+                "description": "投票を{{previousPartyName}}から{{partyName}}に変更してもよろしいですか？",
+                "confirmText": "変更を確認"
+              },
+              "remove": {
+                "title": "投票を削除",
+                "description": "{{partyName}}への投票を削除してもよろしいですか？どの政党にも投票しないことになります。",
+                "confirmText": "はい、投票を削除します"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "投票するには、このアプリをWorld Appで開いてください。",
+              "connectWallet": "最初にウォレットを接続してください。",
+              "noCurrentElection": "現在の選挙を特定できませんでした。",
+              "fetchStatusError": "投票状況の取得に失敗しました。もう一度お試しください。",
+              "transactionFailed": "トランザクションが失敗したか、拒否されました。",
+              "voteRemovedSuccess": "投票が正常に削除されました",
+              "voteSuccess": "{{partyName}}に正常に投票しました！",
+              "voteError": "投票中にエラーが発生しました。"
+            },
+            "electionFaqPage": {
+              "title": "選挙に関するよくある質問",
+              "items": {
+                "electionPurpose": {
+                  "question": "これらの選挙の目的は何ですか？",
+                  "answer": "これらの選挙は、私たちのガバナンスモデルの中核部分です。当初、彼らは党の助成金がどのように分配されるかを決定し、受け取った支援に基づいて党に報酬を与えます。私たちのシステムが成熟するにつれて、選挙結果は党にさらに重要な責任を与えることになります。これは、私たちが学び、改善するのを助けるための反復的なプロセスです。"
+                },
+                "ballotQualification": {
+                  "question": "党はどのようにして投票用紙に載るのですか？",
+                  "answer": "投票用紙に載るためには、党はベーシックインカムプラス受給者の総数の少なくとも0.05％に相当するメンバーを持っている必要があります。これにより、党がアクティブで検証済みのメンバーからの基本的なレベルのサポートを確保できます。"
+                },
+                "howToVote": {
+                  "question": "どのように投票しますか？",
+                  "answer": "選挙ページでは、資格のある政党のリストを見ることができます。支持したい政党の横にある「投票」ボタンをタップするだけです。ウォレットを介して投票を確認するように求められます。"
+                },
+                "canIChangeVote": {
+                  "question": "投票を変更できますか？",
+                  "answer": "はい、選挙が有効である限り、いつでも投票を変更できます。別の政党に投票するだけで、以前の投票は置き換えられます。投票を完全に削除することもできます。"
+                },
+                "electionDeadline": {
+                  "question": "選挙はいつ終了しますか？",
+                  "answer": "テスト選挙は、日曜日の23:59:59 UTCまで実施されます。現在の選挙でカウントされるためには、この時間までに投票する必要があります。"
+                },
+                "isVoteAnonymous": {
+                  "question": "私の投票は匿名ですか？",
+                  "answer": "投票は偽名です。あなたの投票は透明性のためにブロックチェーン上のあなたのウォレットアドレスにリンクされていますが、あなたの現実世界の身元は直接それに関連付けられていません。"
+                },
+                "whatArePartySubsidies": {
+                  "question": "党の助成金とは何ですか？",
+                  "answer": "党の助成金は、受け取った票に基づいて政党に分配される報酬です。このプログラムは、党の活動に資金を提供し、彼らが成長するのを助けます。<a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">党助成金プログラム</a>について詳しく知ることができます。"
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -660,7 +622,7 @@
           "description": "重要な問題に関する直接投票",
           "worldConstitutional": {
             "title": "世界憲法国民投票",
-            "description": "人類の共同の未来を導く原則に関する歴史的な投票に参加しましょう。",
+            "description": "人類の共同の未来を導く原則に関する歴史的な投票に参加しましょう",
             "button": "近日公開"
           }
         },
@@ -674,9 +636,8 @@
       "title": "メニュー",
       "sections": {
         "experimental": {
-          "title": "実験的機能",
+          "title": "設定",
           "links": {
-            "verification": "認証状態",
             "language": "言語"
           }
         },
@@ -691,6 +652,7 @@
         "help": {
           "title": "ヘルプ",
           "links": {
+            "support": "サポート",
             "faq": "よくある質問"
           }
         },
@@ -712,11 +674,11 @@
         },
         "basicIncome": {
           "question": "ベーシックインカムとは何ですか？",
-          "answer": "ベーシックインカムは、ワールドリパブリックの全市民に提供される1日1 WDD（ワールドドラクマ）の補助金です。リアルタイムで蓄積され、アプリを通じていつでも請求できます。"
+          "answer": "ベーシックインカムは、ワールドリパブリックの全市民に提供される1日0.01 WDD（ワールドドラクマ）の補助金です。リアルタイムで蓄積され、アプリを通じていつでも請求できます。"
         },
         "basicIncomePlus": {
           "question": "ベーシックインカムプラスを有効化するにはどうすればよいですか？",
-          "answer": "ベーシックインカムプラスは1日あたり追加10 WDDを提供し、Orb認証済みユーザーのみが利用できます。ベーシックインカムを有効化した後、Earnページでベーシックインカムプラスを有効化するオプションが表示されます。"
+          "answer": "ベーシックインカムプラスは1日あたり追加0.19 WDDを提供し、Orb認証済みユーザーのみが利用できます。ベーシックインカムを有効化した後、Earnページでベーシックインカムプラスを有効化するオプションが表示されます。"
         },
         "savings": {
           "question": "貯金口座はどのように機能しますか？",
@@ -724,19 +686,19 @@
         },
         "referralCodes": {
           "question": "紹介コードはどのように機能しますか？",
-          "answer": "世界共和国の市民として、紹介プログラムを通じて報酬を獲得できます。あなた固有の紹介リンクを友達と共有すると、Orbまたはパスポートで認証された人が参加するごとに50 WDDを受け取れます。報酬を受け取っていませんか？あなたの友達が紹介セクションの「紹介者に報酬を与える」オプションを選択して手動でトリガーする必要があるかもしれません。"
+          "answer": "世界共和国の市民として、紹介プログラムを通じて報酬を獲得できます。固有の紹介リンクを友人と共有すると、当社のウェブアプリに参加しライブネス検証を完了した人1人につき10 WDDを受け取れます。"
         },
         "drachmaValue": {
           "question": "ドラクマの価値はどこから来るのですか？",
           "answer": "ドラクマは、ワールドリパブリックの公式通貨であることから価値を得ています。私たちの民主的なグローバルガバナンスプラットフォームが成長するにつれ、WDDは世界経済における重要な交換手段となる可能性があり、最終的には技術的進歩とグローバル資源からの利益の公平な分配に役割を果たす可能性があります。"
         },
         "topWallets": {
-          "question": "最大のアカウントは誰が管理しているのですか？",
-          "answer": "3つの最大アカウントは、<a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>ワールドリパブリック財務省</a>、<a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>ベーシックインカム基金</a>、<a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>ベーシックインカムプラス基金</a>です。現在、これらはプロジェクトの創設者が管理していますが、憲法が批准された後はコミュニティに移管されます。その他の主要なアドレスには、<a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>貯金口座コントラクト</a>、<a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>紹介報酬配布者</a>、および流動性プール：<a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>、<a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>、<a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>が含まれます。"
+          "question": "最大のアカウントを管理しているのは誰ですか？",
+          "answer": "3つの最大のアカウントは、<a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>世界共和国財務省</a>、<a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>ベーシックインカム基金</a>、および<a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>ベーシックインカムプラス基金</a>です。これらは現在、プロジェクトの創設者によって管理されており、安定性を確保しながら段階的にコミュニティに管理を移管しています。その他の主要なアドレスには、<a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>普通預金口座契約</a>、<a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>紹介報酬ディストリビューター</a>、および流動性プールが含まれます：<a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>、<a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>、および<a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>。"
         },
         "voteRequirements": {
-          "question": "投票を提案するための要件は何ですか？",
-          "answer": "現在の投票と公開書簡はデモンストレーション用です。私たちのコミュニティは、2025年第2四半期に選出される制憲議会が主導する憲法設計プロセスを通じて、ガバナンスシステムを集団的に決定します。"
+          "question": "ガバナンスに参加するにはどうすればよいですか？",
+          "answer": "政党に参加または作成することで参加できます。現在の投票は例示的ですが、政党は私たちのガバナンスモデルの基盤です。政党が専門化するにつれて、民主的な管理のためのより重要な領域が解放され、私たちの集合的な決定にあなたの声が届くようになります。"
         }
       }
     },
@@ -745,26 +707,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "認証状態",
-      "levels": {
-        "document": {
-          "title": "書類認証",
-          "description": "書類の認証状態を確認",
-          "buttonText": "状態を確認"
-        },
-        "secureDocument": {
-          "title": "セキュア書類認証",
-          "description": "セキュア書類の認証状態を確認",
-          "buttonText": "状態を確認"
-        },
-        "orb": {
-          "title": "Orb認証",
-          "description": "Orbの認証状態を確認",
-          "buttonText": "状態を確認"
-        }
       }
     }
   }

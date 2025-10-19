@@ -1,19 +1,7 @@
 "use client";
 
 import { Pill } from "@/components/ui/Pill";
-import { MiniKit } from "@worldcoin/minikit-js";
-
-interface Tab {
-  key: string;
-  label: string;
-}
-
-interface TabSwiperProps<T extends string> {
-  tabs: Tab[];
-  activeTab: T;
-  onTabChange: (tab: T) => void;
-  tabIndicators?: Record<T, boolean>;
-}
+import type { TabSwiperProps } from "@/lib/types";
 
 export function TabSwiper<T extends string>({
   tabs,
@@ -22,15 +10,6 @@ export function TabSwiper<T extends string>({
   tabIndicators = {} as Record<T, boolean>,
 }: TabSwiperProps<T>) {
   const handleTabChange = (tab: T) => {
-    // Add haptic feedback when changing tabs
-    if (MiniKit.isInstalled()) {
-      MiniKit.commands.sendHapticFeedback({
-        hapticsType: "impact",
-        style: "light",
-      });
-    }
-
-    // Call the original onTabChange function
     onTabChange(tab);
   };
 

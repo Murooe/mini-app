@@ -1,14 +1,18 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "Połącz Portfel"
+      "connect": "Połącz portfel"
     },
-    "verifyButton": {
-      "verify": "Zweryfikuj, aby Odebrać"
+    "banners": {
+      "dalgona": {
+        "title": "Rzeźb Dalgonę, aby Zarobić",
+        "description": "Dołącz do wyzwań cięcia cukierków i wygraj nagrody DAL.",
+        "cta": "Graj teraz"
+      }
     },
-    "pollOfTheDay": {
-      "previousPolls": "Poprzednie Ankiety",
-      "vote": "Zagłosuj Teraz"
+    "pollOfTheWeek": {
+      "previousPolls": "Poprzednie ankiety",
+      "vote": "Zagłosuj teraz"
     },
     "stakeForm": {
       "deposit": "Wpłać",
@@ -19,8 +23,8 @@
       "max": "Maksimum",
       "interest": "Odsetki:",
       "collect": "Odbierz",
-      "depositButton": "Wpłać Drachmy",
-      "withdrawButton": "Wypłać Drachmy"
+      "depositButton": "Wpłać drachmy",
+      "withdrawButton": "Wypłać drachmy"
     },
     "toasts": {
       "wallet": {
@@ -59,7 +63,6 @@
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "Jesteśmy świadomi problemów z ładowaniem partii. Prosimy o cierpliwość podczas pracy nad ich naprawą.",
       "myParty": "Moja partia",
       "createParty": "Utwórz nową partię",
       "noParty": "Nie utworzyłeś ani nie dołączyłeś jeszcze do żadnej partii.",
@@ -70,7 +73,8 @@
       "leader": "Lider",
       "website": "Strona internetowa",
       "members": "Członkowie",
-      "noMembers": "Jeszcze brak członków",
+      "noMembers": "Brak członków",
+      "approvalNote": "Partie z działającym oficjalnym linkiem i/lub rosnącym członkostwem mają priorytet przy zatwierdzaniu.",
       "bannedMembers": "Zablokowani członkowie",
       "errorLoading": "Błąd ładowania partii",
       "partyNotFound": "Nie znaleziono partii",
@@ -245,6 +249,11 @@
           "subtitle": "Zaloguj się, aby odebrać swój dochód podstawowy",
           "setupSubtitle": "Skonfiguruj swój dochód podstawowy",
           "claimableSubtitle": "Drachmy do odebrania",
+          "claimableTooltip1": "W ramach naszego",
+          "claimableTooltip2": "programu wykupu",
+          "claimableTooltip3": ", dostosowujemy poziomy dochodu podstawowego, aby stworzyć zrównoważone, długoterminowe korzyści dla naszej społeczności. Zobacz",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "aby poznać aktualne stawki.",
           "activateButton": "Aktywuj Dochód Podstawowy",
           "claimButton": "Odbierz",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "Dodatkowy dochód dla zweryfikowanych użytkowników",
               "features": {
                 "rate": {
-                  "title": "Dodatkowe 10 WDD dziennie"
+                  "title": "Dodatkowe 0,19 WDD dziennie"
                 },
                 "verification": {
                   "title": "Dostępne wyłącznie dla użytkowników zweryfikowanych przez Orb, aby zapewnić sprawiedliwą dystrybucję"
-                },
-                "rewards": {
-                  "title": "Nagrody przechodzą na Plus z czasem, utrzymując łączną sumę 11 WDD/dzień"
                 }
               },
               "activateButton": "Aktywuj Dochód Podstawowy Plus",
@@ -276,240 +282,102 @@
           "tabTitle": "Oszczędności",
           "title": "Konto Oszczędnościowe",
           "subtitle": "Zarabiaj odsetki co sekundę",
-          "tooltip": "Podstawowa stopa 69% APY. Zbieraj i reinwestuj odsetki, aby osiągnąć blisko 100% efektywnego zwrotu rocznie. Wypłać w dowolnym momencie."
+          "tooltip": "Podstawowa stopa 69% APY. Zbieraj i reinwestuj odsetki, aby osiągnąć blisko 100% efektywnego zwrotu rocznego. Wypłać w dowolnym momencie."
         },
         "invite": {
           "title": "Zaproś",
-          "subtitle": "Zdobądź 50 WDD za każdego znajomego, który dołączy",
-          "tooltip": "Znajomi muszą zostać zweryfikowani przez Orb lub paszport.",
+          "subtitle": "Otrzymuj 10 WDD za każdego znajomego, który dołączy",
+          "tooltip": "Znajomi muszą dołączyć do naszej nowej aplikacji webowej.",
           "learnMore": "Dowiedz się więcej",
           "stats": {
-            "title": "Twoje Statystyki Polecania",
+            "title": "Twoje statystyki polecania",
             "invites": "Przyjęte zaproszenia",
             "rewards": "Łączne nagrody"
           },
           "actions": {
-            "copyLink": "Kopiuj Link Polecający",
+            "copyLink": "Kopiuj link polecający",
             "copied": "Link polecający skopiowany do schowka!",
             "connectWallet": "Proszę połącz portfel, aby wygenerować link polecający",
-            "rewardReferrer": "Nagródź Polecającego",
-            "share": "Udostępnij Link Zaproszenia"
-          },
-          "drawer": {
-            "title": "Nagródź Polecającego",
-            "subtitle": "Aktywuj darmową nagrodę 50 WDD dla swojego polecającego",
-            "passportSubtitle": "Udowodnij weryfikację swojego paszportu i aktywuj darmową nagrodę 50 WDD dla swojego polecającego",
-            "invitedBy": "Zostałeś zaproszony przez: {{username}}",
-            "input": {
-              "placeholder": "Wprowadź nazwę użytkownika (np. username.0000)",
-              "lookupButton": "Wyszukaj Użytkownika",
-              "sendingTo": "Wysyłanie nagrody do:",
-              "editButton": "Edytuj",
-              "sendButton": "Wyślij Nagrodę",
-              "proveReward": "Udowodnij i Nagródź"
-            },
-            "errors": {
-              "enterUsername": "Wprowadź nazwę użytkownika",
-              "usernameNotFound": "Nie znaleziono użytkownika",
-              "lookupFailed": "Nie udało się wyszukać użytkownika. Spróbuj ponownie.",
-              "installMiniKit": "Zainstaluj MiniKit, aby wyszukiwać użytkowników",
-              "connectWallet": "Najpierw połącz swój portfel",
-              "transactionCanceled": "Transakcja została anulowana"
-            },
-            "success": {
-              "rewardSent": "Pomyślnie wysłano nagrodę do {{username}}!"
-            }
+            "share": "Udostępnij link zaproszenia"
           },
           "share": {
             "title": "Dołącz do Światowej Republiki",
             "text": "Użyj mojego linku zapraszającego, aby dołączyć do Światowej Republiki i razem zdobywać nagrody!"
-          },
-          "passportDrawer": {
-            "title": "Program Poleceń Zweryfikowany Paszportem",
-            "subtitle": "Zaproś posiadaczy paszportów i zdobądź 50 WDD",
-            "features": {
-              "countries": {
-                "title": "Weryfikacja paszportowa jest obecnie dostępna w Argentynie, Australii, Chile, Kolumbii, Chorwacji, Japonii, Filipinach, Portugalii, Korei Południowej i Stanach Zjednoczonych"
-              },
-              "rewards": {
-                "title": "Przyjaciele otrzymują WLD za weryfikację swojego paszportu w aplikacji World"
-              },
-              "basicIncome": {
-                "title": "Dodatkowy dochód podstawowy dla osób zweryfikowanych paszportem wkrótce będzie dostępny"
-              }
-            },
-            "trigger": {
-              "titleText": "Teraz również dostępne po znajomych zweryfikowanych paszportem!",
-              "titleDetails": "Szczegóły"
-            }
           }
         },
         "contribute": {
           "title": "Współtwórz",
           "subtitle": "Zaangażuj się, otrzymuj nagrody",
-          "contests": {
-            "ended": "Zakończony",
-            "weekly": "Tygodniowy",
-            "topPrize": "Główna nagroda",
-            "xPost": {
-              "title": "Konkurs Postów X",
-              "description": "Pisz angażujące posty, wygrywaj nagrody"
-            },
-            "poll": {
-              "title": "Konkurs Ankiet",
-              "description": "Zbieraj opinie społeczności i zarabiaj"
-            },
-            "pollContest": {
-              "title": "Konkurs Ankiet",
-              "weeklyTitle": "Tygodniowy Konkurs Ankiet",
-              "description": "Zbieraj opinie społeczności i wygrywaj nagrody",
-              "prizes": {
-                "title": "Nagrody",
-                "viewWinners": "Zobacz poprzednich zwycięzców",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "Jak Wziąć Udział",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "Stwórz ankietę związaną z Republiką Świata lub ogólnie z zarządzaniem globalnym"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "Ustaw ją tak, aby tylko zweryfikowani użytkownicy mogli głosować"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "Udostępnij swoją ankietę na naszym",
-                    "link": {
-                      "text": "Kanale Telegram Konkursu Ankiet",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "Zasady Konkursu",
-                "list": {
-                  "rule1": "Tylko ankiety rozpoczęte w bieżącym tygodniu są kwalifikowane",
-                  "rule2": "Konkurs kończy się w każdą niedzielę o 23:59 UTC",
-                  "rule3": "Zwycięzcy są wybierani na podstawie całkowitej liczby głosów i kontaktowani przez Telegram w ciągu 24 godzin"
-                }
-              },
-              "cta": {
-                "create": "Utwórz Ankietę",
-                "submit": "Wyślij Ankietę"
-              },
-              "winners": {
-                "title": "Zwycięzcy Konkursu",
-                "weekOf": "Tydzień od",
-                "votes": "głosów"
-              }
-            },
-            "testing": {
-              "title": "Testowanie Nowej Funkcji",
-              "description": "Otwarte dla członków zweryfikowanych paszportem, ale nie przez Orb"
-            },
-            "oneOff": "Jednorazowo",
-            "limited": "50 miejsc"
-          },
-          "earlyAccess": {
-            "title": "Program Wczesnego Dostępu",
-            "description": "Zarabiaj WDD testując nasze nadchodzące funkcje"
-          },
           "buybackProgram": {
-            "topnav": "Program Odkupu",
-            "title": "Program Odkupu Tokenów",
-            "subtitle": "Wzmacniajmy razem wartość WDD",
+            "topnav": "Program Wykupu",
+            "title": "Program Wykupu Tokenów",
+            "subtitle": "Wzmocnijmy wartość WDD razem",
             "sections": {
-              "devRewards": {
-                "title": "Program Nagród dla Deweloperów",
-                "startDate": "Rozpoczęty 1 kwietnia 2025",
-                "description": "World testuje nagrody dla deweloperów oparte na użytkowaniu aplikacji przez zweryfikowanych ludzi.",
-                "learnMore": "Dowiedz się więcej o programie"
+              "fundingSources": {
+                "title": "Źródła finansowania",
+                "devRewards": {
+                  "title": "Nagrody dla Deweloperów World",
+                  "weekProgress": "Tydzień 7 z 12"
+                },
+                "worldRetro": {
+                  "title": "Finansowanie World Retro"
+                },
+                "optimism": {
+                  "title": "Finansowanie Optimism Retro"
+                },
+                "affiliate": {
+                  "title": "Prowizje afiliacyjne"
+                }
               },
               "commitment": {
-                "title": "Nasze zobowiązanie 50%",
-                "body": "Zobowiązujemy się wykorzystać co najmniej 50% naszych nagród z programu na odkup WDD."
+                "title": "Nasze zobowiązanie",
+                "description": "Zobowiązujemy się do wykorzystania co najmniej 50% wszystkich tych środków na wykup WDD.",
+                "viewAccount": "Zobacz konto wykupu"
+              },
+              "valueCycle": {
+                "title": "Pozytywny Cykl Wartości",
+                "steps": {
+                  "step1": "Więcej użytkowników i wykorzystania aplikacji",
+                  "step2": "Wyższe nagrody",
+                  "step3": "Więcej wykupów tokenów"
+                }
               },
               "helpSection": {
                 "title": "Jak możesz pomóc",
-                "intro": "Możesz bezpośrednio przyczynić się do zwiększenia wartości Twoich tokenów WDD:",
+                "intro": "Możesz bezpośrednio przyczynić się do zwiększenia wartości swoich tokenów WDD:",
                 "steps": {
                   "invite": {
                     "title": "Zaproś innych do dołączenia",
                     "description": "Rozwijaj naszą społeczność zweryfikowanych członków"
                   },
                   "useApp": {
-                    "title": "Korzystaj z aplikacji regularnie",
+                    "title": "Regularnie korzystaj z aplikacji",
                     "description": "Napędzaj pozytywny cykl ekonomiczny"
                   }
-                }
-              },
-              "valueCycle": {
-                "title": "Pozytywny Cykl Wartości",
-                "steps": {
-                  "step1": "Więcej użytkowników i korzystania z aplikacji",
-                  "step2": "Wyższe nagrody dla deweloperów",
-                  "step3": "Więcej odkupów tokenów"
                 }
               }
             },
             "actions": {
-              "share": "Udostępnij Zaproszenie"
+              "share": "Udostępnij zaproszenie"
             },
-            "cta": "Zobacz Statystyki Mini Aplikacji"
+            "cta": "Zobacz nagrody mini app"
           },
           "buybackLink": {
             "title": "Program Odkupu",
             "description": "Wzrost wartości WDD napędzany przez społeczność"
-          },
-          "xContest": {
-            "title": "Konkurs Postów X",
-            "weeklyTitle": "Tygodniowy Konkurs Postów X",
-            "description": "Pisz angażujące posty, wygrywaj nagrody",
-            "prizes": {
-              "title": "Nagrody",
-              "viewWinners": "Zobacz poprzednich zwycięzców",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "Jak wziąć udział",
-              "step1": "Napisz post na X o Republice Świata",
-              "step2": "Oznacz @WorldRepublicEN",
-              "step3": {
-                "prefix": "Udostępnij link do swojego posta w naszym",
-                "link": "kanale Telegram Konkursu Postów X"
-              }
-            },
-            "rules": {
-              "title": "Zasady konkursu",
-              "rule1": "Kwalifikują się tylko posty opublikowane w bieżącym tygodniu",
-              "rule2": "Konkurs kończy się w każdą niedzielę o 23:59 UTC",
-              "rule3": "Zwycięzcy są wybierani na podstawie łącznego organicznego zaangażowania (polubienia + udostępnienia + komentarze) i kontaktowani przez Telegram w ciągu 24 godzin"
-            },
-            "cta": {
-              "post": "Zacznij Publikować Teraz",
-              "submit": "Zgłoś Swój Post"
-            },
-            "winners": {
-              "title": "Zwycięzcy Konkursu",
-              "weekOf": "Tydzień",
-              "engagements": "zaangażowań"
-            }
           },
           "partySubsidy": {
             "topnav": "Program Dotacji",
             "title": "Program Dotacji dla Partii",
             "subtitle": "Buduj swój ruch polityczny i zarabiaj",
             "weeklyPool": {
-              "title": "100 000 WDD",
-              "subtitle": "Stała tygodniowa pula"
+              "old": "100 000",
+              "new": "250 000 WDD",
+              "subtitle": "Stała pula"
             },
             "devRewards": {
               "title": "10% naszych Nagród dla Deweloperów",
-              "subtitle": "Zmienna pula nagród",
+              "subtitle": "Zmienna pula",
               "tooltip": "World dystrybuuje nagrody dla deweloperów na podstawie korzystania z aplikacji przez zweryfikowanych ludzi.",
               "checkOutRewards": "Sprawdź nagrody"
             },
@@ -517,22 +385,27 @@
               "title": "Jak to działa",
               "steps": {
                 "createParty": {
-                  "title": "Utwórz Partię",
+                  "title": "Utwórz partię",
                   "description": "Rozpocznij swój ruch polityczny w aplikacji World Republic"
                 },
                 "growMembership": {
-                  "title": "Rozwijaj Członkostwo",
-                  "description": "Rekrutuj członków i buduj swoją społeczność"
+                  "title": "Zdobądź miejsce na liście wyborczej",
+                  "description": "Zwiększ liczbę członków, aby zakwalifikować się do cotygodniowych wyborów"
                 },
                 "earnRewards": {
-                  "title": "Zdobywaj Nagrody",
-                  "description": "Liderzy 50 najlepszych partii otrzymują cotygodniowe dofinansowanie"
+                  "title": "Otrzymuj finansowanie",
+                  "description": "Zdobywaj dotacje proporcjonalne do liczby głosów otrzymanych przez twoją partię"
                 }
               }
             },
             "cta": {
-              "createJoin": "Utwórz lub Dołącz do Partii",
-              "leaderGroup": "Dołącz do Grupy Liderów Partii"
+              "createJoin": "Utwórz lub dołącz do partii",
+              "leaderGroup": "Dołącz do grupy liderów partii"
+            },
+            "payouts": {
+              "title": "Wypłaty",
+              "week": "Tydzień",
+              "showAll": "Pokaż wszystkie"
             }
           }
         }
@@ -548,13 +421,21 @@
       },
       "sections": {
         "polls": {
-          "title": "Ankieta Dnia",
+          "title": "Ankieta Tygodnia",
           "description": "Szybkie głosowania na aktualne tematy",
           "previous": {
             "title": "Poprzednie Ankiety",
             "backToGovern": "Powrót do Zarządzania",
             "polls": {
-              "heatAdaptation": "Czy kraje powinny ustanowić globalny mechanizm koordynacji wczesnego ostrzegania przed falami upałów i wspólnych działań pomocowych w celu ochrony wrażliwych populacji podczas ekstremalnych upałów?",
+              "digitalGovernance": "W miarę szybkiego postępu sztucznej inteligencji i technologii cyfrowych, czy narody powinny wspólnie zapewnić odpowiedzialny rozwój i zarządzanie, aby zapobiec powszechnym zakłóceniom społecznym?",
+              "nuclearEscalationRisk": "Czy należy ustanowić globalne ramy w celu zmniejszenia ryzyka eskalacji nuklearnej w regionach o podwyższonych napięciach geopolitycznych?",
+              "middleEastEscalation": "Czy niezależne konsorcjum narodów powinno wspierać neutralną inicjatywę deeskalacji na Bliskim Wschodzie w celu zmniejszenia ryzyka konfliktu regionalnego?",
+              "nuclearDisarmamentTalks": "W związku z ostatnimi doniesieniami o zwiększonej produkcji materiałów jądrowych, czy światowe mocarstwa powinny wznowić kompleksowe negocjacje rozbrojeniowe?",
+              "pandemicPreparednessFund": "Czy należy utworzyć stały globalny fundusz, aby zapewnić ciągły i sprawiedliwy dostęp do zasobów na potrzeby przyszłych działań w zakresie przygotowania i reagowania na pandemie na całym świecie?",
+              "globalAidCuts": "Czy kraje powinny rozważyć ponownie cięcia w pomocy zagranicznej, które ryzykują odwrócenie dziesięcioleci postępu w walce z chorobami takimi jak AIDS i malaria?",
+              "coralCrisisAction": "Czy państwa powinny zobowiązać się do skoordynowanej globalnej strategii ochrony raf koralowych w obliczu najgorszego wydarzenia blaknięcia koralowców w historii?",
+              "aiSafetyTreaty": "Czy państwa powinny zgodzić się na egzekwowalny globalny traktat o bezpieczeństwie AI?",
+              "heatAdaptation": "Czy kraje powinny ustanowić globalny mechanizm koordynacji wczesnego ostrzegania przed falami upałów i wspólnych działań ratunkowych w celu ochrony wrażliwych populacji podczas ekstremalnych upałów?",
               "globalMilitaryExerciseProtocol": "Czy kraje powinny zgodzić się na międzynarodowy protokół powiadamiania i obserwatorów dla ćwiczeń wojskowych na dużą skalę w pobliżu spornych regionów, aby zmniejszyć ryzyko eskalacji?",
               "globalMaritimeSecurity": "Czy należy ustanowić międzynarodową grupę zadaniową ds. bezpieczeństwa morskiego w celu ochrony żeglugi handlowej na wodach międzynarodowych przed atakami zbrojnymi?",
               "globalNuclearDialogue": "Czy mocarstwa powinny być zobowiązane na mocy międzynarodowego porozumienia do prowadzenia ciągłych negocjacji nuklearnych na poziomie eksperckim z państwami przeciwnymi, aby zapobiec eskalacji i zapewnić nadzór dyplomatyczny?",
@@ -619,7 +500,8 @@
               "sovereignDebtRestructuring": "Czy powinien istnieć międzynarodowo skoordynowany mechanizm restrukturyzacji długu państwowego, zapewniający terminową pomoc krajom borykającym się z niezrównoważonym poziomem zadłużenia?",
               "wildlifeTrafficking": "Czy państwa powinny współpracować w ramach dedykowanych międzynarodowych ram w celu zwalczania nielegalnego handlu dziką fauną i florą, w tym pojawiającego się biopiractwa owadów i innych gatunków?",
               "criticalMineralsExport": "Czy powinny istnieć międzynarodowo skoordynowane ramy kontroli eksportu surowców krytycznych—takich jak metale ziem rzadkich i metale strategiczne—aby zapobiec wstrząsom w łańcuchu dostaw i przymusowi geopolitycznemu?",
-              "tradePolicyStability": "Czy narody powinny przyjąć skoordynowany międzynarodowy kodeks postępowania w zakresie polityki taryfowej, aby zwiększyć przewidywalność i stabilność w handlu światowym?"
+              "tradePolicyStability": "Czy narody powinny przyjąć skoordynowany międzynarodowy kodeks postępowania w zakresie polityki taryfowej, aby zwiększyć przewidywalność i stabilność w handlu światowym?",
+              "cyberResilienceProtocol": "Czy państwa powinny ustanowić skoordynowany globalny protokół reagowania na cyberzagrożenia, aby bronić się przed cyberatakami zasilanymi przez AI, które mogą zakłócić kluczową infrastrukturę na całym świecie?"
             }
           }
         },
@@ -641,7 +523,7 @@
               "referenceTitle": "Instytut Przyszłości Życia"
             },
             "longView": {
-              "title": "List otwarty wzywający światowych przywódców do wykazania się długoterminowym przywództwem w sprawie zagrożeń egzystencjalnych",
+              "title": "List Otwarty Wzywający Światowych Przywódców do Wykazania Się Długoterminowym Przywództwem w Sprawie Zagrożeń Egzystencjalnych",
               "referenceTitle": "Instytut Przyszłości Życia"
             }
           }
@@ -649,10 +531,90 @@
         "elections": {
           "title": "Wybory",
           "description": "Wybierz swoich przedstawicieli",
-          "worldConstituent": {
-            "title": "Wybory do Światowego Zgromadzenia Konstytucyjnego",
-            "description": "Wybierz przedstawicieli do pierwszego demokratycznie wybranego parlamentu światowego.",
-            "button": "Wkrótce"
+          "testElections": {
+            "title": "Wybory Testowe",
+            "description": "Pomóż nam rozdzielić dotacje partyjne i ulepszyć nasz system zarządzania",
+            "button": "Otwórz wybory testowe"
+          },
+          "currentElectionPage": {
+            "title": "Aktualne Wybory",
+            "testElectionTitle": "Wybory Testowe",
+            "testElectionSubtitle": "Pomóż nam przetestować nasz system głosowania",
+            "testElectionTooltip1": "Aby uzyskać więcej informacji, przeczytaj ",
+            "testElectionTooltip2": "FAQ wyborcze",
+            "testElectionTooltip3": ".",
+            "politicalParties": "Partie polityczne",
+            "searchPlaceholder": "Szukaj partii...",
+            "leaderPrefix": "Lider: ",
+            "noActiveElection": "Brak Aktywnych Wyborów",
+            "noActiveElectionDescription": "Obecnie nie trwają żadne wybory",
+            "backToOverview": "Powrót do przeglądu",
+            "buttons": {
+              "voted": "Zagłosowano",
+              "vote": "Głosuj",
+              "processing": "Przetwarzanie...",
+              "cancel": "Anuluj"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "Potwierdź Swój Głos",
+                "description": "Zamierzasz oddać swój głos na {{partyName}}. Ta akcja zostanie zapisana na blockchainie.",
+                "confirmText": "Potwierdź głos"
+              },
+              "change": {
+                "title": "Zmień Swój Głos",
+                "description": "Czy na pewno chcesz zmienić swój głos z {{previousPartyName}} na {{partyName}}?",
+                "confirmText": "Potwierdź zmianę"
+              },
+              "remove": {
+                "title": "Usuń Swój Głos",
+                "description": "Czy na pewno chcesz usunąć swój głos na {{partyName}}? Nie będziesz głosować na żadną partię.",
+                "confirmText": "Tak, usuń głos"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "Otwórz tę aplikację w World App, aby zagłosować.",
+              "connectWallet": "Najpierw podłącz swój portfel.",
+              "noCurrentElection": "Nie można ustalić bieżących wyborów.",
+              "fetchStatusError": "Nie udało się pobrać statusu głosowania. Spróbuj ponownie.",
+              "transactionFailed": "Transakcja nie powiodła się lub została odrzucona.",
+              "voteRemovedSuccess": "Głos usunięty pomyślnie",
+              "voteSuccess": "Pomyślnie oddano głos na {{partyName}}!",
+              "voteError": "Wystąpił błąd podczas oddawania głosu."
+            },
+            "electionFaqPage": {
+              "title": "FAQ Wyborcze",
+              "items": {
+                "electionPurpose": {
+                  "question": "Jaki jest cel tych wyborów?",
+                  "answer": "Te wybory są kluczowym elementem naszego modelu zarządzania. Początkowo decydują o podziale dotacji dla partii, nagradzając je na podstawie otrzymanego wsparcia. W miarę dojrzewania naszego systemu, wyniki wyborów będą przyznawać partiom coraz większe obowiązki. To proces iteracyjny, który pomoże nam się uczyć i doskonalić."
+                },
+                "ballotQualification": {
+                  "question": "Jak partia trafia na listę wyborczą?",
+                  "answer": "Aby znaleźć się na liście wyborczej, partia musi mieć członków stanowiących co najmniej 0,05% całkowitej liczby odbiorców Dochodu Podstawowego Plus. Zapewnia to, że partie mają podstawowy poziom wsparcia od aktywnych, zweryfikowanych członków."
+                },
+                "howToVote": {
+                  "question": "Jak głosować?",
+                  "answer": "Na stronie wyborów można zobaczyć listę uprawnionych partii politycznych. Wystarczy dotknąć przycisku 'Głosuj' obok partii, którą chcesz poprzeć. Zostaniesz poproszony o potwierdzenie głosu za pośrednictwem portfela."
+                },
+                "canIChangeVote": {
+                  "question": "Czy mogę zmienić swój głos?",
+                  "answer": "Tak, możesz zmienić swój głos w dowolnym momencie, gdy wybory są aktywne. Po prostu zagłosuj na inną partię, a Twój poprzedni głos zostanie zastąpiony. Możesz również całkowicie usunąć swój głos."
+                },
+                "electionDeadline": {
+                  "question": "Kiedy kończą się wybory?",
+                  "answer": "Wybory testowe trwają do niedzieli do 23:59:59 UTC. Głosy muszą zostać oddane przed tym czasem, aby zostały zaliczone do bieżących wyborów."
+                },
+                "isVoteAnonymous": {
+                  "question": "Czy mój głos jest anonimowy?",
+                  "answer": "Głosowanie jest pseudonimowe. Chociaż Twój głos jest powiązany z adresem portfela na blockchainie w celu zapewnienia przejrzystości, Twoja tożsamość w świecie rzeczywistym nie jest z nim bezpośrednio powiązana."
+                },
+                "whatArePartySubsidies": {
+                  "question": "Czym są dotacje dla partii?",
+                  "answer": "Dotacje dla partii to nagrody przyznawane partiom politycznym na podstawie liczby otrzymanych głosów. Program ten finansuje działalność partii i pomaga im się rozwijać. Możesz dowiedzieć się więcej o <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">Programie Dotacji dla Partii</a>."
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -660,7 +622,7 @@
           "description": "Bezpośrednie głosowania w ważnych sprawach",
           "worldConstitutional": {
             "title": "Światowe Referendum Konstytucyjne",
-            "description": "Weź udział w historycznym głosowaniu nad zasadami, które będą kierować zbiorową przyszłością ludzkości.",
+            "description": "Weź udział w historycznym głosowaniu nad zasadami, które będą kierować zbiorową przyszłością ludzkości",
             "button": "Wkrótce"
           }
         },
@@ -674,9 +636,8 @@
       "title": "Menu",
       "sections": {
         "experimental": {
-          "title": "EKSPERYMENTALNE",
+          "title": "USTAWIENIA",
           "links": {
-            "verification": "Status weryfikacji",
             "language": "Język"
           }
         },
@@ -691,6 +652,7 @@
         "help": {
           "title": "POMOC",
           "links": {
+            "support": "Wsparcie",
             "faq": "FAQ"
           }
         },
@@ -712,11 +674,11 @@
         },
         "basicIncome": {
           "question": "Czym jest Dochód Podstawowy?",
-          "answer": "Nasz Dochód Podstawowy to dzienna dotacja w wysokości 1 WDD (drachma światowa), która jest przyznawana wszystkim obywatelom Republiki Świata. Akumuluje się w czasie rzeczywistym i można go odebrać w dowolnym momencie przez aplikację."
+          "answer": "Nasz Dochód Podstawowy to dzienna dotacja w wysokości 0,01 WDD (drachma światowa), która jest przyznawana wszystkim obywatelom Republiki Świata. Akumuluje się w czasie rzeczywistym i można go odebrać w dowolnym momencie przez aplikację."
         },
         "basicIncomePlus": {
           "question": "Jak aktywować Dochód Podstawowy Plus?",
-          "answer": "Dochód Podstawowy Plus zapewnia dodatkowe 10 WDD dziennie i jest dostępny wyłącznie dla użytkowników zweryfikowanych przez Orb. Po aktywacji Dochodu Podstawowego zobaczysz opcję aktywacji Dochodu Podstawowego Plus na stronie Zarabiaj."
+          "answer": "Dochód Podstawowy Plus zapewnia dodatkowe 0,19 WDD dziennie i jest dostępny wyłącznie dla użytkowników zweryfikowanych przez Orb. Po aktywacji Dochodu Podstawowego zobaczysz opcję aktywacji Dochodu Podstawowego Plus na stronie Zarabiaj."
         },
         "savings": {
           "question": "Jak działa Konto Oszczędnościowe?",
@@ -724,7 +686,7 @@
         },
         "referralCodes": {
           "question": "Jak działają kody polecające?",
-          "answer": "Jako obywatel Republiki Światowej możesz zdobywać nagrody poprzez nasz program poleceń. Podziel się swoim unikalnym linkiem polecającym z przyjaciółmi, a otrzymasz 50 WDD za każdą osobę, która dołączy i zostanie zweryfikowana przez Orb lub paszport. Nie otrzymałeś swojej nagrody? Twój znajomy być może będzie musiał uruchomić ją ręcznie, wybierając opcję 'Nagródź Polecającego' w swoim dziale poleceń."
+          "answer": "Jako obywatel Republiki Świata możesz zdobywać nagrody w naszym programie poleceń. Udostępnij swój unikalny link polecający znajomym, a otrzymasz 10 WDD za każdą osobę, która dołączy do naszej aplikacji webowej i ukończy weryfikację żywotności (liveness)."
         },
         "drachmaValue": {
           "question": "Skąd drachma czerpie swoją wartość?",
@@ -732,11 +694,11 @@
         },
         "topWallets": {
           "question": "Kto kontroluje największe konta?",
-          "answer": "Trzy największe konta to <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Skarbiec Republiki Świata</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Fundusz Dochodu Podstawowego</a> i <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Fundusz Dochodu Podstawowego Plus</a>. Obecnie są one kontrolowane przez założyciela projektu, ale kontrola zostanie przekazana społeczności po ratyfikacji naszej konstytucji. Inne kluczowe adresy to <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>kontrakt Konta Oszczędnościowego</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>dystrybutor Nagród za Polecenia</a> i pule płynności: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a> i <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
+          "answer": "Trzy największe konta to <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Skarbiec Republiki Świata</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Fundusz Dochodu Podstawowego</a> oraz <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Fundusz Dochodu Podstawowego Plus</a>. Są one obecnie zarządzane przez założyciela projektu w celu zapewnienia stabilności, podczas gdy stopniowo przekazujemy kontrolę społeczności. Inne kluczowe adresy to <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>umowa konta oszczędnościowego</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>dystrybutor nagród za polecenia</a> oraz pule płynności: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a> i <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "Jakie są wymagania do proponowania głosowań?",
-          "answer": "Obecne ankiety i listy otwarte są tylko pokazem. Nasza społeczność wspólnie zdecyduje o naszym systemie zarządzania poprzez proces projektowania konstytucji prowadzony przez Zgromadzenie Konstytucyjne wybrane w II kwartale 2025 roku."
+          "question": "Jak mogę uczestniczyć w zarządzaniu?",
+          "answer": "Możesz uczestniczyć, dołączając do partii politycznej lub tworząc ją. Chociaż obecne głosowania mają charakter poglądowy, partie są fundamentem naszego modelu zarządzania. W miarę profesjonalizacji partii, będą one odblokowywać coraz ważniejsze obszary kontroli demokratycznej, dając ci głos w naszych wspólnych decyzjach."
         }
       }
     },
@@ -745,26 +707,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "Status Weryfikacji",
-      "levels": {
-        "document": {
-          "title": "Weryfikacja Dokumentu",
-          "description": "Sprawdź status weryfikacji dokumentu",
-          "buttonText": "Sprawdź Status"
-        },
-        "secureDocument": {
-          "title": "Bezpieczna Weryfikacja Dokumentu",
-          "description": "Sprawdź status bezpiecznej weryfikacji dokumentu",
-          "buttonText": "Sprawdź Status"
-        },
-        "orb": {
-          "title": "Weryfikacja Orb",
-          "description": "Sprawdź status weryfikacji Orb",
-          "buttonText": "Sprawdź Status"
-        }
       }
     }
   }

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import "../globals.css";
 import MiniKitProvider from "@/components/providers/minikit-provider";
@@ -7,13 +8,13 @@ import BottomNav from "@/components/BottomNav";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
 import dynamic from "next/dynamic";
 import { ToastProvider } from "@/components/providers/ToastProvider";
+import { PartiesProvider } from "@/components/contexts/PartiesContext";
 
 export const metadata: Metadata = {
   title: "World Republic",
-  description: "The home of global democracy",
+  description: "Basic income and global democracy",
 };
 
-// Add type for language parameter
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
@@ -56,8 +57,10 @@ export default function RootLayout({
             <ErudaProvider>
               <MiniKitProvider>
                 <WalletProvider>
-                  {children}
-                  <BottomNav />
+                  <PartiesProvider>
+                    {children}
+                    <BottomNav />
+                  </PartiesProvider>
                 </WalletProvider>
               </MiniKitProvider>
             </ErudaProvider>

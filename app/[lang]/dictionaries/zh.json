@@ -3,10 +3,14 @@
     "walletAuth": {
       "connect": "连接钱包"
     },
-    "verifyButton": {
-      "verify": "验证以领取"
+    "banners": {
+      "dalgona": {
+        "title": "雕刻达戈纳来赚钱",
+        "description": "参加糖果切割挑战，赢取DAL奖励。",
+        "cta": "立即游戏"
+      }
     },
-    "pollOfTheDay": {
+    "pollOfTheWeek": {
       "previousPolls": "往期投票",
       "vote": "立即投票"
     },
@@ -59,7 +63,6 @@
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "我们知道存在一些政党加载问题。请耐心等待，我们正在努力修复。",
       "myParty": "我的政党",
       "createParty": "创建新政党",
       "noParty": "您尚未创建或加入政党。",
@@ -71,6 +74,7 @@
       "website": "网站",
       "members": "成员",
       "noMembers": "暂无成员",
+      "approvalNote": "具有有效官方链接和/或成员增长的政党在审批时享有优先权。",
       "bannedMembers": "被禁成员",
       "errorLoading": "加载政党时出错",
       "partyNotFound": "未找到政党",
@@ -245,6 +249,11 @@
           "subtitle": "登录以领取您的基本收入",
           "setupSubtitle": "设置您的基本收入",
           "claimableSubtitle": "可领取的德拉克马",
+          "claimableTooltip1": "作为我们",
+          "claimableTooltip2": "回购计划",
+          "claimableTooltip3": "的一部分，我们正在调整基本收入水平，为我们的社区创造可持续的长期利益。有关当前费率，请参阅",
+          "claimableTooltip4": "常见问题解答",
+          "claimableTooltip5": "。",
           "activateButton": "激活基本收入",
           "claimButton": "领取",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "已验证用户的额外收入",
               "features": {
                 "rate": {
-                  "title": "每天额外10 WDD"
+                  "title": "每天额外0.19 WDD"
                 },
                 "verification": {
                   "title": "仅限Orb验证用户，确保公平分配"
-                },
-                "rewards": {
-                  "title": "奖励逐渐转向增强版，同时保持每天总计11 WDD"
                 }
               },
               "activateButton": "激活基本收入增强版",
@@ -280,8 +286,8 @@
         },
         "invite": {
           "title": "邀请",
-          "subtitle": "每邀请一位朋友加入获得50 WDD",
-          "tooltip": "朋友必须通过Orb或护照进行验证。",
+          "subtitle": "每邀请一位加入的朋友可获 10 WDD",
+          "tooltip": "好友需加入我们的全新网页应用。",
           "learnMore": "了解更多",
           "stats": {
             "title": "您的推荐统计",
@@ -292,146 +298,49 @@
             "copyLink": "复制推荐链接",
             "copied": "推荐链接已复制到剪贴板！",
             "connectWallet": "请连接钱包以生成您的推荐链接",
-            "rewardReferrer": "奖励推荐人",
             "share": "分享邀请链接"
-          },
-          "drawer": {
-            "title": "奖励推荐人",
-            "subtitle": "为您的推荐人触发50 WDD免费奖励",
-            "passportSubtitle": "验证您的护照并为您的推荐人触发50 WDD免费奖励",
-            "invitedBy": "您是由{{username}}邀请的",
-            "input": {
-              "placeholder": "输入用户名（例如：username.0000）",
-              "lookupButton": "查找用户",
-              "sendingTo": "发送奖励给：",
-              "editButton": "编辑",
-              "sendButton": "发送奖励",
-              "proveReward": "验证并奖励"
-            },
-            "errors": {
-              "enterUsername": "请输入用户名",
-              "usernameNotFound": "未找到用户名",
-              "lookupFailed": "查找用户名失败。请重试。",
-              "installMiniKit": "请安装MiniKit以查找用户名",
-              "connectWallet": "请先连接您的钱包",
-              "transactionCanceled": "交易已取消"
-            },
-            "success": {
-              "rewardSent": "成功向{{username}}发送奖励！"
-            }
           },
           "share": {
             "title": "加入世界共和国",
             "text": "使用我的邀请链接加入世界共和国，一起赚取奖励！"
-          },
-          "passportDrawer": {
-            "title": "护照验证推荐计划",
-            "subtitle": "邀请护照持有者并赚取50 WDD",
-            "features": {
-              "countries": {
-                "title": "护照验证目前可在阿根廷、澳大利亚、智利、哥伦比亚、克罗地亚、日本、菲律宾、葡萄牙、韩国和美国使用"
-              },
-              "rewards": {
-                "title": "朋友在World App中验证护照后可获得WLD"
-              },
-              "basicIncome": {
-                "title": "护照验证用户的额外基本收入即将推出"
-              }
-            },
-            "trigger": {
-              "titleText": "现在护照验证的朋友也可使用！",
-              "titleDetails": "详情"
-            }
           }
         },
         "contribute": {
           "title": "贡献",
           "subtitle": "参与并获得奖励",
-          "contests": {
-            "ended": "已结束",
-            "weekly": "每周",
-            "topPrize": "最高奖励",
-            "xPost": {
-              "title": "X帖子竞赛",
-              "description": "撰写有趣的帖子，赢取奖励"
-            },
-            "poll": {
-              "title": "投票竞赛",
-              "description": "收集社区反馈并赢取奖励"
-            },
-            "pollContest": {
-              "title": "投票竞赛",
-              "weeklyTitle": "每周投票竞赛",
-              "description": "收集社区反馈并赢取奖励",
-              "prizes": {
-                "title": "奖品",
-                "viewWinners": "查看往期获奖者",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "如何参与",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "创建一个与世界共和国或全球治理相关的投票"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "设置仅允许已验证用户投票"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "在我们的",
-                    "link": {
-                      "text": "投票竞赛Telegram频道",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "竞赛规则",
-                "list": {
-                  "rule1": "仅当周发起的投票有资格参与",
-                  "rule2": "竞赛每周日23:59 UTC结束",
-                  "rule3": "获奖者根据总投票数选出并在24小时内通过Telegram联系"
-                }
-              },
-              "cta": {
-                "create": "创建投票",
-                "submit": "提交投票"
-              },
-              "winners": {
-                "title": "竞赛获奖者",
-                "weekOf": "第",
-                "votes": "票"
-              }
-            },
-            "testing": {
-              "title": "新功能测试",
-              "description": "开放给已通过护照验证但未通过Orb验证的会员。"
-            },
-            "oneOff": "一次性",
-            "limited": "50个名额"
-          },
-          "earlyAccess": {
-            "title": "早期体验计划",
-            "description": "通过测试我们即将推出的功能赚取WDD"
-          },
           "buybackProgram": {
             "topnav": "回购计划",
             "title": "代币回购计划",
             "subtitle": "共同增强WDD价值",
             "sections": {
-              "devRewards": {
-                "title": "开发者奖励计划",
-                "startDate": "2025年4月1日开始",
-                "description": "World正在试行基于经验证的人类使用应用的开发者奖励。",
-                "learnMore": "了解更多关于该计划"
+              "fundingSources": {
+                "title": "资金来源",
+                "devRewards": {
+                  "title": "World开发者奖励",
+                  "weekProgress": "第7周/共12周"
+                },
+                "worldRetro": {
+                  "title": "World Retro资金"
+                },
+                "optimism": {
+                  "title": "Optimism Retro资金"
+                },
+                "affiliate": {
+                  "title": "联盟佣金"
+                }
               },
               "commitment": {
-                "title": "我们的50%承诺",
-                "body": "我们承诺至少将计划奖励的50%用于WDD回购。"
+                "title": "我们的承诺",
+                "description": "我们承诺至少将50%的这些资金用于WDD回购。",
+                "viewAccount": "查看回购账户"
+              },
+              "valueCycle": {
+                "title": "正向价值循环",
+                "steps": {
+                  "step1": "更多应用用户和使用率",
+                  "step2": "更高的奖励",
+                  "step3": "更多代币回购"
+                }
               },
               "helpSection": {
                 "title": "您如何帮助",
@@ -446,71 +355,30 @@
                     "description": "推动良性经济循环"
                   }
                 }
-              },
-              "valueCycle": {
-                "title": "正向价值循环",
-                "steps": {
-                  "step1": "更多应用用户和使用率",
-                  "step2": "更高的开发者奖励",
-                  "step3": "更多代币回购"
-                }
               }
             },
             "actions": {
               "share": "分享邀请"
             },
-            "cta": "查看小程序统计"
+            "cta": "查看小程序奖励"
           },
           "buybackLink": {
             "title": "回购计划",
             "description": "社区驱动的WDD价值增长"
           },
-          "xContest": {
-            "title": "X帖子竞赛",
-            "weeklyTitle": "每周X帖子竞赛",
-            "description": "撰写有趣的帖子，赢取奖励",
-            "prizes": {
-              "title": "奖励",
-              "viewWinners": "查看往期获奖者",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "如何参与",
-              "step1": "撰写关于世界共和国的X帖子",
-              "step2": "标记 @WorldRepublicEN",
-              "step3": {
-                "prefix": "在我们的",
-                "link": "X帖子竞赛Telegram频道分享您的帖子链接"
-              }
-            },
-            "rules": {
-              "title": "竞赛规则",
-              "rule1": "仅当周发布的帖子有资格参与",
-              "rule2": "竞赛每周日23:59 UTC结束",
-              "rule3": "获奖者根据总有机互动量（点赞+转发+评论）选出并在24小时内通过Telegram联系"
-            },
-            "cta": {
-              "post": "立即开始发帖",
-              "submit": "提交您的帖子"
-            },
-            "winners": {
-              "title": "竞赛获奖者",
-              "weekOf": "第几周",
-              "engagements": "互动量"
-            }
-          },
           "partySubsidy": {
             "topnav": "补贴计划",
             "title": "政党补贴计划",
-            "subtitle": "建立您的政治运动并获得收益",
+            "subtitle": "建立您的政治运动并赚取收益",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "固定每周资金池"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "固定奖池"
             },
             "devRewards": {
               "title": "我们开发者奖励的10%",
-              "subtitle": "可变奖励资金池",
-              "tooltip": "World正在根据经验证的人类使用应用程序的情况分配开发者奖励。",
+              "subtitle": "可变奖池",
+              "tooltip": "世界根据经过验证的人类的应用使用情况来分配开发者奖励。",
               "checkOutRewards": "查看奖励"
             },
             "howItWorks": {
@@ -521,18 +389,23 @@
                   "description": "在World Republic应用程序中开始您的政治运动"
                 },
                 "growMembership": {
-                  "title": "增加您的会员",
-                  "description": "招募成员并建立您的社区"
+                  "title": "进入选票",
+                  "description": "发展您的会员资格，以获得每周选举的资格"
                 },
                 "earnRewards": {
-                  "title": "获得奖励",
-                  "description": "前50名政党的领导者会收到每周补贴"
+                  "title": "获得资金",
+                  "description": "根据您的政党获得的选票比例赚取补贴"
                 }
               }
             },
             "cta": {
               "createJoin": "创建或加入政党",
               "leaderGroup": "加入政党领导人群组"
+            },
+            "payouts": {
+              "title": "支付",
+              "week": "周",
+              "showAll": "显示全部"
             }
           }
         }
@@ -548,13 +421,21 @@
       },
       "sections": {
         "polls": {
-          "title": "每日投票",
+          "title": "每周投票",
           "description": "对当前话题进行快速投票",
           "previous": {
             "title": "往期投票",
             "backToGovern": "返回治理",
             "polls": {
-              "heatAdaptation": "各国是否应该建立全球协调机制，以便在极端高温事件期间提供热浪早期预警和联合救援工作，从而保护弱势群体？",
+              "digitalGovernance": "随着人工智能和数字技术的飞速发展，各国是否应共同确保负责任的开发和治理，以防止广泛的社会混乱？",
+              "nuclearEscalationRisk": "是否应建立一个全球框架，以减少地缘政治紧张局势加剧地区的核升级风险？",
+              "middleEastEscalation": "一个独立的国家联盟是否应该支持一项中立的中东缓和局势倡议，以降低地区冲突的风险？",
+              "nuclearDisarmamentTalks": "鉴于最近有关核材料产量增加的报道，世界大国是否应重启全面裁军谈判？",
+              "pandemicPreparednessFund": "是否应该建立一个永久性的全球基金，以确保全球范围内未来大流行病防范和应对工作能够持续公平地获得资源？",
+              "globalAidCuts": "各国是否应该重新考虑削减对外援助，这可能会逆转几十年来对抗艾滋病和疟疾等疾病的进展？",
+              "coralCrisisAction": "面对有记录以来最严重的珊瑚白化事件，各国是否应该承诺采取协调一致的全球战略来保护珊瑚礁？",
+              "aiSafetyTreaty": "各国是否应该同意一个可执行的全球人工智能安全条约？",
+              "heatAdaptation": "各国是否应该建立一个全球协调机制，用于热浪预警和联合救济工作，以在极端高温事件期间保护弱势人群？",
               "criticalMineralsExport": "是否应该建立国际协调框架，对关键矿产（如稀土和战略金属）的出口进行管控，以防止供应链冲击和地缘政治胁迫？",
               "globalMilitaryExerciseProtocol": "各国是否应该同意在争议地区附近进行大规模军事演习时采用国际通知和观察员协议，以降低局势升级的风险？",
               "globalMaritimeSecurity": "是否应该建立国际海事安全特别工作组，以保护国际水域中的商业航运免受武装袭击？",
@@ -619,7 +500,8 @@
               "globalDigitalServicesTax": "各国是否应该采用协调一致的数字服务税，针对大型科技平台的收入，以确保公平和可预测的全球税收？",
               "sovereignDebtRestructuring": "是否应该建立国际协调的主权债务重组机制，为面临不可持续债务水平的国家提供及时救济？",
               "wildlifeTrafficking": "各国是否应该在专门的国际框架下合作打击非法野生动物贩运，包括新兴的昆虫和其他物种的生物盗版？",
-              "tradePolicyStability": "各国是否应该采用协调一致的国际关税政策行为准则，以提高全球贸易的可预测性和稳定性？"
+              "tradePolicyStability": "各国是否应该采用协调一致的国际关税政策行为准则，以提高全球贸易的可预测性和稳定性？",
+              "cyberResilienceProtocol": "各国是否应建立协调一致的全球网络安全响应协议，以防御可能破坏全球关键基础设施的人工智能驱动的网络攻击？"
             }
           }
         },
@@ -649,10 +531,90 @@
         "elections": {
           "title": "选举",
           "description": "选择您的代表",
-          "worldConstituent": {
-            "title": "世界制宪大会选举",
-            "description": "为第一个民主选举产生的全球议会选择代表。",
-            "button": "即将推出"
+          "testElections": {
+            "title": "测试选举",
+            "description": "帮助我们分配政党补贴并改进我们的治理体系",
+            "button": "打开测试选举"
+          },
+          "currentElectionPage": {
+            "title": "当前选举",
+            "testElectionTitle": "测试选举",
+            "testElectionSubtitle": "帮助我们测试投票系统",
+            "testElectionTooltip1": "有关更多信息，请阅读",
+            "testElectionTooltip2": "选举常见问题解答",
+            "testElectionTooltip3": "。",
+            "politicalParties": "政党",
+            "searchPlaceholder": "搜索政党...",
+            "leaderPrefix": "领导人：",
+            "noActiveElection": "无有效选举",
+            "noActiveElectionDescription": "当前没有正在进行的选举",
+            "backToOverview": "返回概览",
+            "buttons": {
+              "voted": "已投票",
+              "vote": "投票",
+              "processing": "处理中...",
+              "cancel": "取消"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "确认您的投票",
+                "description": "您即将为{{partyName}}投票。此操作将记录在区块链上。",
+                "confirmText": "确认投票"
+              },
+              "change": {
+                "title": "更改您的投票",
+                "description": "您确定要将您的投票从{{previousPartyName}}更改为{{partyName}}吗？",
+                "confirmText": "确认更改"
+              },
+              "remove": {
+                "title": "移除您的投票",
+                "description": "您确定要移除您对{{partyName}}的投票吗？您将不会为任何政党投票。",
+                "confirmText": "是的，移除投票"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "请在World App中打开此应用程序进行投票。",
+              "connectWallet": "请先连接您的钱包。",
+              "noCurrentElection": "无法确定当前选举。",
+              "fetchStatusError": "获取投票状态失败。请重试。",
+              "transactionFailed": "交易失败或被拒绝。",
+              "voteRemovedSuccess": "投票已成功移除",
+              "voteSuccess": "成功为{{partyName}}投票！",
+              "voteError": "投票时发生错误。"
+            },
+            "electionFaqPage": {
+              "title": "选举常见问题解答",
+              "items": {
+                "electionPurpose": {
+                  "question": "这些选举的目的是什么？",
+                  "answer": "这些选举是我们治理模式的核心部分。最初，它们根据政党获得的支持来决定如何分配政党补贴，从而奖励政党。随着我们系统的成熟，选举结果将赋予政党更重大的责任。这是一个迭代过程，以帮助我们学习和改进。"
+                },
+                "ballotQualification": {
+                  "question": "一个政党如何进入选票？",
+                  "answer": "要进入选票，一个政党必须拥有至少相当于基本收入增强版总接收者人数0.05%的成员。这确保了政党拥有来自活跃、已验证成员的基本支持水平。"
+                },
+                "howToVote": {
+                  "question": "我如何投票？",
+                  "answer": "在选举页面上，您可以看到合格政党的列表。只需点击您想支持的政党旁边的'投票'按钮。您将被提示通过您的钱包确认您的投票。"
+                },
+                "canIChangeVote": {
+                  "question": "我可以更改我的投票吗？",
+                  "answer": "是的，您可以在选举期间随时更改您的投票。只需投票给另一个政党，您之前的投票就会被替换。您也可以完全撤销您的投票。"
+                },
+                "electionDeadline": {
+                  "question": "选举何时结束？",
+                  "answer": "测试选举将持续到世界协调时间周日23:59:59。投票必须在此时间之前完成，才能计入当前选举。"
+                },
+                "isVoteAnonymous": {
+                  "question": "我的投票是匿名的吗？",
+                  "answer": "投票是假名的。虽然您的投票为了透明性链接到您在区块链上的钱包地址，但您的真实身份并未直接与之绑定。"
+                },
+                "whatArePartySubsidies": {
+                  "question": "什么是政党补贴？",
+                  "answer": "政党补贴是根据政党获得的选票分配给政党的奖励。该计划资助政党活动并帮助其发展。您可以了解更多关于<a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">政党补贴计划</a>的信息。"
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -660,13 +622,14 @@
           "description": "对重要议题直接投票",
           "worldConstitutional": {
             "title": "世界宪法公投",
-            "description": "参与历史性投票，决定将指导人类集体未来的原则。",
+            "description": "参与历史性投票，决定将指导人类集体未来的原则",
             "button": "即将推出"
           }
         },
         "politicalParties": {
           "title": "政党",
-          "description": "围绕共同价值观全球团结"
+          "description": "政党在世界共和国的治理中扮演着至关重要的角色。了解更多关于不同政党及其纲领的信息。",
+          "searchPlaceholder": "搜索政党"
         }
       }
     },
@@ -674,9 +637,8 @@
       "title": "菜单",
       "sections": {
         "experimental": {
-          "title": "实验性功能",
+          "title": "设置",
           "links": {
-            "verification": "验证状态",
             "language": "语言"
           }
         },
@@ -691,6 +653,7 @@
         "help": {
           "title": "帮助",
           "links": {
+            "support": "支持",
             "faq": "常见问题"
           }
         },
@@ -712,11 +675,11 @@
         },
         "basicIncome": {
           "question": "什么是基本收入？",
-          "answer": "我们的基本收入是每天向所有世界共和国公民提供1 WDD（世界德拉克马）的补贴。它实时累积，可以随时通过应用程序领取。"
+          "answer": "我们的基本收入是每天向所有世界共和国公民提供0.01 WDD（世界德拉克马）的补贴。它实时累积，可以随时通过应用程序领取。"
         },
         "basicIncomePlus": {
           "question": "如何激活基本收入增强版？",
-          "answer": "基本收入增强版每天提供额外10 WDD，仅向Orb验证用户开放。激活基本收入后，您将在赚取页面看到激活基本收入增强版的选项。"
+          "answer": "基本收入增强版每天提供额外0.19 WDD，仅向Orb验证用户开放。激活基本收入后，您将在赚取页面看到激活基本收入增强版的选项。"
         },
         "savings": {
           "question": "储蓄账户如何运作？",
@@ -724,7 +687,7 @@
         },
         "referralCodes": {
           "question": "推荐码如何工作？",
-          "answer": "作为世界共和国公民，您可以通过我们的推荐计划获得奖励。分享您的专属推荐链接给朋友，每当有人加入并通过Orb或护照验证，您将获得50 WDD。没有收到奖励？您的朋友可能需要在其推荐部分选择'奖励推荐人'选项手动触发。"
+          "answer": "作为世界共和国公民，您可以通过我们的推荐计划获得奖励。将您的专属推荐链接分享给朋友，每有一人加入我们的网页应用并完成活体检测，您将获得 10 WDD。"
         },
         "drachmaValue": {
           "question": "德拉克马从何处获得价值？",
@@ -732,11 +695,11 @@
         },
         "topWallets": {
           "question": "谁控制着最大的账户？",
-          "answer": "三个最大的账户是<a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>世界共和国国库</a>、<a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>基本收入基金</a>和<a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>基本收入增强版基金</a>。目前这些由项目创始人控制，但在我们的宪法获得批准后将移交给社区。其他关键地址包括<a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>储蓄账户合约</a>、<a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>推荐奖励分发器</a>和流动性池：<a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>、<a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>和<a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>。"
+          "answer": "三个最大的账户是<a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>世界共和国财政部</a>、<a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>基本收入基金</a>和<a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>基本收入附加基金</a>。这些账户目前由项目创始人管理，以确保稳定，同时我们逐步将控制权移交给社区。其他关键地址包括<a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>储蓄账户合约</a>、<a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>推荐奖励分发器</a>和流动性池：<a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>、<a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>和<a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>。"
         },
         "voteRequirements": {
-          "question": "提出投票有什么要求？",
-          "answer": "当前的投票和公开信仅是展示。我们的社区将通过2025年第二季度选举产生的制宪大会领导的宪法设计过程集体决定我们的治理系统。"
+          "question": "我如何参与治理？",
+          "answer": "您可以通过加入或创建一个政党来参与。虽然目前的投票是指示性的，但政党是我们治理模式的基础。随着政党的专业化，它们将为民主控制解锁越来越重要的领域，让您在我们的集体决策中拥有发言权。"
         }
       }
     },
@@ -745,26 +708,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "验证状态",
-      "levels": {
-        "document": {
-          "title": "证件验证",
-          "description": "检查证件验证状态",
-          "buttonText": "检查状态"
-        },
-        "secureDocument": {
-          "title": "安全证件验证",
-          "description": "检查安全证件验证状态",
-          "buttonText": "检查状态"
-        },
-        "orb": {
-          "title": "Orb验证",
-          "description": "检查Orb验证状态",
-          "buttonText": "检查状态"
-        }
       }
     }
   }

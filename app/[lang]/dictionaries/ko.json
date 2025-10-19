@@ -1,12 +1,16 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "지갑 연결하기"
+      "connect": "지갑 연결"
     },
-    "verifyButton": {
-      "verify": "인증 후 수령하기"
+    "banners": {
+      "dalgona": {
+        "title": "달고나 조각으로 수익 창출",
+        "description": "사탕 자르기 챌린지에 참여하고 DAL 보상을 획득하세요.",
+        "cta": "지금 플레이"
+      }
     },
-    "pollOfTheDay": {
+    "pollOfTheWeek": {
       "previousPolls": "이전 투표",
       "vote": "투표하기"
     },
@@ -59,7 +63,6 @@
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "정당 로딩에 일부 문제가 있다는 것을 알고 있습니다. 해결을 위해 노력하는 동안 잠시만 기다려 주세요.",
       "myParty": "내 정당",
       "createParty": "새 정당 만들기",
       "noParty": "아직 정당을 만들거나 가입하지 않았습니다.",
@@ -69,9 +72,10 @@
       "partyInfo": "정당 정보",
       "leader": "리더",
       "website": "웹사이트",
-      "members": "구성원",
-      "noMembers": "아직 구성원이 없습니다",
-      "bannedMembers": "차단된 구성원",
+      "members": "멤버",
+      "noMembers": "아직 멤버가 없습니다",
+      "approvalNote": "작동하는 공식 링크 및/또는 성장하는 멤버십이 있는 정당은 승인 우선순위가 높습니다.",
+      "bannedMembers": "금지된 멤버",
       "errorLoading": "정당 로딩 오류",
       "partyNotFound": "정당을 찾을 수 없음",
       "partyNotFoundDescription": "찾고 계신 정당이 존재하지 않거나 삭제되었습니다.",
@@ -244,7 +248,12 @@
           "title": "기본소득",
           "subtitle": "로그인하여 기본소득을 받으세요",
           "setupSubtitle": "기본소득 설정하기",
-          "claimableSubtitle": "받을 수 있는 드라크마",
+          "claimableSubtitle": "청구 가능한 드라크마",
+          "claimableTooltip1": "저희",
+          "claimableTooltip2": "바이백 프로그램",
+          "claimableTooltip3": "의 일환으로, 커뮤니티에 지속 가능하고 장기적인 혜택을 제공하기 위해 기본 소득 수준을 미세 조정하고 있습니다. 현재 요율은",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "를 참조해 주세요.",
           "activateButton": "기본소득 활성화",
           "claimButton": "받기",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "인증된 사용자를 위한 추가 수입",
               "features": {
                 "rate": {
-                  "title": "하루 추가 10 WDD"
+                  "title": "하루 추가 0.19 WDD"
                 },
                 "verification": {
-                  "title": "공정한 분배를 위해 Orb 인증 사용자 전용"
-                },
-                "rewards": {
-                  "title": "총 11 WDD/일을 유지하면서 시간이 지남에 따라 플러스로 전환"
+                  "title": "공정한 분배를 보장하기 위해 Orb-인증 사용자에게만 독점 제공"
                 }
               },
               "activateButton": "기본소득 플러스 활성화",
@@ -280,8 +286,8 @@
         },
         "invite": {
           "title": "초대",
-          "subtitle": "참여하는 친구당 50 WDD 획득",
-          "tooltip": "친구들은 Orb 또는 여권으로 인증되어야 합니다.",
+          "subtitle": "참여하는 친구 1명당 10 WDD 받기",
+          "tooltip": "친구는 우리의 새로운 웹 앱에 가입해야 합니다.",
           "learnMore": "더 알아보기",
           "stats": {
             "title": "나의 추천 현황",
@@ -292,224 +298,86 @@
             "copyLink": "추천 링크 복사",
             "copied": "추천 링크가 클립보드에 복사되었습니다!",
             "connectWallet": "추천 링크를 생성하려면 지갑을 연결하세요",
-            "rewardReferrer": "추천인에게 보상 지급",
             "share": "초대 링크 공유"
-          },
-          "drawer": {
-            "title": "추천인 보상",
-            "subtitle": "추천인에게 50 WDD 무료 리워드 지급",
-            "passportSubtitle": "패스포트 인증을 증명하고 추천인에게 50 WDD 무료 리워드 지급",
-            "invitedBy": "추천인: {{username}}",
-            "input": {
-              "placeholder": "사용자 이름 입력 (예: username.0000)",
-              "lookupButton": "사용자 검색",
-              "sendingTo": "리워드 전송 대상:",
-              "editButton": "수정",
-              "sendButton": "리워드 전송",
-              "proveReward": "증명하고 보상하기"
-            },
-            "errors": {
-              "enterUsername": "사용자 이름을 입력해주세요",
-              "usernameNotFound": "존재하지 않는 사용자입니다",
-              "lookupFailed": "사용자 검색에 실패했습니다. 다시 시도해주세요.",
-              "installMiniKit": "사용자 검색을 위해 MiniKit을 설치해주세요",
-              "connectWallet": "먼저 지갑을 연결해주세요",
-              "transactionCanceled": "거래가 취소되었습니다"
-            },
-            "success": {
-              "rewardSent": "{{username}}님에게 리워드를 성공적으로 전송했습니다!"
-            }
           },
           "share": {
             "title": "세계 공화국에 참여하세요",
             "text": "제 초대 링크를 사용하여 세계 공화국에 가입하고 함께 보상을 받으세요!"
-          },
-          "passportDrawer": {
-            "title": "여권 인증 추천 프로그램",
-            "subtitle": "여권 소지자를 초대하고 50 WDD를 획득하세요",
-            "features": {
-              "countries": {
-                "title": "여권 인증은 현재 아르헨티나, 호주, 칠레, 콜롬비아, 크로아티아, 일본, 필리핀, 포르투갈, 한국, 미국에서 이용 가능합니다"
-              },
-              "rewards": {
-                "title": "친구들은 World 앱에서 여권을 인증함으로써 WLD를 받습니다"
-              },
-              "basicIncome": {
-                "title": "여권 인증된 사람들을 위한 추가 기본 소득이 곧 제공됩니다"
-              }
-            },
-            "trigger": {
-              "titleText": "이제 여권 인증된 친구 이후에도 사용 가능합니다!",
-              "titleDetails": "상세 정보"
-            }
           }
         },
         "contribute": {
           "title": "기여",
           "subtitle": "참여하고 보상받기",
-          "contests": {
-            "ended": "종료됨",
-            "weekly": "주간",
-            "topPrize": "최고 상금",
-            "xPost": {
-              "title": "X 포스트 콘테스트",
-              "description": "매력적인 게시물을 작성하고 상금을 받으세요"
-            },
-            "poll": {
-              "title": "투표 콘테스트",
-              "description": "커뮤니티 의견을 수집하고 보상받기"
-            },
-            "pollContest": {
-              "title": "투표 콘테스트",
-              "weeklyTitle": "주간 투표 콘테스트",
-              "description": "커뮤니티 피드백을 수집하고 상금을 획득",
-              "prizes": {
-                "title": "상금",
-                "viewWinners": "이전 우승자 보기",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "참여 방법",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "세계 공화국이나 글로벌 거버넌스와 관련된 투표 만들기"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "인증된 사용자만 투표할 수 있도록 설정"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "투표를",
-                    "link": {
-                      "text": "투표 콘테스트 텔레그램 채널",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "콘테스트 규칙",
-                "list": {
-                  "rule1": "당주 시작된 투표만 참여 가능",
-                  "rule2": "콘테스트는 매주 일요일 11:59 PM UTC까지",
-                  "rule3": "총 투표수에 따라 우승자 선정하고 24시간 이내에 텔레그램으로 연락"
-                }
-              },
-              "cta": {
-                "create": "투표 만들기",
-                "submit": "투표 제출"
-              },
-              "winners": {
-                "title": "콘테스트 우승자",
-                "weekOf": "주",
-                "votes": "표"
-              }
-            },
-            "testing": {
-              "title": "새로운 기능 테스트",
-              "description": "여권으로 인증되었지만 Orb로 인증되지 않은 회원 대상."
-            },
-            "oneOff": "일회성",
-            "limited": "50자리 한정"
-          },
-          "earlyAccess": {
-            "title": "얼리 액세스 프로그램",
-            "description": "향후 기능을 테스트하여 WDD 획득"
-          },
           "buybackProgram": {
-            "topnav": "토큰 재구매 프로그램",
-            "title": "토큰 재구매 프로그램",
-            "subtitle": "함께 WDD 가치 강화하기",
+            "topnav": "바이백 프로그램",
+            "title": "토큰 바이백 프로그램",
+            "subtitle": "WDD 가치를 함께 강화",
             "sections": {
-              "devRewards": {
-                "title": "개발자 보상 프로그램",
-                "startDate": "2025년 4월 1일 시작",
-                "description": "월드는 인증된 사용자의 앱 사용량을 기반으로 개발자 보상을 시험 중입니다.",
-                "learnMore": "프로그램에 대해 더 알아보기"
+              "fundingSources": {
+                "title": "자금 출처",
+                "devRewards": {
+                  "title": "World 개발자 보상",
+                  "weekProgress": "12주 중 7주차"
+                },
+                "worldRetro": {
+                  "title": "World Retro 자금"
+                },
+                "optimism": {
+                  "title": "Optimism Retro 자금"
+                },
+                "affiliate": {
+                  "title": "제휴 수수료"
+                }
               },
               "commitment": {
-                "title": "우리의 50% 약속",
-                "body": "프로그램에서 받는 보상의 최소 50%를 WDD 재구매에 사용할 것을 약속합니다."
-              },
-              "helpSection": {
-                "title": "어떻게 도울 수 있나요",
-                "intro": "귀하의 WDD 토큰 가치 증가에 직접 기여할 수 있습니다:",
-                "steps": {
-                  "invite": {
-                    "title": "다른 사람들을 초대하세요",
-                    "description": "인증된 회원 커뮤니티를 확장하세요"
-                  },
-                  "useApp": {
-                    "title": "앱을 정기적으로 사용하세요",
-                    "description": "선순환 경제 사이클을 촉진하세요"
-                  }
-                }
+                "title": "우리의 약속",
+                "description": "이러한 자금의 최소 50%를 WDD 바이백에 사용할 것을 약속합니다.",
+                "viewAccount": "바이백 계정 보기"
               },
               "valueCycle": {
-                "title": "긍정적인 가치 사이클",
+                "title": "긍정적인 가치 순환",
                 "steps": {
-                  "step1": "더 많은 앱 사용자 및 사용량",
-                  "step2": "더 높은 개발자 보상",
-                  "step3": "더 많은 토큰 재구매"
+                  "step1": "더 많은 앱 사용자와 사용량",
+                  "step2": "더 높은 보상",
+                  "step3": "더 많은 토큰 바이백"
+                }
+              },
+              "helpSection": {
+                "title": "도움을 주는 방법",
+                "intro": "WDD 토큰의 가치를 직접 높이는 데 기여할 수 있습니다:",
+                "steps": {
+                  "invite": {
+                    "title": "다른 사람 초대하기",
+                    "description": "인증된 회원들의 커뮤니티 성장시키기"
+                  },
+                  "useApp": {
+                    "title": "정기적으로 앱 사용하기",
+                    "description": "선순환 경제 사이클 주도하기"
+                  }
                 }
               }
             },
             "actions": {
               "share": "초대 공유하기"
             },
-            "cta": "미니앱 통계 보기"
+            "cta": "미니 앱 보상 보기"
           },
           "buybackLink": {
             "title": "바이백 프로그램",
             "description": "커뮤니티 주도의 WDD 가치 성장"
-          },
-          "xContest": {
-            "title": "X 포스트 콘테스트",
-            "weeklyTitle": "주간 X 포스트 콘테스트",
-            "description": "매력적인 게시물을 작성하고 상금을 받으세요",
-            "prizes": {
-              "title": "상금",
-              "viewWinners": "지난 우승자 보기",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "참여 방법",
-              "step1": "월드 리퍼블릭에 대한 X 포스트 작성하기",
-              "step2": "@WorldRepublicEN 태그하기",
-              "step3": {
-                "prefix": "게시물 링크를 우리의",
-                "link": "X 포스트 콘테스트 텔레그램 채널에 공유하기"
-              }
-            },
-            "rules": {
-              "title": "콘테스트 규칙",
-              "rule1": "해당 주에 게시된 포스트만 참여 가능",
-              "rule2": "매주 일요일 오후 11시 59분(UTC) 종료",
-              "rule3": "총 유기적 참여도(좋아요 + 리포스트 + 댓글)에 따라 우승자 선정하고 24시간 이내에 텔레그램으로 연락"
-            },
-            "cta": {
-              "post": "지금 포스팅 시작하기",
-              "submit": "포스트 제출하기"
-            },
-            "winners": {
-              "title": "콘테스트 우승자",
-              "weekOf": "해당 주",
-              "engagements": "참여도"
-            }
           },
           "partySubsidy": {
             "topnav": "보조금 프로그램",
             "title": "정당 보조금 프로그램",
             "subtitle": "정치 운동을 구축하고 수익을 창출하세요",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "고정 주간 풀"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "고정 풀"
             },
             "devRewards": {
               "title": "개발자 보상의 10%",
-              "subtitle": "변동 보상 풀",
+              "subtitle": "변동 풀",
               "tooltip": "World는 인증된 사람들의 앱 사용량을 기반으로 개발자 보상을 분배합니다.",
               "checkOutRewards": "보상 확인하기"
             },
@@ -521,18 +389,23 @@
                   "description": "World Republic 앱에서 정치 운동을 시작하세요"
                 },
                 "growMembership": {
-                  "title": "회원 수 늘리기",
-                  "description": "구성원을 모집하고 커뮤니티를 구축하세요"
+                  "title": "투표용지에 오르기",
+                  "description": "주간 선거에 참여할 자격을 얻기 위해 회원 수를 늘리세요"
                 },
                 "earnRewards": {
-                  "title": "보상 획득",
-                  "description": "상위 50개 정당의 지도자들은 매주 보조금을 받습니다"
+                  "title": "자금 지원 받기",
+                  "description": "정당이 받은 득표수에 비례하여 보조금을 획득하세요"
                 }
               }
             },
             "cta": {
               "createJoin": "정당 만들기 또는 가입하기",
               "leaderGroup": "정당 리더 그룹 가입하기"
+            },
+            "payouts": {
+              "title": "지급",
+              "week": "주",
+              "showAll": "전체 보기"
             }
           }
         }
@@ -548,13 +421,20 @@
       },
       "sections": {
         "polls": {
-          "title": "오늘의 투표",
-          "description": "현안에 대한 신속한 투표",
+          "title": "이번 주 투표",
+          "description": "현재 주제에 대한 빠른 투표",
           "previous": {
             "title": "이전 투표",
             "backToGovern": "거버넌스로 돌아가기",
             "polls": {
-              "heatAdaptation": "극심한 열파 사태 동안 취약 계층을 보호하기 위해 국가들이 열파 조기 경보 및 공동 구호 노력을 위한 글로벌 조정 메커니즘을 수립해야 할까요?",
+              "digitalGovernance": "인공지능과 디지털 기술이 빠르게 발전함에 따라, 각국은 광범위한 사회적 혼란을 방지하기 위해 책임 있는 개발과 거버넌스를 공동으로 보장해야 할까요?",
+              "nuclearEscalationRisk": "지정학적 긴장이 고조된 지역에서 핵 확산 위험을 줄이기 위해 세계적인 틀을 마련해야 하는가?",
+              "nuclearDisarmamentTalks": "최근 핵물질 생산 증가에 대한 보고에 따라, 세계 강대국들은 포괄적 군축 협상을 재개해야 할까요?",
+              "pandemicPreparednessFund": "향후 전 세계적인 팬데믹 대비 및 대응을 위한 자원에 대한 지속적이고 공정한 접근을 보장하기 위해 영구적인 글로벌 기금을 설립해야 할까요?",
+              "globalAidCuts": "에이즈와 말라리아와 같은 질병에 대한 수십 년의 진전을 되돌릴 위험이 있는 대외 원조 감축을 재고해야 할까요?",
+              "coralCrisisAction": "역사상 가장 심각한 산호 백화 현상 속에서 각국은 산호초 보호를 위한 조율된 글로벌 전략에 전념해야 할까요?",
+              "aiSafetyTreaty": "각국은 시행 가능한 글로벌 AI 안전 조약에 동의해야 할까요?",
+              "heatAdaptation": "각국은 극단적인 열파 사건 동안 취약 인구를 보호하기 위한 열파 조기 경보 및 공동 구호 노력을 위한 글로벌 조정 메커니즘을 수립해야 할까요?",
               "sovereignDebtRestructuring": "지속 불가능한 부채 수준에 직면한 국가들에게 적시에 구제를 제공하기 위한 국제적으로 조정된 국가 부채 구조조정 메커니즘이 있어야 할까요?",
               "globalMilitaryExerciseProtocol": "분쟁 지역 근처에서 대규모 군사 훈련을 실시할 때 긴장 고조의 위험을 줄이기 위해 국가들이 국제 통보 및 관찰자 프로토콜에 동의해야 할까요?",
               "globalMaritimeSecurity": "국제 해역에서 무장 공격으로부터 상업 선박을 보호하기 위한 국제 해양 안보 태스크포스를 설립해야 할까요?",
@@ -623,7 +503,9 @@
               "globalDigitalServicesTax": "각국은 공정하고 예측 가능한 글로벌 과세를 보장하기 위해 대형 기술 플랫폼의 수익을 대상으로 하는 조율된 디지털 서비스세를 채택해야 할까요?",
               "wildlifeTrafficking": "각국은 곤충 및 기타 종의 신흥 생물해적행위를 포함한 불법 야생동물 밀매를 퇴치하기 위한 전용 국제 프레임워크에 협력해야 할까요?",
               "criticalMineralsExport": "공급망 충격과 지정학적 강압을 방지하기 위해 희토류 및 전략적 금속과 같은 주요 광물의 수출 통제에 대한 국제적으로 조율된 프레임워크가 있어야 할까요?",
-              "tradePolicyStability": "국가들이 글로벌 무역의 예측 가능성과 안정성을 향상시키기 위해 관세 정책에 대한 조정된 국제 행동 강령을 채택해야 할까요?"
+              "tradePolicyStability": "국가들이 글로벌 무역의 예측 가능성과 안정성을 향상시키기 위해 관세 정책에 대한 조정된 국제 행동 강령을 채택해야 할까요?",
+              "cyberResilienceProtocol": "국가들은 AI 기반 사이버 공격으로부터 전 세계의 중요한 인프라를 보호하기 위해 조정된 글로벌 사이버 보안 대응 프로토콜을 수립해야 할까요?",
+              "middleEastEscalation": "독립적인 국가 컨소시엄이 중동의 지역 분쟁 위험을 줄이기 위해 중립적인 긴장 완화 계획을 지원해야 할까요?"
             }
           }
         },
@@ -653,18 +535,98 @@
         "elections": {
           "title": "선거",
           "description": "대표를 선택하세요",
-          "worldConstituent": {
-            "title": "세계 제헌 의회 선거",
-            "description": "민주적으로 선출된 최초의 글로벌 의회를 위한 대표를 선택하세요.",
-            "button": "곧 출시 예정"
+          "testElections": {
+            "title": "테스트 선거",
+            "description": "정당 보조금을 분배하고 거버넌스 시스템을 개선하도록 도와주세요",
+            "button": "테스트 선거 열기"
+          },
+          "currentElectionPage": {
+            "title": "현재 선거",
+            "testElectionTitle": "테스트 선거",
+            "testElectionSubtitle": "투표 시스템 테스트를 도와주세요",
+            "testElectionTooltip1": "자세한 내용은 ",
+            "testElectionTooltip2": "선거 FAQ",
+            "testElectionTooltip3": "를 참조하십시오.",
+            "politicalParties": "정당",
+            "searchPlaceholder": "정당 검색...",
+            "leaderPrefix": "대표: ",
+            "noActiveElection": "진행 중인 선거 없음",
+            "noActiveElectionDescription": "현재 진행 중인 선거가 없습니다",
+            "backToOverview": "개요로 돌아가기",
+            "buttons": {
+              "voted": "투표함",
+              "vote": "투표하기",
+              "processing": "처리 중...",
+              "cancel": "취소"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "투표 확인",
+                "description": "{{partyName}}에 투표하려고 합니다. 이 작업은 블록체인에 기록됩니다.",
+                "confirmText": "투표 확인"
+              },
+              "change": {
+                "title": "투표 변경",
+                "description": "{{previousPartyName}}에서 {{partyName}}으로 투표를 변경하시겠습니까?",
+                "confirmText": "변경 확인"
+              },
+              "remove": {
+                "title": "투표 철회",
+                "description": "{{partyName}}에 대한 투표를 철회하시겠습니까? 어떤 정당에도 투표하지 않게 됩니다.",
+                "confirmText": "예, 투표 철회"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "투표하려면 World App에서 이 앱을여십시오.",
+              "connectWallet": "먼저 지갑을 연결하십시오.",
+              "noCurrentElection": "현재 선거를 확인할 수 없습니다.",
+              "fetchStatusError": "투표 상태를 가져 오는 데 실패했습니다. 다시 시도하십시오.",
+              "transactionFailed": "거래가 실패했거나 거부되었습니다.",
+              "voteRemovedSuccess": "투표가 성공적으로 철회되었습니다",
+              "voteSuccess": "{{partyName}}에 성공적으로 투표했습니다!",
+              "voteError": "투표하는 동안 오류가 발생했습니다."
+            },
+            "electionFaqPage": {
+              "title": "선거 FAQ",
+              "items": {
+                "electionPurpose": {
+                  "question": "이 선거의 목적은 무엇입니까?",
+                  "answer": "이 선거는 우리 거버넌스 모델의 핵심 부분입니다. 처음에는 정당 보조금이 어떻게 분배되는지를 결정하여 정당이받는 지원에 따라 보상합니다. 우리 시스템이 성숙 해짐에 따라 선거 결과는 정당에 더 중요한 책임을 부여 할 것입니다. 이것은 우리가 배우고 개선하는 데 도움이되는 반복적 인 과정입니다."
+                },
+                "ballotQualification": {
+                  "question": "정당은 어떻게 투표 용지에 오르게됩니까?",
+                  "answer": "투표 용지에 오르려면 정당은 기본 소득 플러스 수령인 총 수의 0.05 % 이상에 해당하는 회원을 보유해야합니다. 이것은 정당이 활동적이고 검증 된 회원으로부터 기본적인 수준의 지원을 받도록 보장합니다."
+                },
+                "howToVote": {
+                  "question": "어떻게 투표합니까?",
+                  "answer": "선거 페이지에서 자격있는 정당 목록을 볼 수 있습니다. 지원하려는 정당 옆의 '투표하기'버튼을 누르기 만하면됩니다. 지갑을 통해 투표를 확인하라는 메시지가 표시됩니다."
+                },
+                "canIChangeVote": {
+                  "question": "투표를 변경할 수 있습니까?",
+                  "answer": "예, 선거가 활성화되어있는 동안 언제든지 투표를 변경할 수 있습니다. 다른 정당에 투표하기 만하면 이전 투표가 대체됩니다. 투표를 완전히 철회 할 수도 있습니다."
+                },
+                "electionDeadline": {
+                  "question": "선거는 언제 끝납니 까?",
+                  "answer": "테스트 선거는 일요일 23:59:59 UTC까지 진행됩니다. 현재 선거에 포함되려면 이 시간 이전에 투표해야 합니다."
+                },
+                "isVoteAnonymous": {
+                  "question": "내 투표는 익명입니까?",
+                  "answer": "투표는 가명입니다. 귀하의 투표는 투명성을 위해 블록 체인의 지갑 주소에 연결되어 있지만 실제 신원은 직접 연결되어 있지 않습니다."
+                },
+                "whatArePartySubsidies": {
+                  "question": "정당 보조금은 무엇입니까?",
+                  "answer": "정당 보조금은받는 투표에 따라 정당에 분배되는 보상입니다. 이 프로그램은 정당 활동에 자금을 지원하고 성장을 돕습니다. <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">정당 보조금 프로그램</a>에 대해 자세히 알아볼 수 있습니다."
+                }
+              }
+            }
           }
         },
         "referendums": {
-          "title": "국민투표",
+          "title": "국민 투표",
           "description": "중요한 이슈에 대한 직접 투표",
           "worldConstitutional": {
             "title": "세계 헌법 국민투표",
-            "description": "인류의 집단적 미래를 이끌어 갈 원칙에 대한 역사적인 투표에 참여하세요.",
+            "description": "인류의 집단적 미래를 이끌어 갈 원칙에 대한 역사적인 투표에 참여하세요",
             "button": "곧 출시 예정"
           }
         },
@@ -678,9 +640,8 @@
       "title": "메뉴",
       "sections": {
         "experimental": {
-          "title": "실험 기능",
+          "title": "설정",
           "links": {
-            "verification": "인증 상태",
             "language": "언어"
           }
         },
@@ -695,6 +656,7 @@
         "help": {
           "title": "도움말",
           "links": {
+            "support": "지원",
             "faq": "자주 묻는 질문"
           }
         },
@@ -716,11 +678,11 @@
         },
         "basicIncome": {
           "question": "기본소득이란 무엇인가요?",
-          "answer": "저희의 기본소득은 월드 리퍼블릭의 모든 시민에게 제공되는 1 WDD(월드 드라크마)의 일일 보조금입니다. 실시간으로 누적되며 앱을 통해 언제든지 청구할 수 있습니다."
+          "answer": "저희의 기본소득은 월드 리퍼블릭의 모든 시민에게 제공되는 0.01 WDD(월드 드라크마)의 일일 보조금입니다. 실시간으로 누적되며 앱을 통해 언제든지 청구할 수 있습니다."
         },
         "basicIncomePlus": {
           "question": "기본소득 플러스는 어떻게 활성화하나요?",
-          "answer": "기본소득 플러스는 하루 추가 10 WDD를 제공하며 Orb 인증을 받은 사용자만 이용할 수 있습니다. 기본소득을 활성화한 후 수입 페이지에서 기본소득 플러스 활성화 옵션을 확인할 수 있습니다."
+          "answer": "기본소득 플러스는 하루 추가 0.19 WDD를 제공하며 Orb 인증을 받은 사용자만 이용할 수 있습니다. 기본소득을 활성화한 후 수입 페이지에서 기본소득 플러스 활성화 옵션을 확인할 수 있습니다."
         },
         "savings": {
           "question": "저축 계좌는 어떻게 작동하나요?",
@@ -728,19 +690,19 @@
         },
         "referralCodes": {
           "question": "추천 코드는 어떻게 작동하나요?",
-          "answer": "월드 리퍼블릭 시민으로서, 추천 프로그램을 통해 보상을 얻을 수 있습니다. 친구들과 고유한 추천 링크를 공유하면, Orb 또는 여권을 통해 인증된 사람이 가입할 때마다 50 WDD를 받게 됩니다. 보상을 받지 못하셨나요? 친구가 자신의 추천 섹션에서 '추천인에게 보상하기' 옵션을 선택하여 수동으로 활성화해야 할 수도 있습니다."
+          "answer": "월드 리퍼블릭 시민으로서 추천 프로그램을 통해 보상을 받을 수 있습니다. 고유한 추천 링크를 친구들과 공유하면, 우리 웹앱에 가입하고 라이브니스 검사를 완료한 사람 한 명당 10 WDD를 받게 됩니다."
         },
         "drachmaValue": {
           "question": "드라크마는 어디서 가치를 얻나요?",
           "answer": "드라크마는 월드 리퍼블릭의 공식 화폐로서 가치를 얻습니다. 우리의 민주적 글로벌 거버넌스 플랫폼이 성장함에 따라 WDD는 세계 경제에서 중요한 교환 수단이 될 잠재력이 있으며, 궁극적으로 기술 발전과 글로벌 자원의 혜택을 공평하게 분배하는 데 역할을 할 수 있습니다."
         },
         "topWallets": {
-          "question": "가장 큰 계정들은 누가 관리하나요?",
-          "answer": "세 개의 최대 계정은 <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>월드 리퍼블릭 재무부</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>기본소득 기금</a>, <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>기본소득 플러스 기금</a>입니다. 현재는 프로젝트 창립자가 관리하고 있지만, 헌법이 비준된 후에는 커뮤니티로 관리권이 이전될 예정입니다. 기타 주요 주소로는 <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>저축 계좌 컨트랙트</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>추천 리워드 분배자</a>, 그리고 유동성 풀: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>가 있습니다."
+          "question": "가장 큰 계정은 누가 통제하나요?",
+          "answer": "세 개의 가장 큰 계정은 <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>세계 공화국 재무부</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>기본 소득 기금</a>, 그리고 <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>기본 소득 플러스 기금</a>입니다. 이들은 현재 프로젝트 설립자에 의해 관리되며, 점진적으로 커뮤니티에 통제권을 이전하면서 안정성을 보장합니다. 다른 주요 주소에는 <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>저축 계좌 계약</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>추천 보상 분배자</a>, 그리고 유동성 풀이 포함됩니다: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, 그리고 <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "투표를 제안하기 위한 요건은 무엇인가요?",
-          "answer": "현재의 투표와 공개 서한은 단순한 시연용입니다. 우리 커뮤니티는 2025년 2분기에 선출될 제헌의회가 주도하는 헌법 설계 과정을 통해 거버넌스 시스템을 공동으로 결정하게 됩니다."
+          "question": "거버넌스에 어떻게 참여할 수 있나요?",
+          "answer": "정당에 가입하거나 창당하여 참여할 수 있습니다. 현재의 투표는 예시적인 것이지만, 정당은 우리 거버넌스 모델의 기초입니다. 정당이 전문화됨에 따라 민주적 통제를 위한 점점 더 중요한 영역을 열게 될 것이며, 이는 우리의 집단적 결정에 당신의 목소리를 낼 수 있게 할 것입니다."
         }
       }
     },
@@ -749,26 +711,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "인증 상태",
-      "levels": {
-        "document": {
-          "title": "문서 인증",
-          "description": "문서 인증 상태 확인",
-          "buttonText": "상태 확인"
-        },
-        "secureDocument": {
-          "title": "보안 문서 인증",
-          "description": "보안 문서 인증 상태 확인",
-          "buttonText": "상태 확인"
-        },
-        "orb": {
-          "title": "Orb 인증",
-          "description": "Orb 인증 상태 확인",
-          "buttonText": "상태 확인"
-        }
       }
     }
   }

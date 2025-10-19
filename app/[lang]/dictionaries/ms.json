@@ -1,14 +1,18 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "Sambung Dompet"
+      "connect": "Sambung dompet"
     },
-    "verifyButton": {
-      "verify": "Sahkan untuk Tuntut"
+    "banners": {
+      "dalgona": {
+        "title": "Ukir Dalgona untuk Mendapatkan Pendapatan",
+        "description": "Sertai cabaran memotong gula-gula dan menang ganjaran DAL.",
+        "cta": "Main sekarang"
+      }
     },
-    "pollOfTheDay": {
-      "previousPolls": "Undian Sebelumnya",
-      "vote": "Undi Sekarang"
+    "pollOfTheWeek": {
+      "previousPolls": "Undian sebelumnya",
+      "vote": "Undi sekarang"
     },
     "stakeForm": {
       "deposit": "Simpan",
@@ -19,8 +23,8 @@
       "max": "Maksimum",
       "interest": "Faedah:",
       "collect": "Kutip",
-      "depositButton": "Simpan Drachma",
-      "withdrawButton": "Tarik Drachma"
+      "depositButton": "Simpan drachma",
+      "withdrawButton": "Tarik drachma"
     },
     "toasts": {
       "wallet": {
@@ -53,32 +57,32 @@
       "tabs": {
         "politicalParties": "Parti",
         "polls": "Undian",
-        "openLetters": "Surat Terbuka",
-        "elections": "Pilihan Raya",
+        "openLetters": "Surat terbuka",
+        "elections": "Pilihan raya",
         "referendums": "Referendum"
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "Kami sedar tentang beberapa masalah pemuatan parti. Harap bersabar semasa kami berusaha untuk memperbaikinya.",
       "myParty": "Parti saya",
       "createParty": "Cipta Parti Baharu",
       "noParty": "Anda belum mencipta atau menyertai parti.",
       "discover": "Terokai",
       "partyDetails": "Butiran Parti",
       "description": "Penerangan",
-      "partyInfo": "Maklumat Parti",
+      "partyInfo": "Maklumat parti",
       "leader": "Ketua",
-      "website": "Laman Web",
+      "website": "Laman web",
       "members": "Ahli",
       "noMembers": "Belum ada ahli",
-      "bannedMembers": "Ahli yang Disekat",
+      "approvalNote": "Parti dengan pautan rasmi yang berfungsi dan/atau keahlian yang berkembang diberi keutamaan untuk kelulusan.",
+      "bannedMembers": "Ahli yang diharamkan",
       "errorLoading": "Ralat Memuatkan Parti",
       "partyNotFound": "Parti Tidak Dijumpai",
       "partyNotFoundDescription": "Parti yang anda cari tidak wujud atau telah dikeluarkan.",
       "backToParties": "Kembali ke Parti",
       "joining": "Menyertai...",
-      "joinParty": "Sertai Parti",
-      "shareParty": "Kongsi Parti",
+      "joinParty": "Sertai parti",
+      "shareParty": "Kongsi parti",
       "copied": "Pautan disalin ke papan klip",
       "status": {
         "pending": "Tertunda",
@@ -100,9 +104,9 @@
         "deleted": "Dipadam",
         "members": "ahli",
         "actions": {
-          "leaveParty": "Tinggalkan Parti",
-          "joinParty": "Sertai Parti",
-          "joinPendingParty": "Sertai Parti Menunggu"
+          "leaveParty": "Tinggalkan parti",
+          "joinParty": "Sertai parti",
+          "joinPendingParty": "Sertai parti menunggu"
         },
         "management": {
           "title": "Pengurusan Parti",
@@ -140,14 +144,14 @@
           },
           "button": {
             "creating": "Mencipta...",
-            "create": "Cipta Parti"
+            "create": "Cipta parti"
           }
         },
         "update": {
           "title": "Kemas Kini Butiran Parti",
           "button": {
             "update": "Kemas kini",
-            "updateDescription": "Kemas kini Penerangan"
+            "updateDescription": "Kemas kini penerangan"
           }
         },
         "transferLeadership": {
@@ -171,7 +175,7 @@
           },
           "button": {
             "processing": "Memproses...",
-            "transfer": "Pindahkan Kepimpinan"
+            "transfer": "Pindahkan kepimpinan"
           }
         },
         "leave": {
@@ -198,8 +202,8 @@
           "confirm": "Adakah anda pasti mahu memadam parti ini?",
           "button": {
             "processing": "Memproses...",
-            "deletePending": "Padam Parti Menunggu",
-            "delete": "Padam Parti"
+            "deletePending": "Padam parti menunggu",
+            "delete": "Padam parti"
           }
         },
         "memberManagement": {
@@ -214,21 +218,21 @@
             "description": "Masukkan alamat dompet ahli yang ingin anda keluarkan atau cari mengikut nama pengguna.",
             "button": {
               "processing": "Memproses...",
-              "remove": "Keluarkan Ahli"
+              "remove": "Keluarkan ahli"
             }
           },
           "ban": {
             "description": "Masukkan nama pengguna atau alamat dompet ahli yang ingin anda sekat daripada parti.",
             "button": {
               "processing": "Memproses...",
-              "ban": "Sekat Ahli"
+              "ban": "Sekat ahli"
             }
           },
           "unban": {
             "description": "Masukkan nama pengguna atau alamat dompet ahli yang disekat yang ingin anda benarkan kembali ke parti.",
             "button": {
               "processing": "Memproses...",
-              "unban": "Nyahsekat Ahli"
+              "unban": "Nyahsekat ahli"
             }
           }
         }
@@ -245,6 +249,11 @@
           "subtitle": "Log masuk untuk menuntut pendapatan asas anda",
           "setupSubtitle": "Sediakan pendapatan asas anda",
           "claimableSubtitle": "Drachma yang boleh dituntut",
+          "claimableTooltip1": "Sebagai sebahagian daripada",
+          "claimableTooltip2": "program pembelian balik",
+          "claimableTooltip3": " kami, kami sedang menyelaraskan tahap pendapatan asas untuk mewujudkan faedah jangka panjang yang mampan untuk komuniti kami. Sila lihat",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "untuk kadar semasa.",
           "activateButton": "Aktifkan Pendapatan Asas",
           "claimButton": "Tuntut",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "Pendapatan tambahan untuk pengguna yang disahkan",
               "features": {
                 "rate": {
-                  "title": "Tambahan 10 WDD sehari"
+                  "title": "Tambahan 0.19 WDD sehari"
                 },
                 "verification": {
                   "title": "Eksklusif untuk pengguna yang disahkan Orb untuk memastikan pengagihan yang adil"
-                },
-                "rewards": {
-                  "title": "Ganjaran beralih ke Plus dari masa ke masa sambil mengekalkan jumlah pada 11 WDD/hari"
                 }
               },
               "activateButton": "Aktifkan Pendapatan Asas Plus",
@@ -280,259 +286,126 @@
         },
         "invite": {
           "title": "Jemput",
-          "subtitle": "Dapatkan 50 WDD bagi setiap rakan yang menyertai",
-          "tooltip": "Rakan perlu disahkan melalui Orb atau pasport.",
+          "subtitle": "Dapatkan 10 WDD untuk setiap rakan yang menyertai",
+          "tooltip": "Rakan perlu menyertai aplikasi web baharu kami.",
           "learnMore": "Ketahui lebih lanjut",
           "stats": {
-            "title": "Statistik Rujukan Anda",
+            "title": "Statistik rujukan anda",
             "invites": "Jemputan diterima",
             "rewards": "Jumlah ganjaran"
           },
           "actions": {
-            "copyLink": "Salin Pautan Rujukan",
+            "copyLink": "Salin pautan rujukan",
             "copied": "Pautan rujukan disalin ke clipboard!",
             "connectWallet": "Sila sambungkan dompet anda untuk menjana pautan rujukan",
-            "rewardReferrer": "Hadiahkan Pemberi Rujukan",
-            "share": "Kongsi Pautan Jemputan"
-          },
-          "drawer": {
-            "title": "Ganjarkan Pemberi Rujukan",
-            "subtitle": "Cetuskan ganjaran 50 WDD percuma untuk pemberi rujukan anda",
-            "passportSubtitle": "Buktikan pengesahan pasport anda dan cetuskan ganjaran 50 WDD percuma untuk pemberi rujukan anda",
-            "invitedBy": "Anda dijemput oleh: {{username}}",
-            "input": {
-              "placeholder": "Masukkan nama pengguna (cth. username.0000)",
-              "lookupButton": "Cari Pengguna",
-              "sendingTo": "Menghantar ganjaran kepada:",
-              "editButton": "Sunting",
-              "sendButton": "Hantar Ganjaran",
-              "proveReward": "Buktikan dan Ganjarkan"
-            },
-            "errors": {
-              "enterUsername": "Sila masukkan nama pengguna",
-              "usernameNotFound": "Nama pengguna tidak dijumpai",
-              "lookupFailed": "Gagal mencari nama pengguna. Sila cuba lagi.",
-              "installMiniKit": "Sila pasang MiniKit untuk mencari nama pengguna",
-              "connectWallet": "Sila sambung dompet anda terlebih dahulu",
-              "transactionCanceled": "Transaksi dibatalkan"
-            },
-            "success": {
-              "rewardSent": "Berjaya menghantar ganjaran kepada {{username}}!"
-            }
+            "share": "Kongsi pautan jemputan"
           },
           "share": {
             "title": "Sertai Republik Dunia",
             "text": "Gunakan pautan jemputan saya untuk menyertai Republik Dunia dan memperoleh ganjaran bersama!"
-          },
-          "passportDrawer": {
-            "title": "Program Rujukan Disahkan-Pasport",
-            "subtitle": "Jemput pemegang pasport dan dapatkan 50 WDD",
-            "features": {
-              "countries": {
-                "title": "Pengesahan pasport kini tersedia di Argentina, Australia, Chile, Colombia, Croatia, Japan, Philippines, Portugal, South Korea, dan United States"
-              },
-              "rewards": {
-                "title": "Rakan menerima WLD untuk mengesahkan pasport mereka dalam Aplikasi World"
-              },
-              "basicIncome": {
-                "title": "Pendapatan asas tambahan untuk orang yang disahkan pasport akan datang tidak lama lagi"
-              }
-            },
-            "trigger": {
-              "titleText": "Kini juga tersedia selepas rakan-rakan yang disahkan pasport!",
-              "titleDetails": "Butiran"
-            }
           }
         },
         "contribute": {
           "title": "Sumbangan",
           "subtitle": "Terlibat, dapatkan ganjaran",
-          "contests": {
-            "ended": "Tamat",
-            "weekly": "Mingguan",
-            "topPrize": "Hadiah utama",
-            "xPost": {
-              "title": "Pertandingan Catatan X",
-              "description": "Tulis catatan menarik, menangi hadiah"
-            },
-            "poll": {
-              "title": "Pertandingan Undian",
-              "description": "Kumpul maklum balas komuniti dan perolehi"
-            },
-            "pollContest": {
-              "title": "Pertandingan Undian",
-              "weeklyTitle": "Pertandingan Undian Mingguan",
-              "description": "Kumpul maklum balas komuniti dan menangi hadiah",
-              "prizes": {
-                "title": "Hadiah",
-                "viewWinners": "Lihat pemenang sebelumnya",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "Cara Menyertai",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "Cipta undian berkaitan dengan Republik Dunia atau tadbir urus global secara amnya"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "Tetapkan supaya hanya pengguna yang disahkan boleh mengundi"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "Kongsi undian anda dalam",
-                    "link": {
-                      "text": "Saluran Telegram Pertandingan Undian kami",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "Peraturan Pertandingan",
-                "list": {
-                  "rule1": "Hanya undian yang dimulakan pada minggu semasa layak",
-                  "rule2": "Pertandingan berakhir setiap Ahad pada 11:59 PM UTC",
-                  "rule3": "Pemenang dipilih berdasarkan jumlah undi dan dihubungi melalui Telegram dalam masa 24 jam"
-                }
-              },
-              "cta": {
-                "create": "Buat Undian",
-                "submit": "Hantar Undian"
-              },
-              "winners": {
-                "title": "Pemenang Pertandingan",
-                "weekOf": "Minggu",
-                "votes": "undi"
-              }
-            },
-            "testing": {
-              "title": "Ujian Ciri Baharu",
-              "description": "Terbuka untuk ahli yang disahkan dengan pasport tetapi tidak melalui Orb"
-            },
-            "oneOff": "Sekali sahaja",
-            "limited": "50 tempat"
-          },
-          "earlyAccess": {
-            "title": "Program Akses Awal",
-            "description": "Dapatkan WDD dengan menguji ciri-ciri kami yang akan datang"
-          },
           "buybackProgram": {
-            "topnav": "Program Belian Balik",
-            "title": "Program Belian Balik Token",
-            "subtitle": "Perkukuhkan nilai WDD bersama",
+            "topnav": "Program Pembelian Semula",
+            "title": "Program Pembelian Semula Token",
+            "subtitle": "Perkukuh nilai WDD bersama",
             "sections": {
-              "devRewards": {
-                "title": "Program Ganjaran Pembangun",
-                "startDate": "Bermula 1 April 2025",
-                "description": "World sedang menguji ganjaran pembangun berdasarkan penggunaan aplikasi oleh manusia yang disahkan.",
-                "learnMore": "Ketahui lebih lanjut tentang program"
+              "fundingSources": {
+                "title": "Sumber pembiayaan",
+                "devRewards": {
+                  "title": "Ganjaran Pembangun World",
+                  "weekProgress": "Minggu 7 daripada 12"
+                },
+                "worldRetro": {
+                  "title": "Pembiayaan World Retro"
+                },
+                "optimism": {
+                  "title": "Pembiayaan Optimism Retro"
+                },
+                "affiliate": {
+                  "title": "Komisen afiliasi"
+                }
               },
               "commitment": {
-                "title": "Janji kami sebanyak 50%",
-                "body": "Kami berjanji untuk menggunakan sekurang-kurangnya 50% daripada ganjaran program kami untuk belian balik WDD."
-              },
-              "helpSection": {
-                "title": "Bagaimana anda boleh membantu",
-                "intro": "Anda boleh menyumbang secara langsung untuk meningkatkan nilai token WDD anda:",
-                "steps": {
-                  "invite": {
-                    "title": "Jemput orang lain untuk menyertai",
-                    "description": "Kembangkan komuniti ahli yang disahkan"
-                  },
-                  "useApp": {
-                    "title": "Gunakan aplikasi secara kerap",
-                    "description": "Dorong kitaran ekonomi yang baik"
-                  }
-                }
+                "title": "Komitmen kami",
+                "description": "Kami berjanji untuk menggunakan sekurang-kurangnya 50% daripada semua pembiayaan ini untuk pembelian semula WDD.",
+                "viewAccount": "Lihat Akaun Pembelian Semula"
               },
               "valueCycle": {
                 "title": "Kitaran Nilai Positif",
                 "steps": {
-                  "step1": "Lebih banyak pengguna & penggunaan aplikasi",
-                  "step2": "Ganjaran pembangun yang lebih tinggi",
-                  "step3": "Lebih banyak belian balik token"
+                  "step1": "Lebih ramai pengguna & penggunaan aplikasi",
+                  "step2": "Ganjaran lebih tinggi",
+                  "step3": "Lebih banyak pembelian semula token"
+                }
+              },
+              "helpSection": {
+                "title": "Cara anda boleh membantu",
+                "intro": "Anda boleh menyumbang secara langsung untuk meningkatkan nilai token WDD anda:",
+                "steps": {
+                  "invite": {
+                    "title": "Jemput orang lain untuk menyertai",
+                    "description": "Tumbuhkan komuniti ahli yang disahkan kami"
+                  },
+                  "useApp": {
+                    "title": "Gunakan aplikasi secara berkala",
+                    "description": "Dorong kitaran ekonomi yang positif"
+                  }
                 }
               }
             },
             "actions": {
-              "share": "Kongsi Jemputan"
+              "share": "Kongsi jemputan"
             },
-            "cta": "Lihat Statistik Mini App"
+            "cta": "Lihat ganjaran mini app"
           },
           "buybackLink": {
             "title": "Program Pembelian Semula",
             "description": "Pertumbuhan nilai WDD digerakkan oleh komuniti"
-          },
-          "xContest": {
-            "title": "Pertandingan Catatan X",
-            "weeklyTitle": "Pertandingan Catatan X Mingguan",
-            "description": "Tulis catatan menarik, menangi hadiah",
-            "prizes": {
-              "title": "Hadiah",
-              "viewWinners": "Lihat pemenang terdahulu",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "Cara menyertai",
-              "step1": "Tulis catatan X tentang Republik Dunia",
-              "step2": "Tag @WorldRepublicEN",
-              "step3": {
-                "prefix": "Kongsi pautan ke catatan anda dalam",
-                "link": "Saluran Telegram Pertandingan Catatan X"
-              }
-            },
-            "rules": {
-              "title": "Peraturan pertandingan",
-              "rule1": "Hanya catatan yang diterbitkan pada minggu semasa layak",
-              "rule2": "Pemenang dipilih berdasarkan jumlah penglibatan organik (suka + kongsi semula + komen)",
-              "rule3": "Pertandingan berakhir setiap Ahad pada 11:59 PM UTC"
-            },
-            "cta": {
-              "post": "Mula Menulis Sekarang",
-              "submit": "Hantar Catatan Anda"
-            },
-            "winners": {
-              "title": "Pemenang Pertandingan",
-              "weekOf": "Minggu",
-              "engagements": "penglibatan"
-            }
           },
           "partySubsidy": {
             "topnav": "Program Subsidi",
             "title": "Program Subsidi Parti",
             "subtitle": "Bina pergerakan politik anda dan dapatkan pendapatan",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "Dana mingguan tetap"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "Kolam tetap"
             },
             "devRewards": {
               "title": "10% daripada Ganjaran Pembangun kami",
-              "subtitle": "Dana ganjaran berubah-ubah",
+              "subtitle": "Kolam berubah-ubah",
               "tooltip": "World mengagihkan ganjaran pembangun berdasarkan penggunaan aplikasi oleh manusia yang disahkan.",
               "checkOutRewards": "Lihat ganjaran"
             },
             "howItWorks": {
-              "title": "Cara Ia Berfungsi",
+              "title": "Cara ia berfungsi",
               "steps": {
                 "createParty": {
-                  "title": "Cipta Parti",
+                  "title": "Cipta parti",
                   "description": "Mulakan pergerakan politik anda dalam aplikasi World Republic"
                 },
                 "growMembership": {
-                  "title": "Tingkatkan Keahlian Anda",
-                  "description": "Rekrut ahli dan bina komuniti anda"
+                  "title": "Masuk dalam undi",
+                  "description": "Tingkatkan keahlian anda untuk layak dalam pilihan raya mingguan"
                 },
                 "earnRewards": {
-                  "title": "Dapatkan Ganjaran",
-                  "description": "Pemimpin 50 parti teratas menerima subsidi mingguan"
+                  "title": "Terima pembiayaan",
+                  "description": "Dapatkan subsidi mengikut kadar undi yang diterima oleh parti anda"
                 }
               }
             },
             "cta": {
-              "createJoin": "Cipta atau Sertai Parti",
-              "leaderGroup": "Sertai Kumpulan Pemimpin Parti"
+              "createJoin": "Cipta atau sertai parti",
+              "leaderGroup": "Sertai kumpulan pemimpin parti"
+            },
+            "payouts": {
+              "title": "Pembayaran",
+              "week": "Minggu",
+              "showAll": "Tunjukkan semua"
             }
           }
         }
@@ -548,13 +421,21 @@
       },
       "sections": {
         "polls": {
-          "title": "Undian Hari Ini",
-          "description": "Undian pantas tentang topik semasa",
+          "title": "Undian Mingguan",
+          "description": "Undian pantas mengenai topik semasa",
           "previous": {
             "title": "Undian Sebelumnya",
-            "backToGovern": "Kembali ke Tadbir Urus",
+            "backToGovern": "Kembali ke Tadbir",
             "polls": {
-              "heatAdaptation": "Haruskah negara-negara menubuhkan mekanisme koordinasi global untuk amaran awal gelombang panas dan usaha bantuan bersama untuk melindungi populasi yang rentan semasa kejadian haba ekstrem?",
+              "digitalGovernance": "Memandangkan kecerdasan buatan dan teknologi digital berkembang pesat, patutkah negara-negara secara kolektif memastikan pembangunan dan tadbir urus yang bertanggungjawab untuk mengelakkan gangguan masyarakat yang meluas?",
+              "nuclearEscalationRisk": "Haruskah satu rangka kerja global diwujudkan untuk mengurangkan risiko peningkatan nuklear di kawasan yang mempunyai ketegangan geopolitik yang memuncak?",
+              "middleEastEscalation": "Patutkah sebuah konsortium negara-negara merdeka menyokong inisiatif de-eskalasi berkecuali di Timur Tengah untuk mengurangkan risiko konflik serantau?",
+              "nuclearDisarmamentTalks": "Memandangkan laporan terkini mengenai peningkatan pengeluaran bahan nuklear, patutkah kuasa dunia memulakan semula rundingan perlucutan senjata nuklear yang menyeluruh?",
+              "pandemicPreparednessFund": "Adakah dana global kekal harus ditubuhkan untuk memastikan akses berterusan dan saksama kepada sumber untuk kesediaan dan tindak balas pandemik masa hadapan di seluruh dunia?",
+              "globalAidCuts": "Adakah negara-negara harus mempertimbangkan semula pengurangan bantuan asing yang berisiko membalikkan kemajuan selama beberapa dekad terhadap penyakit seperti AIDS dan malaria?",
+              "coralCrisisAction": "Haruskah negara-negara komited kepada strategi global yang terkoordinasi untuk melindungi terumbu karang di tengah-tengah peristiwa pemutihan karang terburuk dalam sejarah yang direkodkan?",
+              "aiSafetyTreaty": "Haruskah negara-negara bersetuju dengan perjanjian keselamatan AI global yang boleh dikuatkuasakan?",
+              "heatAdaptation": "Patutkah negara-negara mewujudkan mekanisme koordinasi global untuk amaran awal gelombang panas dan usaha bantuan bersama untuk melindungi populasi yang terdedah semasa kejadian panas melampau?",
               "globalMilitaryExerciseProtocol": "Patutkah negara-negara bersetuju dengan protokol pemberitahuan dan pemerhati antarabangsa untuk latihan ketenteraan berskala besar berhampiran kawasan yang dipertikaikan untuk mengurangkan risiko peningkatan ketegangan?",
               "globalMaritimeSecurity": "Patutkah pasukan petugas keselamatan maritim antarabangsa ditubuhkan untuk melindungi perkapalan komersial di perairan antarabangsa daripada serangan bersenjata?",
               "globalNuclearDialogue": "Patutkah kuasa-kuasa utama diwajibkan di bawah perjanjian antarabangsa untuk terlibat dalam rundingan nuklear berterusan di peringkat pakar dengan negara-negara lawan untuk mencegah eskalasi dan memastikan pengawasan diplomatik?",
@@ -620,7 +501,8 @@
               "sovereignDebtRestructuring": "Haruskah terdapat mekanisme penstrukturan semula hutang kerajaan yang diselaraskan secara antarabangsa untuk memberikan bantuan tepat pada masanya kepada negara-negara yang menghadapi tahap hutang yang tidak mampan?",
               "wildlifeTrafficking": "Perlukah negara-negara bekerjasama dalam rangka kerja antarabangsa khusus untuk memerangi pemerdagangan hidupan liar yang menyalahi undang-undang, termasuk biopirasi serangga dan spesies lain yang sedang berkembang?",
               "criticalMineralsExport": "Patutkah terdapat rangka kerja yang diselaraskan secara antarabangsa untuk kawalan eksport mineral kritikal—seperti logam nadir bumi dan logam strategik—untuk mencegah kejutan rantaian bekalan dan paksaan geopolitik?",
-              "tradePolicyStability": "Perlukah negara-negara mengamalkan kod etika antarabangsa yang terkoordinasi untuk dasar tarif bagi meningkatkan kebolehramalan dan kestabilan dalam perdagangan global?"
+              "tradePolicyStability": "Perlukah negara-negara mengamalkan kod etika antarabangsa yang terkoordinasi untuk dasar tarif bagi meningkatkan kebolehramalan dan kestabilan dalam perdagangan global?",
+              "cyberResilienceProtocol": "Patutkah negara-negara mewujudkan protokol tindak balas keselamatan siber global yang diselaraskan untuk mempertahankan daripada serangan siber berkuasa AI yang boleh mengganggu infrastruktur kritikal di seluruh dunia?"
             }
           }
         },
@@ -642,7 +524,7 @@
               "referenceTitle": "Institut Masa Depan Kehidupan"
             },
             "longView": {
-              "title": "Surat terbuka memanggil pemimpin dunia untuk menunjukkan kepimpinan pandangan panjang mengenai ancaman kewujudan",
+              "title": "Surat Terbuka Memanggil Pemimpin Dunia untuk Menunjukkan Kepimpinan Pandangan Panjang mengenai Ancaman Kewujudan",
               "referenceTitle": "Institut Masa Depan Kehidupan"
             }
           }
@@ -650,10 +532,90 @@
         "elections": {
           "title": "Pilihan Raya",
           "description": "Pilih wakil anda",
-          "worldConstituent": {
-            "title": "Pilihan Raya Perhimpunan Perlembagaan Dunia",
-            "description": "Pilih wakil-wakil untuk parlimen global pertama yang dipilih secara demokratik.",
-            "button": "Akan Datang"
+          "testElections": {
+            "title": "Pilihan Raya Ujian",
+            "description": "Bantu kami mengagihkan subsidi parti dan memperbaiki sistem tadbir urus kami",
+            "button": "Buka pilihan raya ujian"
+          },
+          "currentElectionPage": {
+            "title": "Pilihan Raya Semasa",
+            "testElectionTitle": "Pilihan Raya Ujian",
+            "testElectionSubtitle": "Bantu kami menguji sistem pengundian kami",
+            "testElectionTooltip1": "Untuk maklumat lanjut, sila baca ",
+            "testElectionTooltip2": "Soalan Lazim pilihan raya",
+            "testElectionTooltip3": ".",
+            "politicalParties": "Parti-parti politik",
+            "searchPlaceholder": "Cari parti...",
+            "leaderPrefix": "Ketua: ",
+            "noActiveElection": "Tiada Pilihan Raya Aktif",
+            "noActiveElectionDescription": "Tiada pilihan raya yang sedang berjalan pada masa ini",
+            "backToOverview": "Kembali ke gambaran keseluruhan",
+            "buttons": {
+              "voted": "Telah Mengundi",
+              "vote": "Undi",
+              "processing": "Memproses...",
+              "cancel": "Batal"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "Sahkan Undi Anda",
+                "description": "Anda akan memberikan undi anda untuk {{partyName}}. Tindakan ini akan direkodkan pada blockchain.",
+                "confirmText": "Sahkan undi"
+              },
+              "change": {
+                "title": "Tukar Undi Anda",
+                "description": "Adakah anda pasti mahu menukar undi anda dari {{previousPartyName}} kepada {{partyName}}?",
+                "confirmText": "Sahkan perubahan"
+              },
+              "remove": {
+                "title": "Buang Undi Anda",
+                "description": "Adakah anda pasti mahu membuang undi anda untuk {{partyName}}? Anda tidak akan mengundi mana-mana parti.",
+                "confirmText": "Ya, buang undi"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "Sila buka aplikasi ini dalam Aplikasi Dunia untuk mengundi.",
+              "connectWallet": "Sila sambungkan dompet anda terlebih dahulu.",
+              "noCurrentElection": "Tidak dapat menentukan pilihan raya semasa.",
+              "fetchStatusError": "Gagal mendapatkan status pengundian. Sila cuba lagi.",
+              "transactionFailed": "Transaksi gagal atau ditolak.",
+              "voteRemovedSuccess": "Undi berjaya dibuang",
+              "voteSuccess": "Berjaya mengundi untuk {{partyName}}!",
+              "voteError": "Ralat berlaku semasa membuang undi anda."
+            },
+            "electionFaqPage": {
+              "title": "Soalan Lazim Pilihan Raya",
+              "items": {
+                "electionPurpose": {
+                  "question": "Apakah tujuan pilihan raya ini?",
+                  "answer": "Pilihan raya ini adalah bahagian teras model tadbir urus kami. Pada mulanya, mereka menentukan bagaimana subsidi parti diagihkan, memberi ganjaran kepada parti berdasarkan sokongan yang mereka terima. Apabila sistem kami matang, keputusan pilihan raya akan memberikan tanggungjawab yang lebih besar kepada parti. Ini adalah proses berulang untuk membantu kami belajar dan memperbaiki."
+                },
+                "ballotQualification": {
+                  "question": "Bagaimanakah sesebuah parti boleh masuk ke dalam kertas undi?",
+                  "answer": "Untuk berada di atas kertas undi, sesebuah parti mesti mempunyai ahli yang sama dengan sekurang-kurangnya 0.05% daripada jumlah penerima Pendapatan Asas Plus. Ini memastikan bahawa parti mempunyai tahap sokongan asas daripada ahli yang aktif dan disahkan."
+                },
+                "howToVote": {
+                  "question": "Bagaimana cara saya mengundi?",
+                  "answer": "Di halaman pilihan raya, anda boleh melihat senarai parti politik yang layak. Hanya ketik butang 'Undi' di sebelah parti yang ingin anda sokong. Anda akan diminta untuk mengesahkan undi anda melalui dompet anda."
+                },
+                "canIChangeVote": {
+                  "question": "Bolehkah saya menukar undi saya?",
+                  "answer": "Ya, anda boleh menukar undi anda pada bila-bila masa semasa pilihan raya aktif. Hanya undi parti yang berbeza, dan undi anda sebelum ini akan digantikan. Anda juga boleh membuang undi anda sepenuhnya."
+                },
+                "electionDeadline": {
+                  "question": "Bilakah pilihan raya berakhir?",
+                  "answer": "Pilihan raya ujian berjalan sehingga Ahad jam 23:59:59 UTC. Undi mesti diberikan sebelum masa ini untuk dikira untuk pilihan raya semasa."
+                },
+                "isVoteAnonymous": {
+                  "question": "Adakah undi saya tanpa nama?",
+                  "answer": "Pengundian adalah nama samaran. Walaupun undi anda dipautkan ke alamat dompet anda di blockchain untuk ketelusan, identiti dunia nyata anda tidak terikat secara langsung dengannya."
+                },
+                "whatArePartySubsidies": {
+                  "question": "Apakah subsidi parti?",
+                  "answer": "Subsidi parti adalah ganjaran yang diagihkan kepada parti politik berdasarkan undi yang mereka terima. Program ini membiayai aktiviti parti dan membantu mereka berkembang. Anda boleh mengetahui lebih lanjut mengenai <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">Program Subsidi Parti</a>."
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -661,8 +623,8 @@
           "description": "Undian langsung mengenai isu-isu penting",
           "worldConstitutional": {
             "title": "Referendum Perlembagaan Dunia",
-            "description": "Sertai undian bersejarah mengenai prinsip-prinsip yang akan memandu masa depan kolektif manusia.",
-            "button": "Akan Datang"
+            "description": "Sertai undian bersejarah mengenai prinsip-prinsip yang akan memandu masa depan kolektif manusia",
+            "button": "Akan datang"
           }
         },
         "politicalParties": {
@@ -675,14 +637,13 @@
       "title": "Menu",
       "sections": {
         "experimental": {
-          "title": "EKSPERIMENTAL",
+          "title": "TETAPAN",
           "links": {
-            "verification": "Status pengesahan",
             "language": "Bahasa"
           }
         },
         "connect": {
-          "title": "HUBUNGAN",
+          "title": "BERHUBUNG",
           "links": {
             "community": "Komuniti",
             "announcements": "Pengumuman",
@@ -692,7 +653,8 @@
         "help": {
           "title": "BANTUAN",
           "links": {
-            "faq": "Soalan Lazim"
+            "support": "Sokongan",
+            "faq": "FAQ"
           }
         },
         "code": {
@@ -713,11 +675,11 @@
         },
         "basicIncome": {
           "question": "Apakah Pendapatan Asas?",
-          "answer": "Pendapatan Asas kami ialah subsidi harian 1 WDD (drachma dunia) yang disediakan kepada semua warganegara Republik Dunia. Ia terkumpul secara masa nyata dan boleh dituntut pada bila-bila masa melalui aplikasi."
+          "answer": "Pendapatan Asas kami ialah subsidi harian 0.01 WDD (drachma dunia) yang disediakan kepada semua warganegara Republik Dunia. Ia terkumpul secara masa nyata dan boleh dituntut pada bila-bila masa melalui aplikasi."
         },
         "basicIncomePlus": {
           "question": "Bagaimana saya mengaktifkan Pendapatan Asas Plus?",
-          "answer": "Pendapatan Asas Plus menyediakan tambahan 10 WDD sehari dan tersedia secara eksklusif untuk pengguna yang disahkan Orb. Selepas mengaktifkan Pendapatan Asas, anda akan melihat pilihan untuk mengaktifkan Pendapatan Asas Plus pada halaman Perolehan."
+          "answer": "Pendapatan Asas Plus menyediakan tambahan 0.19 WDD sehari dan tersedia secara eksklusif untuk pengguna yang disahkan Orb. Selepas mengaktifkan Pendapatan Asas, anda akan melihat pilihan untuk mengaktifkan Pendapatan Asas Plus pada halaman Perolehan."
         },
         "savings": {
           "question": "Bagaimana Akaun Simpanan berfungsi?",
@@ -725,19 +687,19 @@
         },
         "referralCodes": {
           "question": "Bagaimana kod rujukan berfungsi?",
-          "answer": "Sebagai warga Republik Dunia, anda boleh mendapat ganjaran melalui program rujukan kami. Kongsi pautan rujukan unik anda dengan rakan-rakan, dan anda akan menerima 50 WDD untuk setiap orang yang menyertai dan disahkan melalui Orb atau pasport. Belum menerima ganjaran anda? Rakan anda mungkin perlu mengaktifkannya secara manual dengan memilih pilihan 'Beri Ganjaran kepada Perujuk' dalam bahagian rujukan mereka."
+          "answer": "Sebagai warga Republik Dunia, anda boleh memperoleh ganjaran melalui program rujukan kami. Kongsi pautan rujukan unik anda dengan rakan, dan anda akan menerima 10 WDD untuk setiap orang yang menyertai web app kami dan melengkapkan semakan liveness."
         },
         "drachmaValue": {
           "question": "Dari mana drachma mendapat nilainya?",
           "answer": "Drachma mendapat nilainya dari menjadi mata wang rasmi Republik Dunia. Apabila platform tadbir urus global demokratik kami berkembang, WDD berpotensi menjadi medium pertukaran yang penting dalam ekonomi dunia, dan akhirnya boleh memainkan peranan dalam pengagihan faedah yang saksama dari kemajuan teknologi dan sumber global."
         },
         "topWallets": {
-          "question": "Siapa yang mengawal akaun terbesar?",
-          "answer": "Tiga akaun terbesar ialah <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Perbendaharaan Republik Dunia</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Asas</a>, dan <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Asas Plus</a>. Pada masa ini, ini dikawal oleh pengasas projek, tetapi kawalan akan dipindahkan kepada komuniti selepas perlembagaan kami disahkan. Alamat utama lain termasuk <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>kontrak Akaun Simpanan</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>pengedar Ganjaran Rujukan</a>, dan kolam kecairan: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, dan <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
+          "question": "Siapa yang mengawal akaun-akaun terbesar?",
+          "answer": "Tiga akaun terbesar adalah <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Perbendaharaan Republik Dunia</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Asas</a>, dan <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Asas Plus</a>. Ini sedang diuruskan oleh pengasas projek untuk memastikan kestabilan sementara kami secara beransur-ansur memindahkan kawalan kepada komuniti. Alamat utama lain termasuk <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>kontrak Akaun Simpanan</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>pengedar Ganjaran Rujukan</a>, dan kolam kecairan: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, dan <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "Apakah keperluan untuk mencadangkan undian?",
-          "answer": "Undian dan surat terbuka semasa hanya untuk pameran. Komuniti kami akan secara kolektif memutuskan sistem tadbir urus kami melalui proses reka bentuk perlembagaan yang diketuai oleh Perhimpunan Perlembagaan yang dipilih pada Q2 2025."
+          "question": "Bagaimana saya boleh mengambil bahagian dalam tadbir urus?",
+          "answer": "Anda boleh mengambil bahagian dengan menyertai atau menubuhkan parti politik. Walaupun undi semasa adalah sebagai gambaran, parti adalah asas model tadbir urus kami. Apabila parti menjadi profesional, mereka akan membuka lebih banyak bidang penting untuk kawalan demokrasi, memberikan anda suara dalam keputusan kolektif kami."
         }
       }
     },
@@ -746,26 +708,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "Status Pengesahan",
-      "levels": {
-        "document": {
-          "title": "Pengesahan Dokumen",
-          "description": "Semak status pengesahan dokumen",
-          "buttonText": "Semak Status"
-        },
-        "secureDocument": {
-          "title": "Pengesahan Dokumen Selamat",
-          "description": "Semak status pengesahan dokumen selamat",
-          "buttonText": "Semak Status"
-        },
-        "orb": {
-          "title": "Pengesahan Orb",
-          "description": "Semak status pengesahan Orb",
-          "buttonText": "Semak Status"
-        }
       }
     }
   }

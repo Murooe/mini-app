@@ -1,12 +1,10 @@
 "use client";
 
 import { Typography } from "@/components/ui/Typography";
-import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import { BiChevronLeft } from "react-icons/bi";
 import { FiExternalLink } from "react-icons/fi";
 import {
-  PiCode,
   PiCoins,
   PiHandHeart,
   PiHandshake,
@@ -19,6 +17,7 @@ import { useCallback, useEffect } from "react";
 import { useToast } from "@/components/ui/Toast";
 import { useWallet } from "@/components/contexts/WalletContext";
 import { MiniKit } from "@worldcoin/minikit-js";
+import { useRouter } from "next/navigation";
 
 export default function BuybackProgramPage({
   params: { lang },
@@ -28,6 +27,7 @@ export default function BuybackProgramPage({
   const dictionary = useTranslations(lang);
   const { showToast } = useToast();
   const { username, walletAddress, setUsername } = useWallet();
+  const router = useRouter();
 
   // First, wrap loadCurrentUsername with useCallback to prevent infinite loop
   const loadCurrentUsernameCallback = useCallback(async () => {
@@ -76,7 +76,7 @@ export default function BuybackProgramPage({
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("newBuybackProgramVisited", "true");
+      localStorage.setItem("newBuybackVisited", "true");
     }
   }, []);
 
@@ -84,14 +84,18 @@ export default function BuybackProgramPage({
     <div className="pb-safe flex min-h-dvh flex-col px-6">
       <div className="fixed left-0 right-0 top-0 z-10 bg-gray-0 px-6">
         <div className="relative flex items-center justify-center py-6">
-          <Link
-            href={`/${lang}/earn?tab=Contribute`}
+          <button
+            onClick={() => router.back()}
             className="absolute left-0 flex size-10 items-center justify-center rounded-full bg-gray-100"
-            aria-label="Back to Earn"
+            aria-label="Back"
           >
             <BiChevronLeft className="size-6 text-gray-500" />
-          </Link>
-          <Typography as="h2" variant={{ variant: "heading", level: 3 }}>
+          </button>
+          <Typography
+            as="h2"
+            variant={{ variant: "heading", level: 3 }}
+            className="mx-12 text-center"
+          >
             {dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram?.topnav}
           </Typography>
         </div>
@@ -120,12 +124,12 @@ export default function BuybackProgramPage({
         </div>
 
         <div className="space-y-8">
-          {/* Developer Rewards Section */}
+          {/* Funding Sources Card */}
           <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-0 shadow-sm">
-            <div className="border-b border-gray-100 bg-gradient-to-r from-gray-50 to-gray-0 p-4">
-              <div className="mb-3 flex items-center">
+            <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50 to-gray-0 p-4">
+              <div className="flex items-center">
                 <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200">
-                  <PiCode className="h-4 w-4 text-gray-500" />
+                  <PiCoins className="h-4 w-4 text-gray-500" />
                 </div>
                 <Typography
                   as="h3"
@@ -134,46 +138,141 @@ export default function BuybackProgramPage({
                 >
                   {
                     dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
-                      ?.sections?.devRewards?.title
+                      ?.sections?.fundingSources?.title
                   }
                 </Typography>
               </div>
-              <Typography
-                variant="subtitle"
-                level={3}
-                className="text-gray-700"
-              >
-                {
-                  dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
-                    ?.sections?.devRewards?.startDate
-                }
-              </Typography>
             </div>
-            <div className="p-4">
-              <Typography variant="body" level={2} className="text-gray-600">
-                {
-                  dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
-                    ?.sections?.devRewards?.description
-                }
-              </Typography>
+            <div className="space-y-3 p-4">
+              {/* Developer Rewards */}
               <a
                 href="https://world.org/blog/announcements/world-launches-mini-apps-300k-dev-rewards-pilot-inspire-human-first-apps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-600 hover:text-primary-800 mt-3 inline-flex items-center"
+                className="group block rounded-lg bg-gray-50 p-3"
               >
-                <Typography variant="subtitle" level={3}>
-                  {
-                    dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
-                      ?.sections?.devRewards?.learnMore
-                  }
-                </Typography>
-                <FiExternalLink className="mb-0.5 ml-1 h-3 w-3" />
+                <div className="my-1 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <div className="text-[16px] font-medium text-gray-900">
+                      {(() => {
+                        const title =
+                          dictionary?.pages?.earn?.tabs?.contribute
+                            ?.buybackProgram?.sections?.fundingSources
+                            ?.devRewards?.title || "";
+                        const words = title.split(" ");
+                        const lastWord = words.pop();
+                        return (
+                          <>
+                            {words.join(" ")}
+                            {lastWord && (
+                              <>
+                                {" "}
+                                <span className="inline-flex items-center">
+                                  {lastWord}
+                                  <FiExternalLink className="mb-[1px] ml-1.5 inline-block h-3.5 w-3.5 align-baseline" />
+                                </span>
+                              </>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end whitespace-nowrap">
+                    <span className="bg-green-100 text-green-800 rounded-full py-0.5 pl-2.5 text-sm font-medium">
+                      30,290 WLD
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              {/* Optimism Funding */}
+              <a
+                href="https://atlas.optimism.io/project/0x5831a5bc2b6e683bcb8e392453a85c5e7f755aa700e827ed9c3e1c6d67fb2a96"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-lg bg-gray-50 p-3 transition-all hover:bg-gray-100"
+              >
+                <div className="my-1 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <div className="text-[16px] font-medium text-gray-900">
+                      {(() => {
+                        const title =
+                          dictionary?.pages?.earn?.tabs?.contribute
+                            ?.buybackProgram?.sections?.fundingSources?.optimism
+                            ?.title || "";
+                        const words = title.split(" ");
+                        const lastWord = words.pop();
+                        return (
+                          <>
+                            {words.join(" ")}
+                            {lastWord && (
+                              <>
+                                {" "}
+                                <span className="inline-flex items-center">
+                                  {lastWord}
+                                  <FiExternalLink className="mb-[1px] ml-1.5 inline-block h-3.5 w-3.5 align-baseline" />
+                                </span>
+                              </>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end whitespace-nowrap">
+                    <span className="bg-yellow-100 text-yellow-800 rounded-full py-0.5 pl-2.5 text-sm font-medium">
+                      62,786 OP
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              {/* World Retro Funding */}
+              <a
+                href="https://world.org/retro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-lg bg-gray-50 p-3 transition-all hover:bg-gray-100"
+              >
+                <div className="my-1 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <div className="text-[16px] font-medium text-gray-900">
+                      {(() => {
+                        const title =
+                          dictionary?.pages?.earn?.tabs?.contribute
+                            ?.buybackProgram?.sections?.fundingSources
+                            ?.worldRetro?.title || "";
+                        const words = title.split(" ");
+                        const lastWord = words.pop();
+                        return (
+                          <>
+                            {words.join(" ")}
+                            {lastWord && (
+                              <>
+                                {" "}
+                                <span className="inline-flex items-center">
+                                  {lastWord}
+                                  <FiExternalLink className="mb-[1px] ml-1.5 inline-block h-3.5 w-3.5 align-baseline" />
+                                </span>
+                              </>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end whitespace-nowrap">
+                    <span className="bg-green-100 text-green-800 rounded-full py-0.5 pl-2.5 text-sm font-medium">
+                      9,885 WLD
+                    </span>
+                  </div>
+                </div>
               </a>
             </div>
           </div>
 
-          {/* Our Pledge Section */}
+          {/* Commitment Card */}
           <div className="rounded-xl bg-gray-100 p-4 shadow-sm">
             <div className="mb-2 flex items-center">
               <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 shadow-sm">
@@ -190,12 +289,27 @@ export default function BuybackProgramPage({
                 }
               </Typography>
             </div>
-            <Typography variant="body" level={2} className="text-gray-600">
+            <Typography
+              variant="body"
+              level={3}
+              className="text-gray-600 mb-3 text-[16px]"
+            >
               {
                 dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
-                  ?.sections?.commitment?.body
+                  ?.sections?.commitment?.description
               }
             </Typography>
+            <a
+              href="https://worldscan.org/address/0x02cf076385b8161822c376bd1bfd09aed17787cd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-800 inline-flex items-center"
+            >
+              <Typography variant="subtitle" level={3}>
+                View buyback account
+              </Typography>
+              <FiExternalLink className="ml-[5px] h-3 w-3" />
+            </a>
           </div>
 
           {/* Value Cycle Visualization */}
@@ -217,7 +331,11 @@ export default function BuybackProgramPage({
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-sm font-medium text-gray-700">
                   1
                 </span>
-                <Typography variant="body" level={3} className="mx-2 flex-1">
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mx-2 flex-1 text-[16px]"
+                >
                   {
                     dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
                       ?.sections?.valueCycle?.steps?.step1
@@ -231,7 +349,11 @@ export default function BuybackProgramPage({
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-sm font-medium text-gray-700">
                   2
                 </span>
-                <Typography variant="body" level={3} className="mx-2 flex-1">
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mx-2 flex-1 text-[16px]"
+                >
                   {
                     dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
                       ?.sections?.valueCycle?.steps?.step2
@@ -245,7 +367,11 @@ export default function BuybackProgramPage({
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-sm font-medium text-gray-700">
                   3
                 </span>
-                <Typography variant="body" level={3} className="mx-2 flex-1">
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mx-2 flex-1 text-[16px]"
+                >
                   {
                     dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
                       ?.sections?.valueCycle?.steps?.step3
@@ -273,7 +399,11 @@ export default function BuybackProgramPage({
                 }
               </Typography>
             </div>
-            <Typography variant="body" level={2} className="text-gray-600 mb-4">
+            <Typography
+              variant="body"
+              level={3}
+              className="text-gray-600 mb-4 text-[16px]"
+            >
               {
                 dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
                   ?.sections?.helpSection?.intro
@@ -289,7 +419,7 @@ export default function BuybackProgramPage({
                   <Typography
                     variant="subtitle"
                     level={2}
-                    className="mb-1 text-gray-900"
+                    className="mb-1 text-[16px] text-gray-900"
                   >
                     {
                       dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
@@ -317,7 +447,7 @@ export default function BuybackProgramPage({
                   <Typography
                     variant="subtitle"
                     level={2}
-                    className="mb-1 text-gray-900"
+                    className="mb-1 text-[16px] text-gray-900"
                   >
                     {
                       dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram
@@ -396,7 +526,9 @@ export default function BuybackProgramPage({
             variant="secondary"
             size="lg"
             fullWidth
-            onClick={() => window.open("https://www.miniapps.world/", "_blank")}
+            onClick={() =>
+              window.open("https://www.miniapps.world/rewards", "_blank")
+            }
           >
             {dictionary?.pages?.earn?.tabs?.contribute?.buybackProgram?.cta}
           </Button>

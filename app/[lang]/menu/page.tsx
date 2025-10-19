@@ -40,6 +40,11 @@ export default function MenuPage({
       title: dictionary?.pages?.menu?.sections?.help?.title,
       links: [
         {
+          label: dictionary?.pages?.menu?.sections?.help?.links?.support,
+          url: "https://t.me/worldrepublicsupport",
+          isExternal: true,
+        },
+        {
           label: dictionary?.pages?.menu?.sections?.help?.links?.faq,
           url: "/faq",
           isExternal: false,
@@ -83,13 +88,6 @@ export default function MenuPage({
           label:
             dictionary?.pages?.menu?.sections?.experimental?.links?.language,
           url: "/language",
-          isExternal: false,
-        },
-        {
-          label:
-            dictionary?.pages?.menu?.sections?.experimental?.links
-              ?.verification,
-          url: "/verification",
           isExternal: false,
         },
       ],

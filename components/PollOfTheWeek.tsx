@@ -11,32 +11,32 @@ interface Poll {
 
 const polls: Poll[] = [
   {
-    key: "criticalMineralsExport",
-    url: "https://vote.one/GTN2bfzr",
+    key: "digitalGovernance",
+    url: "https://world.org/mini-app?app_id=app_86794ef02e4fdd6579a937e4a0d858fb&app_mode=mini-app&path=/6OV7dcto",
   },
   {
-    key: "heatAdaptation",
-    url: "https://vote.one/lYGmfQI7",
+    key: "nuclearDisarmamentTalks",
+    url: "https://world.org/mini-app?app_id=app_86794ef02e4fdd6579a937e4a0d858fb&app_mode=mini-app&path=/gV4RQAsj",
   },
   {
-    key: "tradePolicyStability",
-    url: "https://vote.one/2LwLzOSv",
+    key: "cyberResilienceProtocol",
+    url: "https://world.org/mini-app?app_id=app_86794ef02e4fdd6579a937e4a0d858fb&app_mode=mini-app&path=/2QOSYgip",
   },
   {
-    key: "sovereignDebtRestructuring",
-    url: "https://vote.one/8veO6EHF",
+    key: "middleEastEscalation",
+    url: "https://world.org/mini-app?app_id=app_86794ef02e4fdd6579a937e4a0d858fb&app_mode=mini-app&path=/RKrASNCV",
   },
   {
-    key: "wildlifeTrafficking",
-    url: "https://vote.one/eWitQrSp",
+    key: "nuclearEscalationRisk",
+    url: "https://world.org/mini-app?app_id=app_86794ef02e4fdd6579a937e4a0d858fb&app_mode=mini-app&path=/jRxpCulS",
   },
 ];
 
-interface PollOfTheDayProps {
+interface PollOfTheWeekProps {
   lang: string;
 }
 
-export function PollOfTheDay({ lang }: PollOfTheDayProps) {
+export function PollOfTheWeek({ lang }: PollOfTheWeekProps) {
   const dictionary = useTranslations(lang);
 
   const getPollIndex = () => {
@@ -46,25 +46,29 @@ export function PollOfTheDay({ lang }: PollOfTheDayProps) {
     const dayDiff = Math.floor(
       (today.getTime() - referenceDate.getTime()) / (24 * 60 * 60 * 1000)
     );
-    return Math.abs(dayDiff % polls.length);
+    const weekDiff = Math.floor(dayDiff / 7);
+    return Math.abs(weekDiff % polls.length);
   };
 
   const [pollIndex, setPollIndex] = useState(getPollIndex());
 
   useEffect(() => {
     const now = new Date();
-    const tomorrow = new Date(
+    const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const daysUntilNextMonday = currentDay === 0 ? 1 : 8 - currentDay;
+    const nextMonday = new Date(
       now.getFullYear(),
       now.getMonth(),
-      now.getDate() + 1
+      now.getDate() + daysUntilNextMonday
     );
-    const msUntilTomorrow = tomorrow.getTime() - now.getTime();
+    nextMonday.setHours(0, 0, 0, 0);
+    const msUntilNextWeek = nextMonday.getTime() - now.getTime();
 
     setPollIndex(getPollIndex());
 
     const timer = setTimeout(() => {
       setPollIndex(getPollIndex());
-    }, msUntilTomorrow);
+    }, msUntilNextWeek);
 
     return () => clearTimeout(timer);
   }, []);
@@ -91,7 +95,7 @@ export function PollOfTheDay({ lang }: PollOfTheDayProps) {
         </Typography>
         <a href={currentPoll.url} target="_blank" rel="noopener noreferrer">
           <Button variant="primary" fullWidth>
-            {dictionary?.components?.pollOfTheDay?.vote}
+            {dictionary?.components?.pollOfTheWeek?.vote}
           </Button>
         </a>
         <Link
@@ -99,7 +103,7 @@ export function PollOfTheDay({ lang }: PollOfTheDayProps) {
           className="mt-2 block h-10 w-full"
         >
           <Button variant="ghost" fullWidth>
-            {dictionary?.components?.pollOfTheDay?.previousPolls}
+            {dictionary?.components?.pollOfTheWeek?.previousPolls}
           </Button>
         </Link>
       </div>

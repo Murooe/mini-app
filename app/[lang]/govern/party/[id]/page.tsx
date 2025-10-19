@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 import { useWallet } from "@/components/contexts/WalletContext";
+import { useParties } from "@/components/contexts/PartiesContext";
 import { useToast } from "@/components/ui/Toast";
-import { BiChevronLeft, BiChevronDown, BiShareAlt } from "react-icons/bi";
+import { BiChevronLeft, BiShareAlt, BiChevronUp } from "react-icons/bi";
 import {
   PiUserFocusBold,
   PiLinkSimpleBold,
@@ -18,37 +19,13 @@ import {
 } from "react-icons/pi";
 import { MiniKit } from "@worldcoin/minikit-js";
 import { parseAbi } from "viem";
-
-// GraphQL endpoint
-const GOLDSKY_SUBGRAPH_URL =
-  "https://api.goldsky.com/api/public/project_cm9oeq0bhalzw01y0hwth80bk/subgraphs/political-party-registry/1.0.0/gn";
+import { useRouter } from "next/navigation";
+import type { PartyDetail } from "@/lib/types";
+import { PartyStatus } from "@/lib/types";
 
 // Contract address
 const POLITICAL_PARTY_REGISTRY_ADDRESS =
   "0x70a993E1D1102F018365F966B5Fc009e8FA9b7dC";
-
-// Party Status
-enum PartyStatus {
-  PENDING = 0,
-  ACTIVE = 1,
-  INACTIVE = 2,
-}
-
-// Party interface
-interface Party {
-  id: number;
-  name: string;
-  shortName: string;
-  description: string;
-  officialLink: string;
-  founder: string;
-  currentLeader: string;
-  status: number;
-  memberCount: number;
-  verifiedMemberCount: number;
-  members: { address: string }[];
-  bannedMembers: { address: string }[];
-}
 
 export default function PartyDetailPage({
   params: { lang, id },
@@ -58,14 +35,25 @@ export default function PartyDetailPage({
   const dictionary = useTranslations(lang);
   const { walletAddress } = useWallet();
   const { showToast } = useToast();
+  const router = useRouter();
+  const {
+    fetchPartyById,
+    activeParties,
+    pendingParties,
+    setUserPartyId,
+    setParties,
+    userPartyId,
+  } = useParties();
 
-  const [party, setParty] = useState<Party | null>(null);
+  const [party, setParty] = useState<PartyDetail | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [isUserMember, setIsUserMember] = useState(false);
   const [showAllMembers, setShowAllMembers] = useState(false);
   const [isJoining, setIsJoining] = useState(false);
   const [leaderUsername, setLeaderUsername] = useState<string | null>(null);
+  const [partyMembers, setPartyMembers] = useState<{ address: string }[]>([]);
+  const [bannedMembers, setBannedMembers] = useState<{ address: string }[]>([]);
 
   // Format number with commas
   const formatNumber = (num: number): string => {
@@ -150,71 +138,19 @@ export default function PartyDetailPage({
     return null;
   };
 
-  // Join party function
-  const joinParty = async () => {
-    if (!MiniKit.isInstalled()) {
-      showToast("Please connect your wallet first", "error");
-      return;
-    }
-
-    try {
-      setIsJoining(true);
-      const { finalPayload } = await MiniKit.commandsAsync.sendTransaction({
-        transaction: [
-          {
-            address: POLITICAL_PARTY_REGISTRY_ADDRESS as `0x${string}`,
-            abi: parseAbi(["function joinParty(uint256 _partyId) external"]),
-            functionName: "joinParty",
-            args: [BigInt(parseInt(id))],
-          },
-        ],
-      });
-
-      if (finalPayload.status === "error") {
-        if (finalPayload.error_code !== "user_rejected") {
-          showToast("Failed to join party", "error");
-        }
-      } else {
-        showToast("Successfully joined party!", "success");
-        setIsUserMember(true);
-        // Update the party data to reflect membership
-        if (party) {
-          setParty({
-            ...party,
-            memberCount: party.memberCount + 1,
-            members: [...party.members, { address: walletAddress || "" }],
-          });
-        }
-      }
-    } catch (error) {
-      console.error("Error joining party:", error);
-      showToast("Error joining party", "error");
-    } finally {
-      setIsJoining(false);
-    }
-  };
-
   // Fetch party data and leader username
   useEffect(() => {
-    const fetchData = async () => {
-      if (!id) return;
-
+    // Move fetchPartyMembers here
+    const fetchPartyMembers = async (partyId: number) => {
       try {
-        setIsLoading(true);
+        // GraphQL endpoint
+        const GOLDSKY_SUBGRAPH_URL =
+          "https://api.goldsky.com/api/public/project_cm9oeq0bhalzw01y0hwth80bk/subgraphs/political-party-registry/1.0.0/gn";
 
-        // GraphQL query
+        // GraphQL query for members
         const query = `
           {
-            parties(where: {id: ${id}}) {
-              name
-              shortName
-              description
-              officialLink
-              founder
-              currentLeader
-              status
-              memberCount
-              verifiedMemberCount
+            parties(where: {id: ${partyId}}) {
               members(first: 1000, where: {isActive: true}) {
                 address
               }
@@ -245,28 +181,14 @@ export default function PartyDetailPage({
         }
 
         if (!result.data.parties || result.data.parties.length === 0) {
-          throw new Error("Party not found");
+          throw new Error("Party members not found");
         }
 
         const partyData = result.data.parties[0];
+        setPartyMembers(partyData.members || []);
+        setBannedMembers(partyData.bannedMembers || []);
 
-        // Transform data to match interface
-        const fetchedParty: Party = {
-          id: parseInt(id),
-          name: partyData.name,
-          shortName: partyData.shortName,
-          description: partyData.description,
-          officialLink: partyData.officialLink,
-          founder: partyData.founder,
-          currentLeader: partyData.currentLeader,
-          status: parseInt(partyData.status),
-          memberCount: parseInt(partyData.memberCount),
-          verifiedMemberCount: parseInt(partyData.verifiedMemberCount),
-          members: partyData.members,
-          bannedMembers: partyData.bannedMembers,
-        };
-
-        // Check if user is a member
+        // Check if user is a member based on the member list
         if (walletAddress) {
           const isMember = partyData.members.some(
             (member: { address: string }) =>
@@ -274,16 +196,73 @@ export default function PartyDetailPage({
           );
           setIsUserMember(isMember);
         }
+      } catch (error) {
+        console.error("Error fetching members:", error);
+      }
+    };
 
-        // Fetch username with the party data
-        let username = null;
-        if (partyData.currentLeader) {
-          username = await fetchLeaderUsername(partyData.currentLeader);
+    const fetchData = async () => {
+      if (!id) return;
+
+      try {
+        setIsLoading(true);
+
+        // First try to find the party in the context cache
+        const partyId = parseInt(id);
+        const cachedParty = [...activeParties, ...pendingParties].find(
+          (p) => p.id === partyId
+        );
+
+        let currentParty: PartyDetail | null = null;
+
+        // If found in cache, use it
+        if (cachedParty) {
+          console.log("Found party in context cache:", cachedParty);
+          currentParty = {
+            ...cachedParty,
+            currentLeader: cachedParty.leader || "",
+            members: [],
+            bannedMembers: [],
+          };
+          setParty(currentParty);
+          setIsUserMember(cachedParty.isUserMember || false);
+
+          // For cache hits, we still need to fetch members via GraphQL
+          fetchPartyMembers(partyId);
+        } else {
+          // If not in cache, fetch from blockchain
+          console.log("Fetching party from blockchain");
+          const fetchedParty = await fetchPartyById(partyId);
+
+          if (!fetchedParty) {
+            throw new Error("Party not found");
+          }
+
+          currentParty = {
+            ...fetchedParty,
+            currentLeader: fetchedParty.leader || "",
+            members: [],
+            bannedMembers: [],
+          };
+          setParty(currentParty);
+          setIsUserMember(fetchedParty.isUserMember || false);
+
+          // For non-cache hits, we need to fetch members
+          fetchPartyMembers(partyId);
         }
 
-        // Set all state at once
-        setParty(fetchedParty);
-        setLeaderUsername(username);
+        // Fetch username for the leader
+        if (
+          currentParty &&
+          (currentParty.currentLeader || currentParty.leader)
+        ) {
+          const leaderAddress =
+            currentParty.currentLeader || currentParty.leader;
+          if (leaderAddress) {
+            const username = await fetchLeaderUsername(leaderAddress);
+            setLeaderUsername(username);
+          }
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
         setError(
@@ -296,20 +275,114 @@ export default function PartyDetailPage({
     };
 
     fetchData();
-  }, [id, walletAddress, showToast]);
+  }, [
+    id,
+    walletAddress,
+    showToast,
+    fetchPartyById,
+    activeParties,
+    pendingParties,
+  ]);
+
+  // Join party function
+  const joinParty = async () => {
+    if (!MiniKit.isInstalled()) {
+      showToast("Please connect your wallet first", "error");
+      return;
+    }
+
+    if (!party) {
+      showToast("Party not found", "error");
+      return;
+    }
+
+    if (userPartyId > 0) {
+      showToast(
+        "Please leave your current party before joining another one",
+        "error"
+      );
+      return;
+    }
+
+    try {
+      setIsJoining(true);
+
+      const { finalPayload } = await MiniKit.commandsAsync.sendTransaction({
+        transaction: [
+          {
+            address: POLITICAL_PARTY_REGISTRY_ADDRESS as `0x${string}`,
+            abi: parseAbi(["function joinParty(uint256 _partyId) external"]),
+            functionName: "joinParty",
+            args: [BigInt(party.id)],
+          },
+        ],
+      });
+
+      if (finalPayload.status !== "error") {
+        // Update local state
+        setIsUserMember(true);
+
+        // Update the context
+        setUserPartyId(party.id);
+
+        // Update the parties array in context
+        setParties((prevParties: any) =>
+          prevParties.map((p: any) =>
+            p.id === party.id
+              ? {
+                  ...p,
+                  isUserMember: true,
+                  memberCount: p.memberCount + 1,
+                }
+              : p
+          )
+        );
+
+        // Update user party cache in localStorage
+        localStorage.setItem(
+          "userPartyCache",
+          JSON.stringify({
+            partyId: party.id,
+            isLeader: false,
+            partyStatus: party.status,
+            timestamp: Date.now(),
+          })
+        );
+
+        showToast("Successfully joined the party", "success");
+      } else if (finalPayload.error_code !== "user_rejected") {
+        showToast("Failed to join party", "error");
+      }
+    } catch (error) {
+      console.error("Error joining party:", error);
+      showToast("Error joining party", "error");
+    } finally {
+      setIsJoining(false);
+    }
+  };
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col px-6">
       <div className="fixed left-0 right-0 top-0 z-10 bg-gray-0 px-6">
         <div className="relative flex items-center justify-center py-6">
-          <Link
-            href={`/${lang}/govern`}
+          <button
+            onClick={() => {
+              if (window.history.length > 1) {
+                router.back();
+              } else {
+                router.push(`/${lang}/govern`);
+              }
+            }}
             className="absolute left-0 flex size-10 items-center justify-center rounded-full bg-gray-100"
-            aria-label="Back to Govern"
+            aria-label="Back"
           >
             <BiChevronLeft className="size-6 text-gray-500" />
-          </Link>
-          <Typography as="h2" variant={{ variant: "heading", level: 3 }}>
+          </button>
+          <Typography
+            as="h2"
+            variant={{ variant: "heading", level: 3 }}
+            className="mx-12 text-center"
+          >
             {dictionary?.components?.politicalPartyList?.partyDetails}
           </Typography>
           {party && (
@@ -533,7 +606,11 @@ export default function PartyDetailPage({
                       </Typography>
                     </div>
                     <a
-                      href={party?.officialLink}
+                      href={
+                        party.officialLink.startsWith("http")
+                          ? party.officialLink
+                          : `https://${party.officialLink}`
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -565,19 +642,16 @@ export default function PartyDetailPage({
                     {formatNumber(party?.memberCount || 0)})
                   </Typography>
 
-                  {party?.members.length > 3 &&
-                    (showAllMembers ? (
-                      <BiChevronDown className="size-[22px] text-gray-500 transition-transform duration-200" />
-                    ) : (
-                      <BiChevronLeft className="size-[22px] text-gray-500 transition-transform duration-200" />
-                    ))}
+                  {partyMembers.length > 3 && showAllMembers && (
+                    <BiChevronUp className="size-[20px] text-gray-500 transition-transform duration-200" />
+                  )}
                 </div>
               </button>
 
-              {party?.members.length > 0 ? (
+              {partyMembers.length > 0 ? (
                 <div>
                   {/* First 3 members always visible */}
-                  {party?.members.slice(0, 3).map((member, index, array) => (
+                  {partyMembers.slice(0, 3).map((member, index, array) => (
                     <div
                       key={index}
                       className={`flex items-center justify-between ${
@@ -605,8 +679,8 @@ export default function PartyDetailPage({
 
                   {/* Additional members shown conditionally */}
                   {showAllMembers &&
-                    party?.members.length > 3 &&
-                    party?.members.slice(3).map((member, index, array) => (
+                    partyMembers.length > 3 &&
+                    partyMembers.slice(3).map((member, index, array) => (
                       <div
                         key={index}
                         className={`flex items-center justify-between ${
@@ -629,6 +703,23 @@ export default function PartyDetailPage({
                         </a>
                       </div>
                     ))}
+
+                  {/* Show All button */}
+                  {!showAllMembers && partyMembers.length > 3 && (
+                    <div className="border-t border-gray-100 px-4">
+                      <Button
+                        variant="ghost"
+                        fullWidth
+                        onClick={() => setShowAllMembers(true)}
+                        className="h-12 text-sm font-medium"
+                      >
+                        {
+                          dictionary?.pages?.earn?.tabs?.contribute
+                            ?.partySubsidy?.payouts?.showAll
+                        }
+                      </Button>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Typography
@@ -641,7 +732,7 @@ export default function PartyDetailPage({
             </div>
 
             {/* Banned Members */}
-            {party?.bannedMembers.length > 0 && (
+            {bannedMembers.length > 0 && (
               <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
                 <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50 to-gray-0 p-4">
                   <Typography
@@ -654,7 +745,7 @@ export default function PartyDetailPage({
                 </div>
                 <div className="max-h-56 overflow-y-auto p-4">
                   <div className="space-y-2">
-                    {party?.bannedMembers.map((member, index) => (
+                    {bannedMembers.map((member, index) => (
                       <div
                         key={index}
                         className="flex items-center justify-between rounded-lg border border-gray-100 p-3"
@@ -719,7 +810,7 @@ export default function PartyDetailPage({
                 >
                   {dictionary?.components?.politicalPartyList?.shareParty}
                 </Button>
-              ) : party.status === PartyStatus.INACTIVE ? (
+              ) : party?.status === PartyStatus.INACTIVE ? (
                 <Link href={`/${lang}/govern`}>
                   <Button variant="secondary" fullWidth>
                     {dictionary?.components?.politicalPartyList?.backToParties}

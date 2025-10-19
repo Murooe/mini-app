@@ -37,6 +37,7 @@ export default function LanguagePage({
     { code: "pcm", label: "Pidgin English - Pidgin English" },
     { code: "tl", label: "Tagalog - Tagalog" },
     { code: "tr", label: "Türkçe - Turkish" },
+    { code: "th", label: "ภาษาไทย - Thai" },
   ].sort((a, b) => {
     // Extract the English name after the hyphen, or use the full label if no hyphen exists
     const aName = a.label.split(" - ")[1] || a.label;
@@ -53,7 +54,11 @@ export default function LanguagePage({
         >
           <BiChevronLeft className="size-6 text-gray-500" />
         </Link>
-        <Typography as="h2" variant={{ variant: "heading", level: 3 }}>
+        <Typography
+          as="h2"
+          variant={{ variant: "heading", level: 3 }}
+          className="mx-12 text-center"
+        >
           {dictionary?.pages?.language?.title}
         </Typography>
       </div>

@@ -1,14 +1,18 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "Connect Wallet"
+      "connect": "Connect wallet"
     },
-    "verifyButton": {
-      "verify": "Verify to Claim"
+    "banners": {
+      "dalgona": {
+        "title": "Carve Dalgona to Earn",
+        "description": "Join candy-cutting challenges and win DAL rewards.",
+        "cta": "Play now"
+      }
     },
-    "pollOfTheDay": {
-      "previousPolls": "Previous Polls",
-      "vote": "Vote Now"
+    "pollOfTheWeek": {
+      "previousPolls": "Previous polls",
+      "vote": "Vote now"
     },
     "stakeForm": {
       "deposit": "Deposit",
@@ -19,8 +23,8 @@
       "max": "Max",
       "interest": "Interest:",
       "collect": "Collect",
-      "depositButton": "Deposit Drachma",
-      "withdrawButton": "Withdraw Drachma"
+      "depositButton": "Deposit drachma",
+      "withdrawButton": "Withdraw drachma"
     },
     "toasts": {
       "wallet": {
@@ -59,26 +63,26 @@
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "We're aware of some party loading issues. Please be patient while we're working to fix them.",
       "myParty": "My party",
       "createParty": "Create New Party",
       "noParty": "You haven't created or joined a party yet.",
       "discover": "Discover",
       "partyDetails": "Party Details",
       "description": "Description",
-      "partyInfo": "Party Info",
+      "partyInfo": "Party info",
       "leader": "Leader",
       "website": "Website",
       "members": "Members",
       "noMembers": "No members yet",
-      "bannedMembers": "Banned Members",
+      "approvalNote": "Parties with a working official link and/or growing membership are prioritized for approval.",
+      "bannedMembers": "Banned members",
       "errorLoading": "Error Loading Party",
       "partyNotFound": "Party Not Found",
       "partyNotFoundDescription": "The party you're looking for doesn't exist or has been removed.",
       "backToParties": "Back to Parties",
       "joining": "Joining...",
-      "joinParty": "Join Party",
-      "shareParty": "Share Party",
+      "joinParty": "Join party",
+      "shareParty": "Share party",
       "copied": "Link copied to clipboard",
       "status": {
         "pending": "Pending",
@@ -100,9 +104,9 @@
         "deleted": "Deleted",
         "members": "members",
         "actions": {
-          "leaveParty": "Leave Party",
-          "joinParty": "Join Party",
-          "joinPendingParty": "Join Pending Party"
+          "leaveParty": "Leave party",
+          "joinParty": "Join party",
+          "joinPendingParty": "Join pending party"
         },
         "management": {
           "title": "Party Management",
@@ -140,14 +144,14 @@
           },
           "button": {
             "creating": "Creating...",
-            "create": "Create Party"
+            "create": "Create party"
           }
         },
         "update": {
           "title": "Update Party Details",
           "button": {
             "update": "Update",
-            "updateDescription": "Update Description"
+            "updateDescription": "Update description"
           }
         },
         "transferLeadership": {
@@ -171,7 +175,7 @@
           },
           "button": {
             "processing": "Processing...",
-            "transfer": "Transfer Leadership"
+            "transfer": "Transfer leadership"
           }
         },
         "leave": {
@@ -198,8 +202,8 @@
           "confirm": "Are you sure you want to delete this party?",
           "button": {
             "processing": "Processing...",
-            "deletePending": "Delete Pending Party",
-            "delete": "Delete Party"
+            "deletePending": "Delete pending party",
+            "delete": "Delete party"
           }
         },
         "memberManagement": {
@@ -214,21 +218,21 @@
             "description": "Enter the wallet address of the member you want to remove or look up by username.",
             "button": {
               "processing": "Processing...",
-              "remove": "Remove Member"
+              "remove": "Remove member"
             }
           },
           "ban": {
             "description": "Enter the username or wallet address of the member you want to ban from the party.",
             "button": {
               "processing": "Processing...",
-              "ban": "Ban Member"
+              "ban": "Ban member"
             }
           },
           "unban": {
             "description": "Enter the username or wallet address of the banned member you want to allow back to the party.",
             "button": {
               "processing": "Processing...",
-              "unban": "Unban Member"
+              "unban": "Unban member"
             }
           }
         }
@@ -245,6 +249,11 @@
           "subtitle": "Sign in to claim your basic income",
           "setupSubtitle": "Set up your basic income",
           "claimableSubtitle": "Claimable drachma",
+          "claimableTooltip1": "As part of our",
+          "claimableTooltip2": "buyback program",
+          "claimableTooltip3": ", we're fine-tuning basic income levels to create sustainable, long-term benefits for our community. Please refer to the",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "for current rates.",
           "activateButton": "Activate Basic Income",
           "claimButton": "Claim",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "Extra income for verified users",
               "features": {
                 "rate": {
-                  "title": "An additional 10 WDD per day"
+                  "title": "An additional 0.19 WDD per day"
                 },
                 "verification": {
                   "title": "Exclusive to Orb-verified users to ensure fair distribution"
-                },
-                "rewards": {
-                  "title": "Rewards shift to Plus over time while keeping total at 11 WDD/day"
                 }
               },
               "activateButton": "Activate Basic Income Plus",
@@ -280,148 +286,61 @@
         },
         "invite": {
           "title": "Invite",
-          "subtitle": "Get 50 WDD per friend who joins",
-          "tooltip": "Friends must be verified via Orb or passport.",
+          "subtitle": "Get 10 WDD per friend who joins",
+          "tooltip": "Friends must join our new web app.",
           "learnMore": "Learn more",
           "stats": {
-            "title": "Your Referral Stats",
+            "title": "Your referral stats",
             "invites": "Invites accepted",
             "rewards": "Total rewards"
           },
           "actions": {
-            "copyLink": "Copy Referral Link",
+            "copyLink": "Copy referral link",
             "copied": "Referral link copied to clipboard!",
             "connectWallet": "Please connect your wallet to generate your referral link",
-            "rewardReferrer": "Reward Referrer",
-            "share": "Share Invite"
-          },
-          "drawer": {
-            "title": "Reward a Referrer",
-            "subtitle": "Trigger a free 50 WDD reward for your referrer",
-            "passportSubtitle": "Prove your passport verification and trigger a free 50 WDD reward for your referrer",
-            "invitedBy": "You were invited by: {{username}}",
-            "input": {
-              "placeholder": "Enter username (e.g. username.0000)",
-              "lookupButton": "Lookup User",
-              "sendingTo": "Sending reward to:",
-              "editButton": "Edit",
-              "sendButton": "Send Reward",
-              "proveReward": "Prove and Reward"
-            },
-            "errors": {
-              "enterUsername": "Please enter a username",
-              "usernameNotFound": "Username not found",
-              "lookupFailed": "Failed to look up username. Please try again.",
-              "installMiniKit": "Please install MiniKit to look up usernames",
-              "connectWallet": "Please connect your wallet first",
-              "transactionCanceled": "Transaction was canceled"
-            },
-            "success": {
-              "rewardSent": "Successfully sent reward to {{username}}!"
-            }
+            "share": "Share invite"
           },
           "share": {
             "title": "Join me in the World Republic",
             "text": "Use my invite link to join the World Republic and earn rewards together!"
-          },
-          "passportDrawer": {
-            "title": "Passport-Verified Referral Program",
-            "subtitle": "Invite passport holders and earn 50 WDD",
-            "features": {
-              "countries": {
-                "title": "Passport-verification is currently available in Argentina, Australia, Chile, Colombia, Croatia, Japan, Philippines, Portugal, South Korea, and the United States"
-              },
-              "rewards": {
-                "title": "Friends receive WLD for verifying their passport in World App"
-              },
-              "basicIncome": {
-                "title": "Extra basic income for passport-verified people is coming soon"
-              }
-            },
-            "trigger": {
-              "titleText": "Now also available after passport-verified friends!",
-              "titleDetails": "Details"
-            }
           }
         },
         "contribute": {
           "title": "Contribute",
           "subtitle": "Get involved, get rewarded",
-          "contests": {
-            "ended": "Ended",
-            "weekly": "Weekly",
-            "topPrize": "Top prize",
-            "xPost": {
-              "title": "X Post Contest",
-              "description": "Write engaging posts, win prizes"
-            },
-            "poll": {
-              "title": "Poll Contest",
-              "description": "Gather community feedback and earn"
-            },
-            "pollContest": {
-              "title": "Poll Contest",
-              "weeklyTitle": "Weekly Poll Contest",
-              "description": "Gather community feedback and earn",
-              "prizes": {
-                "title": "Prizes",
-                "viewWinners": "View past winners",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "How it works",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "Create a poll related to the World Republic or global governance in general"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "Set it up so only verified humans can vote"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "Share your poll in our",
-                    "link": {
-                      "text": "Poll Contest Telegram channel",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "Contest rules",
-                "list": {
-                  "rule1": "Only polls started in the current week are eligible",
-                  "rule2": "Contest ends every Sunday at 11:59 PM UTC",
-                  "rule3": "Winners are selected based on total votes and contacted on Telegram within 24 hours"
-                }
-              },
-              "cta": {
-                "create": "Create Your Poll",
-                "submit": "Submit Your Poll"
-              },
-              "winners": {
-                "title": "Contest Winners",
-                "weekOf": "Week of",
-                "votes": "votes"
-              }
-            }
-          },
           "buybackProgram": {
             "topnav": "Buyback Program",
             "title": "Token Buyback Program",
             "subtitle": "Strengthen WDD value together",
             "sections": {
-              "devRewards": {
-                "title": "Developer Rewards Program",
-                "startDate": "Started April 1, 2025",
-                "description": "World is piloting developer rewards based on app usage by verified humans.",
-                "learnMore": "Learn more about the program"
+              "fundingSources": {
+                "title": "Funding sources",
+                "devRewards": {
+                  "title": "World Dev Rewards",
+                  "weekProgress": "Week 7 of 12"
+                },
+                "worldRetro": {
+                  "title": "World Retro Funding"
+                },
+                "affiliate": {
+                  "title": "Affiliate commissions"
+                },
+                "optimism": {
+                  "title": "Optimism Retro Funding"
+                }
               },
               "commitment": {
-                "title": "Our 50% pledge",
-                "body": "We pledge to use at least 50% of our rewards from the program for WDD buybacks."
+                "title": "Our commitment",
+                "description": "We pledge to use at least 50% of all these fundings for WDD buybacks.",
+                "viewAccount": "View buyback account"
+              },
+              "valueCycle": {
+                "title": "The Positive Value Cycle",
+                "steps": {
+                  "step1": "More app users & usage",
+                  "step2": "Higher rewards",
+                  "step3": "More token buybacks"
+                }
               },
               "helpSection": {
                 "title": "How you can help",
@@ -436,93 +355,53 @@
                     "description": "Drive the virtuous economic cycle"
                   }
                 }
-              },
-              "valueCycle": {
-                "title": "The Positive Value Cycle",
-                "steps": {
-                  "step1": "More app users & usage",
-                  "step2": "Higher developer rewards",
-                  "step3": "More token buybacks"
-                }
               }
             },
             "actions": {
-              "share": "Share Invite"
+              "share": "Share invite"
             },
-            "cta": "View Mini App Stats"
-          },
-          "earlyAccess": {
-            "title": "Early Access Program",
-            "description": "Earn WDD by testing our upcoming features"
-          },
-          "xContest": {
-            "title": "X Post Contest",
-            "weeklyTitle": "Weekly X Post Contest",
-            "description": "Write engaging posts, win prizes",
-            "prizes": {
-              "title": "Prizes",
-              "viewWinners": "View past winners",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "How to participate",
-              "step1": "Write an X post about the World Republic",
-              "step2": "Tag @WorldRepublicEN",
-              "step3": {
-                "prefix": "Share the link to your post in our",
-                "link": "X Post Contest Telegram channel"
-              }
-            },
-            "rules": {
-              "title": "Contest rules",
-              "rule1": "Only posts published in the current week are eligible",
-              "rule2": "Contest ends every Sunday at 11:59 PM UTC",
-              "rule3": "Winners are selected based on total organic engagement (likes + reposts + comments) and contacted on Telegram within 24 hours"
-            },
-            "cta": {
-              "post": "Start Posting Now",
-              "submit": "Submit Your Post"
-            },
-            "winners": {
-              "title": "Contest Winners",
-              "weekOf": "Week of",
-              "engagements": "engagements"
-            }
+            "cta": "View mini app rewards"
           },
           "partySubsidy": {
             "topnav": "Subsidy Program",
             "title": "Party Subsidy Program",
             "subtitle": "Build your political movement and earn",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "Fixed weekly pool"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "Fixed pool"
             },
             "devRewards": {
               "title": "10% of our Dev Rewards",
-              "subtitle": "Variable reward pool",
+              "subtitle": "Variable pool",
               "tooltip": "World is distributing developer rewards based on app usage by verified humans.",
               "checkOutRewards": "Check out rewards"
             },
             "howItWorks": {
-              "title": "How It Works",
+              "title": "How it works",
               "steps": {
                 "createParty": {
-                  "title": "Create a Party",
+                  "title": "Create a party",
                   "description": "Start your political movement in the World Republic app"
                 },
                 "growMembership": {
-                  "title": "Grow Your Membership",
-                  "description": "Recruit members and build your community"
+                  "title": "Get on the ballot",
+                  "description": "Grow your membership to qualify for the test elections"
                 },
                 "earnRewards": {
-                  "title": "Earn Rewards",
-                  "description": "The leaders of the top 50 parties receive weekly subsidies"
+                  "title": "Receive funding",
+                  "description": "Earn subsidies proportional to the votes your party receives"
                 }
               }
             },
             "cta": {
-              "createJoin": "Create or Join a Party",
-              "leaderGroup": "Join Party Leader Group"
+              "createJoin": "Create or join a party",
+              "leaderGroup": "Join party leader group"
+            },
+            "payouts": {
+              "title": "Payouts",
+              "week": "Week",
+              "showAll": "Show all"
             }
           }
         }
@@ -542,12 +421,22 @@
           "description": "Unite globally around shared values"
         },
         "polls": {
-          "title": "Poll of the Day",
+          "title": "Poll of the Week",
           "description": "Quick votes on current topics",
           "previous": {
             "title": "Previous Polls",
             "backToGovern": "Back to Govern",
             "polls": {
+              "digitalGovernance": "As artificial intelligence and digital technologies rapidly advance, should nations collectively ensure responsible development and governance to prevent widespread societal disruption?",
+              "nuclearEscalationRisk": "Should a global framework be established to reduce the risk of nuclear escalation in regions with heightened geopolitical tensions?",
+              "middleEastEscalation": "Should an independent consortium of nations support a neutral de-escalation initiative in the Middle East to reduce the risk of regional conflict?",
+              "cyberResilienceProtocol": "Should nations establish a coordinated global cybersecurity response protocol to defend against AI-powered cyberattacks that could disrupt critical infrastructure worldwide?",
+              "nuclearDisarmamentTalks": "Given recent reports of increased nuclear material production, should global powers restart comprehensive disarmament negotiations?",
+              "pandemicPreparednessFund": "Should a permanent global fund be established to ensure continuous and equitable access to resources for future pandemic preparedness and response efforts worldwide?",
+              "globalAidCuts": "Should countries reconsider foreign aid reductions that risk reversing decades of progress against diseases like AIDS and malaria?",
+              "coralCrisisAction": "Should nations commit to a coordinated global strategy to protect coral reefs amid the worst bleaching event in recorded history?",
+              "aiSafetyTreaty": "Should nations agree to an enforceable global AI safety treaty?",
+              "polarIceProtocol": "Should nations agree to a global sea-ice monitoring and early-response protocol—including joint research, data sharing, and mitigation strategies—to address declining polar ice and avert accelerated sea-level rise?",
               "tradePolicyStability": "Should nations adopt a coordinated international code of conduct for tariff policies to enhance predictability and stability in global trade?",
               "heatAdaptation": "Should countries establish a global coordination mechanism for heatwave early warnings and joint relief efforts to protect vulnerable populations during extreme heat events?",
               "criticalMineralsExport": "Should there be an internationally coordinated framework for export controls on critical minerals—such as rare earths and strategic metals—to prevent supply-chain shocks and geopolitical coercion?",
@@ -636,7 +525,7 @@
               "referenceTitle": "Future of Life Institute"
             },
             "longView": {
-              "title": "Open letter calling on world leaders to show long-view leadership on existential threats",
+              "title": "Open Letter Calling on World Leaders to Show Long-View Leadership on Existential Threats",
               "referenceTitle": "Future of Life Institute"
             }
           }
@@ -644,10 +533,90 @@
         "elections": {
           "title": "Elections",
           "description": "Choose your representatives",
-          "worldConstituent": {
-            "title": "World Constituent Assembly Election",
-            "description": "Select representatives for the first democratically elected global parliament.",
-            "button": "Coming Soon"
+          "testElections": {
+            "title": "Test Elections",
+            "description": "Help us distribute party subsidies and improve our system of governance",
+            "button": "Open test election"
+          },
+          "currentElectionPage": {
+            "title": "Current Election",
+            "testElectionTitle": "Test Election",
+            "testElectionSubtitle": "Help us test our voting system",
+            "testElectionTooltip1": "For more information, please read the ",
+            "testElectionTooltip2": "election FAQ",
+            "testElectionTooltip3": ".",
+            "politicalParties": "Political parties",
+            "searchPlaceholder": "Search parties...",
+            "leaderPrefix": "Leader: ",
+            "noActiveElection": "No Active Election",
+            "noActiveElectionDescription": "There is no election currently running",
+            "backToOverview": "Back to overview",
+            "buttons": {
+              "voted": "Voted",
+              "vote": "Vote",
+              "processing": "Processing...",
+              "cancel": "Cancel"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "Confirm Your Vote",
+                "description": "You are about to cast your vote for {{partyName}}. This action will be recorded on the blockchain.",
+                "confirmText": "Confirm vote"
+              },
+              "change": {
+                "title": "Change Your Vote",
+                "description": "Are you sure you want to change your vote from {{previousPartyName}} to {{partyName}}?",
+                "confirmText": "Confirm change"
+              },
+              "remove": {
+                "title": "Remove Your Vote",
+                "description": "Are you sure you want to remove your vote for {{partyName}}? You will not be voting for any party.",
+                "confirmText": "Yes, remove vote"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "Please open this app in the World App to vote.",
+              "connectWallet": "Please connect your wallet first.",
+              "noCurrentElection": "Could not determine the current election.",
+              "fetchStatusError": "Failed to fetch voting status. Please try again.",
+              "transactionFailed": "Transaction failed or was rejected.",
+              "voteRemovedSuccess": "Vote removed successfully",
+              "voteSuccess": "Successfully voted for {{partyName}}!",
+              "voteError": "An error occurred while casting your vote."
+            },
+            "electionFaqPage": {
+              "title": "Election FAQ",
+              "items": {
+                "electionPurpose": {
+                  "question": "What is the purpose of these elections?",
+                  "answer": "These elections are a core part of our governance model. Initially, they determine how party subsidies are distributed, rewarding parties based on the support they receive. As our system matures, election results will grant parties more significant responsibilities. This is an iterative process to help us learn and improve."
+                },
+                "ballotQualification": {
+                  "question": "How does a party get on the ballot?",
+                  "answer": "To be on the ballot, a party must have members equal to at least 0.05% of the total number of Basic Income Plus recipients. This ensures that parties have a foundational level of support from active, verified members."
+                },
+                "howToVote": {
+                  "question": "How do I vote?",
+                  "answer": "On the election page, you can see a list of eligible political parties. Simply tap the 'Vote' button next to the party you want to support. You will be asked to confirm your vote through your wallet."
+                },
+                "canIChangeVote": {
+                  "question": "Can I change my vote?",
+                  "answer": "Yes, you can change your vote at any time while the election is active. Simply vote for a different party, and your previous vote will be replaced. You can also remove your vote entirely."
+                },
+                "electionDeadline": {
+                  "question": "When do the elections end?",
+                  "answer": "Test elections run until Sunday at 23:59:59 UTC. Votes must be cast before this time to be counted for the current election."
+                },
+                "isVoteAnonymous": {
+                  "question": "Is my vote anonymous?",
+                  "answer": "Voting is pseudonymous. While your vote is linked to your wallet address on the blockchain for transparency, your real-world identity is not directly tied to it."
+                },
+                "whatArePartySubsidies": {
+                  "question": "What are the party subsidies?",
+                  "answer": "Party subsidies are rewards distributed to political parties based on the votes they receive. This program funds party activities and helps them grow. You can learn more about the <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">Party Subsidy Program</a>."
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -655,8 +624,8 @@
           "description": "Direct votes on important issues",
           "worldConstitutional": {
             "title": "World Constitutional Referendum",
-            "description": "Participate in a historic vote on principles that will guide humanity's collective future.",
-            "button": "Coming Soon"
+            "description": "Participate in a historic vote on principles that will guide humanity's collective future",
+            "button": "Coming soon"
           }
         }
       }
@@ -665,9 +634,8 @@
       "title": "Menu",
       "sections": {
         "experimental": {
-          "title": "EXPERIMENTAL",
+          "title": "SETTINGS",
           "links": {
-            "verification": "Verification status",
             "language": "Language"
           }
         },
@@ -682,6 +650,7 @@
         "help": {
           "title": "HELP",
           "links": {
+            "support": "Support",
             "faq": "FAQ"
           }
         },
@@ -703,11 +672,11 @@
         },
         "basicIncome": {
           "question": "What is Basic Income?",
-          "answer": "Our Basic Income is a daily subsidy of 1 WDD (world drachma) that is provided to all citizens of the World Republic. It accumulates in real-time and can be claimed at any moment through the app."
+          "answer": "Our Basic Income is a daily subsidy of 0.01 WDD (world drachma) that is provided to all citizens of the World Republic. It accumulates in real-time and can be claimed at any moment through the app."
         },
         "basicIncomePlus": {
           "question": "How do I activate Basic Income Plus?",
-          "answer": "Basic Income Plus provides an additional 10 WDD per day and is available exclusively to Orb-verified users. After activating Basic Income, you'll see an option to activate Basic Income Plus on the Earn page."
+          "answer": "Basic Income Plus provides an additional 0.19 WDD per day and is available exclusively to Orb-verified users. After activating Basic Income, you'll see an option to activate Basic Income Plus on the Earn page."
         },
         "savings": {
           "question": "How does the Savings Account work?",
@@ -715,7 +684,7 @@
         },
         "referralCodes": {
           "question": "How do referral codes work?",
-          "answer": "As a World Republic citizen, you can earn rewards through our referral program. Share your unique referral link with friends, and you'll receive 50 WDD for each person who joins and verified via Orb or passport. Haven't received your reward? Your friend may need to manually trigger it by selecting the 'Reward Referrer' option in their referral section."
+          "answer": "As a World Republic citizen, you can earn rewards through our referral program. Share your unique referral link with friends, and you'll receive 10 WDD for each person who joins our web app and completes liveness check."
         },
         "drachmaValue": {
           "question": "Where does the drachma get its value?",
@@ -723,11 +692,11 @@
         },
         "topWallets": {
           "question": "Who controls the biggest accounts?",
-          "answer": "The three largest accounts are the <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>World Republic Treasury</a>, the <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Fund</a>, and the <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Plus Fund</a>. Currently, these are controlled by the project's founder, but control will be transferred to the community after our constitution is ratified. Other key addresses include the <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>Savings Account contract</a>, the <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>Referral Rewards distributor</a>, and liquidity pools: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, and <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
+          "answer": "The three largest accounts are the <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>World Republic Treasury</a>, the <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Fund</a>, and the <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Plus Fund</a>. These are currently stewarded by the project's founder to ensure stability while we progressively transfer control to the community. Other key addresses include the <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>Savings Account contract</a>, the <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>Referral Rewards distributor</a>, and liquidity pools: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, and <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "What are the requirements to propose votes?",
-          "answer": "The current polls and open letters are just a showcase. Our community will collectively decide our system of governance through the constitutional design process led by the Constituent Assembly elected in Q2 2025."
+          "question": "How can I participate in governance?",
+          "answer": "You can participate by joining or creating a political party. While current votes are illustrative, parties are the foundation of our governance model. As parties professionalize, they will unlock more and more significant areas for democratic control, giving you a voice in our collective decisions."
         }
       }
     },
@@ -736,26 +705,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "Verification Status",
-      "levels": {
-        "document": {
-          "title": "Document Verification",
-          "description": "Check document verification status",
-          "buttonText": "Check Status"
-        },
-        "secureDocument": {
-          "title": "Secure Document Verification",
-          "description": "Check secure document verification status",
-          "buttonText": "Check Status"
-        },
-        "orb": {
-          "title": "Orb Verification",
-          "description": "Check Orb verification status",
-          "buttonText": "Check Status"
-        }
       }
     }
   }

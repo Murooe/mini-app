@@ -2,16 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Typography } from "@/components/ui/Typography";
-import Link from "next/link";
 import { BiChevronLeft, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "@/hooks/useTranslations";
-
-type FAQItem = {
-  id: string;
-  question: string;
-  answer: string;
-};
+import { useRouter } from "next/navigation";
+import type { FAQItem } from "@/lib/types";
 
 export default function FAQPage({
   params: { lang },
@@ -21,7 +16,7 @@ export default function FAQPage({
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const searchParams = useSearchParams();
   const dictionary = useTranslations(lang);
-
+  const router = useRouter();
   const faqs: FAQItem[] = [
     {
       id: "app-purpose",
@@ -85,13 +80,18 @@ export default function FAQPage({
   return (
     <div className="flex min-h-screen flex-col px-6 pb-20">
       <div className="relative flex items-center justify-center py-6">
-        <Link
-          href={`/${lang}/menu`}
+        <button
+          onClick={() => router.back()}
           className="absolute left-0 flex size-10 items-center justify-center rounded-full bg-gray-100"
+          aria-label="Back"
         >
           <BiChevronLeft className="size-6 text-gray-500" />
-        </Link>
-        <Typography as="h2" variant={{ variant: "heading", level: 3 }}>
+        </button>
+        <Typography
+          as="h2"
+          variant={{ variant: "heading", level: 3 }}
+          className="mx-12 text-center"
+        >
           {dictionary?.pages?.faq?.title}
         </Typography>
       </div>

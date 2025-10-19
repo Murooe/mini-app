@@ -1,14 +1,18 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "Hubungkan Dompet"
+      "connect": "Hubungkan dompet"
     },
-    "verifyButton": {
-      "verify": "Verifikasi untuk Klaim"
+    "banners": {
+      "dalgona": {
+        "title": "Ukir Dalgona untuk Mendapatkan Penghasilan",
+        "description": "Bergabunglah dengan tantangan memotong permen dan menangkan hadiah DAL.",
+        "cta": "Main sekarang"
+      }
     },
-    "pollOfTheDay": {
-      "previousPolls": "Polling Sebelumnya",
-      "vote": "Voting Sekarang"
+    "pollOfTheWeek": {
+      "previousPolls": "Jajak pendapat sebelumnya",
+      "vote": "Pilih sekarang"
     },
     "stakeForm": {
       "deposit": "Setor",
@@ -19,8 +23,8 @@
       "max": "Maksimal",
       "interest": "Bunga:",
       "collect": "Kumpulkan",
-      "depositButton": "Setor Drachma",
-      "withdrawButton": "Tarik Drachma"
+      "depositButton": "Setor drachma",
+      "withdrawButton": "Tarik drachma"
     },
     "toasts": {
       "wallet": {
@@ -52,33 +56,33 @@
     "tabSwiper": {
       "tabs": {
         "politicalParties": "Partai",
-        "polls": "Jajak Pendapat",
-        "openLetters": "Surat Terbuka",
+        "polls": "Jajak pendapat",
+        "openLetters": "Surat terbuka",
         "elections": "Pemilu",
         "referendums": "Referendum"
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "Kami menyadari adanya masalah pemuatan partai. Harap bersabar sementara kami bekerja untuk memperbaikinya.",
       "myParty": "Partai saya",
       "createParty": "Buat Partai Baru",
       "noParty": "Anda belum membuat atau bergabung dengan partai.",
       "discover": "Jelajahi",
       "partyDetails": "Detail Partai",
       "description": "Deskripsi",
-      "partyInfo": "Informasi Partai",
+      "partyInfo": "Informasi partai",
       "leader": "Pemimpin",
-      "website": "Situs Web",
+      "website": "Situs web",
       "members": "Anggota",
       "noMembers": "Belum ada anggota",
-      "bannedMembers": "Anggota Diblokir",
+      "approvalNote": "Partai dengan tautan resmi yang berfungsi dan/atau keanggotaan yang berkembang diprioritaskan untuk persetujuan.",
+      "bannedMembers": "Anggota yang diblokir",
       "errorLoading": "Kesalahan Memuat Partai",
       "partyNotFound": "Partai Tidak Ditemukan",
       "partyNotFoundDescription": "Partai yang Anda cari tidak ada atau telah dihapus.",
       "backToParties": "Kembali ke Partai",
       "joining": "Bergabung...",
-      "joinParty": "Bergabung dengan Partai",
-      "shareParty": "Bagikan Partai",
+      "joinParty": "Bergabung dengan partai",
+      "shareParty": "Bagikan partai",
       "copied": "Tautan disalin ke clipboard",
       "status": {
         "pending": "Tertunda",
@@ -100,9 +104,9 @@
         "deleted": "Dihapus",
         "members": "anggota",
         "actions": {
-          "leaveParty": "Tinggalkan Partai",
-          "joinParty": "Bergabung dengan Partai",
-          "joinPendingParty": "Bergabung dengan Partai Tertunda"
+          "leaveParty": "Tinggalkan partai",
+          "joinParty": "Bergabung dengan partai",
+          "joinPendingParty": "Bergabung dengan partai tertunda"
         },
         "management": {
           "title": "Manajemen Partai",
@@ -140,14 +144,14 @@
           },
           "button": {
             "creating": "Membuat...",
-            "create": "Buat Partai"
+            "create": "Buat partai"
           }
         },
         "update": {
           "title": "Perbarui Detail Partai",
           "button": {
             "update": "Perbarui",
-            "updateDescription": "Perbarui Deskripsi"
+            "updateDescription": "Perbarui deskripsi"
           }
         },
         "transferLeadership": {
@@ -171,7 +175,7 @@
           },
           "button": {
             "processing": "Memproses...",
-            "transfer": "Transfer Kepemimpinan"
+            "transfer": "Transfer kepemimpinan"
           }
         },
         "leave": {
@@ -198,8 +202,8 @@
           "confirm": "Apakah Anda yakin ingin menghapus partai ini?",
           "button": {
             "processing": "Memproses...",
-            "deletePending": "Hapus Partai Tertunda",
-            "delete": "Hapus Partai"
+            "deletePending": "Hapus partai tertunda",
+            "delete": "Hapus partai"
           }
         },
         "memberManagement": {
@@ -208,27 +212,27 @@
           "tabs": {
             "remove": "Hapus",
             "ban": "Blokir",
-            "unban": "Batalkan Blokir"
+            "unban": "Batalkan blokir"
           },
           "remove": {
             "description": "Masukkan alamat dompet anggota yang ingin Anda hapus atau cari berdasarkan nama pengguna.",
             "button": {
               "processing": "Memproses...",
-              "remove": "Hapus Anggota"
+              "remove": "Hapus anggota"
             }
           },
           "ban": {
             "description": "Masukkan nama pengguna atau alamat dompet anggota yang ingin Anda blokir dari partai.",
             "button": {
               "processing": "Memproses...",
-              "ban": "Blokir Anggota"
+              "ban": "Blokir anggota"
             }
           },
           "unban": {
             "description": "Masukkan nama pengguna atau alamat dompet anggota yang diblokir yang ingin Anda izinkan kembali ke partai.",
             "button": {
               "processing": "Memproses...",
-              "unban": "Batalkan Blokir Anggota"
+              "unban": "Batalkan blokir anggota"
             }
           }
         }
@@ -245,6 +249,11 @@
           "subtitle": "Masuk untuk mengklaim pendapatan dasar Anda",
           "setupSubtitle": "Atur pendapatan dasar Anda",
           "claimableSubtitle": "Drachma yang dapat diklaim",
+          "claimableTooltip1": "Sebagai bagian dari",
+          "claimableTooltip2": "program pembelian kembali",
+          "claimableTooltip3": " kami, kami menyesuaikan tingkat pendapatan dasar untuk menciptakan manfaat berkelanjutan jangka panjang bagi komunitas kami. Silakan lihat",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "untuk tarif saat ini.",
           "activateButton": "Aktifkan Pendapatan Dasar",
           "claimButton": "Klaim",
           "plus": {
@@ -257,13 +266,10 @@
               "subtitle": "Pendapatan tambahan untuk pengguna terverifikasi",
               "features": {
                 "rate": {
-                  "title": "Tambahan 10 WDD per hari"
+                  "title": "Tambahan 0,19 WDD per hari"
                 },
                 "verification": {
                   "title": "Eksklusif untuk pengguna terverifikasi Orb untuk memastikan distribusi yang adil"
-                },
-                "rewards": {
-                  "title": "Hadiah beralih ke Plus seiring waktu sambil mempertahankan total 11 WDD/hari"
                 }
               },
               "activateButton": "Aktifkan Pendapatan Dasar Plus",
@@ -280,259 +286,126 @@
         },
         "invite": {
           "title": "Undang",
-          "subtitle": "Dapatkan 50 WDD untuk setiap teman yang bergabung",
-          "tooltip": "Teman harus diverifikasi melalui Orb atau paspor.",
+          "subtitle": "Dapatkan 10 WDD untuk setiap teman yang bergabung",
+          "tooltip": "Teman harus bergabung ke aplikasi web baru kami.",
           "learnMore": "Pelajari lebih lanjut",
           "stats": {
-            "title": "Statistik Referral Anda",
+            "title": "Statistik referral Anda",
             "invites": "Undangan diterima",
             "rewards": "Total hadiah"
           },
           "actions": {
-            "copyLink": "Salin Tautan Referral",
+            "copyLink": "Salin tautan referral",
             "copied": "Tautan referral disalin ke clipboard!",
             "connectWallet": "Silakan hubungkan dompet Anda untuk menghasilkan tautan referral",
-            "rewardReferrer": "Hadiahkan Referrer",
-            "share": "Bagikan Tautan Undangan"
-          },
-          "drawer": {
-            "title": "Beri Hadiah Pereferral",
-            "subtitle": "Berikan hadiah 50 WDD gratis untuk pereferral Anda",
-            "passportSubtitle": "Buktikan verifikasi paspor Anda dan berikan hadiah 50 WDD gratis untuk pereferral Anda",
-            "invitedBy": "Anda diundang oleh: {{username}}",
-            "input": {
-              "placeholder": "Masukkan username (contoh: username.0000)",
-              "lookupButton": "Cari Pengguna",
-              "sendingTo": "Mengirim hadiah ke:",
-              "editButton": "Edit",
-              "sendButton": "Kirim Hadiah",
-              "proveReward": "Buktikan dan Beri Hadiah"
-            },
-            "errors": {
-              "enterUsername": "Silakan masukkan username",
-              "usernameNotFound": "Username tidak ditemukan",
-              "lookupFailed": "Gagal mencari username. Silakan coba lagi.",
-              "installMiniKit": "Silakan pasang MiniKit untuk mencari username",
-              "connectWallet": "Silakan hubungkan dompet Anda terlebih dahulu",
-              "transactionCanceled": "Transaksi dibatalkan"
-            },
-            "success": {
-              "rewardSent": "Berhasil mengirim hadiah ke {{username}}!"
-            }
+            "share": "Bagikan tautan undangan"
           },
           "share": {
             "title": "Bergabunglah dengan Republik Dunia",
             "text": "Gunakan tautan undangan saya untuk bergabung dengan Republik Dunia dan mendapatkan hadiah bersama!"
-          },
-          "passportDrawer": {
-            "title": "Program Referral Terverifikasi Paspor",
-            "subtitle": "Undang pemegang paspor dan dapatkan 50 WDD",
-            "features": {
-              "countries": {
-                "title": "Verifikasi paspor saat ini tersedia di Argentina, Australia, Chili, Kolombia, Kroasia, Jepang, Filipina, Portugal, Korea Selatan, dan Amerika Serikat"
-              },
-              "rewards": {
-                "title": "Teman menerima WLD untuk memverifikasi paspor mereka di Aplikasi World"
-              },
-              "basicIncome": {
-                "title": "Pendapatan dasar tambahan untuk orang-orang yang terverifikasi paspor akan segera hadir"
-              }
-            },
-            "trigger": {
-              "titleText": "Sekarang juga tersedia setelah teman-teman terverifikasi paspor!",
-              "titleDetails": "Detail"
-            }
           }
         },
         "contribute": {
           "title": "Berkontribusi",
           "subtitle": "Ikut terlibat, dapatkan hadiah",
-          "contests": {
-            "ended": "Selesai",
-            "weekly": "Mingguan",
-            "topPrize": "Hadiah utama",
-            "xPost": {
-              "title": "Kontes Posting X",
-              "description": "Tulis posting menarik, menangkan hadiah"
-            },
-            "poll": {
-              "title": "Kontes Polling",
-              "description": "Kumpulkan umpan balik komunitas dan dapatkan hadiah"
-            },
-            "pollContest": {
-              "title": "Kontes Jajak Pendapat",
-              "weeklyTitle": "Kontes Jajak Pendapat Mingguan",
-              "description": "Kumpulkan umpan balik komunitas dan menangkan hadiah",
-              "prizes": {
-                "title": "Hadiah",
-                "viewWinners": "Lihat pemenang sebelumnya",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "Cara Berpartisipasi",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "Buat jajak pendapat terkait Republik Dunia atau tata kelola global secara umum"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "Atur agar hanya pengguna terverifikasi yang dapat memilih"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "Bagikan jajak pendapat Anda di",
-                    "link": {
-                      "text": "saluran Telegram Kontes Jajak Pendapat",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "Aturan Kontes",
-                "list": {
-                  "rule1": "Hanya jajak pendapat yang dimulai minggu ini yang berhak berpartisipasi",
-                  "rule2": "Kontes berakhir setiap Minggu pukul 11:59 PM UTC",
-                  "rule3": "Pemenang dipilih berdasarkan total suara dan dihubungi melalui Telegram dalam waktu 24 jam"
-                }
-              },
-              "cta": {
-                "create": "Buat Jajak Pendapat",
-                "submit": "Kirim Jajak Pendapat"
-              },
-              "winners": {
-                "title": "Pemenang Kontes",
-                "weekOf": "Minggu",
-                "votes": "suara"
-              }
-            },
-            "testing": {
-              "title": "Pengujian Fitur Baru",
-              "description": "Terbuka untuk anggota yang terverifikasi dengan paspor tetapi tidak oleh Orb."
-            },
-            "oneOff": "Satu kali",
-            "limited": "50 tempat"
-          },
-          "earlyAccess": {
-            "title": "Program Akses Awal",
-            "description": "Dapatkan WDD dengan menguji fitur-fitur kami yang akan datang"
-          },
           "buybackProgram": {
             "topnav": "Program Pembelian Kembali",
             "title": "Program Pembelian Kembali Token",
-            "subtitle": "Memperkuat nilai WDD bersama",
+            "subtitle": "Perkuat nilai WDD bersama",
             "sections": {
-              "devRewards": {
-                "title": "Program Imbalan Pengembang",
-                "startDate": "Dimulai 1 April 2025",
-                "description": "World sedang menguji imbalan pengembang berdasarkan penggunaan aplikasi oleh manusia terverifikasi.",
-                "learnMore": "Pelajari lebih lanjut tentang program ini"
+              "fundingSources": {
+                "title": "Sumber pendanaan",
+                "devRewards": {
+                  "title": "Hadiah Pengembang World",
+                  "weekProgress": "Minggu 7 dari 12"
+                },
+                "worldRetro": {
+                  "title": "Pendanaan World Retro"
+                },
+                "optimism": {
+                  "title": "Pendanaan Optimism Retro"
+                },
+                "affiliate": {
+                  "title": "Komisi afiliasi"
+                }
               },
               "commitment": {
-                "title": "Komitmen 50% kami",
-                "body": "Kami berjanji untuk menggunakan setidaknya 50% dari imbalan program kami untuk pembelian kembali WDD."
-              },
-              "helpSection": {
-                "title": "Bagaimana Anda dapat membantu",
-                "intro": "Anda dapat berkontribusi langsung dalam meningkatkan nilai token WDD Anda:",
-                "steps": {
-                  "invite": {
-                    "title": "Undang orang lain untuk bergabung",
-                    "description": "Kembangkan komunitas anggota terverifikasi kami"
-                  },
-                  "useApp": {
-                    "title": "Gunakan aplikasi secara teratur",
-                    "description": "Dorong siklus ekonomi yang baik"
-                  }
-                }
+                "title": "Komitmen kami",
+                "description": "Kami berkomitmen untuk menggunakan setidaknya 50% dari semua pendanaan ini untuk pembelian kembali WDD.",
+                "viewAccount": "Lihat akun pembelian kembali"
               },
               "valueCycle": {
                 "title": "Siklus Nilai Positif",
                 "steps": {
                   "step1": "Lebih banyak pengguna & penggunaan aplikasi",
-                  "step2": "Imbalan pengembang yang lebih tinggi",
+                  "step2": "Hadiah lebih tinggi",
                   "step3": "Lebih banyak pembelian kembali token"
+                }
+              },
+              "helpSection": {
+                "title": "Bagaimana Anda dapat membantu",
+                "intro": "Anda dapat berkontribusi langsung untuk meningkatkan nilai token WDD Anda:",
+                "steps": {
+                  "invite": {
+                    "title": "Mengundang orang lain untuk bergabung",
+                    "description": "Tumbuhkan komunitas anggota terverifikasi kami"
+                  },
+                  "useApp": {
+                    "title": "Gunakan aplikasi secara teratur",
+                    "description": "Dorong siklus ekonomi yang positif"
+                  }
                 }
               }
             },
             "actions": {
-              "share": "Bagikan Undangan"
+              "share": "Bagikan undangan"
             },
-            "cta": "Lihat Statistik Mini App"
+            "cta": "Lihat hadiah mini app"
           },
           "buybackLink": {
             "title": "Program Buyback",
             "description": "Pertumbuhan nilai WDD yang didukung komunitas"
-          },
-          "xContest": {
-            "title": "Kontes Posting X",
-            "weeklyTitle": "Kontes Posting X Mingguan",
-            "description": "Tulis posting menarik, menangkan hadiah",
-            "prizes": {
-              "title": "Hadiah",
-              "viewWinners": "Lihat pemenang sebelumnya",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "Cara berpartisipasi",
-              "step1": "Tulis posting X tentang Republik Dunia",
-              "step2": "Tag @WorldRepublicEN",
-              "step3": {
-                "prefix": "Bagikan tautan posting Anda di",
-                "link": "Saluran Telegram Kontes Posting X"
-              }
-            },
-            "rules": {
-              "title": "Aturan kontes",
-              "rule1": "Hanya posting yang diterbitkan pada minggu ini yang memenuhi syarat",
-              "rule2": "Pemenang dipilih berdasarkan total keterlibatan organik (suka + repost + komentar)",
-              "rule3": "Kontes berakhir setiap hari Minggu pukul 11:59 PM UTC"
-            },
-            "cta": {
-              "post": "Mulai Posting Sekarang",
-              "submit": "Kirim Posting Anda"
-            },
-            "winners": {
-              "title": "Pemenang Kontes",
-              "weekOf": "Minggu",
-              "engagements": "keterlibatan"
-            }
           },
           "partySubsidy": {
             "topnav": "Program Subsidi",
             "title": "Program Subsidi Partai",
             "subtitle": "Bangun gerakan politik Anda dan dapatkan penghasilan",
             "weeklyPool": {
-              "title": "100.000 WDD",
-              "subtitle": "Dana mingguan tetap"
+              "old": "100.000",
+              "new": "250.000 WDD",
+              "subtitle": "Kolam tetap"
             },
             "devRewards": {
               "title": "10% dari Reward Developer kami",
-              "subtitle": "Dana reward yang bervariasi",
+              "subtitle": "Kolam variabel",
               "tooltip": "World mendistribusikan reward developer berdasarkan penggunaan aplikasi oleh manusia terverifikasi.",
               "checkOutRewards": "Lihat reward"
             },
             "howItWorks": {
-              "title": "Cara Kerjanya",
+              "title": "Cara kerjanya",
               "steps": {
                 "createParty": {
-                  "title": "Buat Partai",
+                  "title": "Buat partai",
                   "description": "Mulai gerakan politik Anda di aplikasi World Republic"
                 },
                 "growMembership": {
-                  "title": "Kembangkan Keanggotaan Anda",
-                  "description": "Rekrut anggota dan bangun komunitas Anda"
+                  "title": "Masuk ke surat suara",
+                  "description": "Tingkatkan keanggotaan Anda untuk memenuhi syarat pemilihan mingguan"
                 },
                 "earnRewards": {
-                  "title": "Dapatkan Hadiah",
-                  "description": "Para pemimpin dari 50 partai teratas menerima subsidi mingguan"
+                  "title": "Menerima pendanaan",
+                  "description": "Dapatkan subsidi sebanding dengan suara yang diterima partai Anda"
                 }
               }
             },
             "cta": {
-              "createJoin": "Buat atau Gabung Partai",
-              "leaderGroup": "Gabung Grup Pemimpin Partai"
+              "createJoin": "Buat atau gabung partai",
+              "leaderGroup": "Gabung grup pemimpin partai"
+            },
+            "payouts": {
+              "title": "Pembayaran",
+              "week": "Minggu",
+              "showAll": "Tampilkan semua"
             }
           }
         }
@@ -548,12 +421,19 @@
       },
       "sections": {
         "polls": {
-          "title": "Polling Hari Ini",
-          "description": "Voting cepat tentang topik terkini",
+          "title": "Polling Mingguan",
+          "description": "Voting cepat tentang topik saat ini",
           "previous": {
             "title": "Polling Sebelumnya",
             "backToGovern": "Kembali ke Kelola",
             "polls": {
+              "digitalGovernance": "Seiring kemajuan pesat kecerdasan buatan dan teknologi digital, haruskah negara-negara secara kolektif memastikan pengembangan dan tata kelola yang bertanggung jawab untuk mencegah gangguan sosial yang meluas?",
+              "nuclearEscalationRisk": "Haruskah kerangka kerja global dibentuk untuk mengurangi risiko eskalasi nuklir di wilayah dengan ketegangan geopolitik yang meningkat?",
+              "nuclearDisarmamentTalks": "Mengingat laporan terbaru tentang peningkatan produksi bahan nuklir, haruskah kekuatan dunia memulai kembali negosiasi perlucutan senjata nuklir yang komprehensif?",
+              "pandemicPreparednessFund": "Apakah dana global permanen harus didirikan untuk memastikan akses berkelanjutan dan adil terhadap sumber daya untuk kesiapsiagaan dan respons pandemi di masa depan di seluruh dunia?",
+              "globalAidCuts": "Apakah negara-negara harus mempertimbangkan kembali pengurangan bantuan luar negeri yang berisiko membalikkan kemajuan puluhan tahun melawan penyakit seperti AIDS dan malaria?",
+              "coralCrisisAction": "Haruskah negara-negara berkomitmen pada strategi global terkoordinasi untuk melindungi terumbu karang di tengah peristiwa pemutihan karang terburuk dalam sejarah yang tercatat?",
+              "aiSafetyTreaty": "Haruskah negara-negara menyetujui perjanjian keamanan AI global yang dapat ditegakkan?",
               "heatAdaptation": "Haruskah negara-negara membentuk mekanisme koordinasi global untuk peringatan dini gelombang panas dan upaya bantuan bersama untuk melindungi populasi rentan selama peristiwa panas ekstrem?",
               "globalMilitaryExerciseProtocol": "Haruskah negara-negara menyetujui protokol notifikasi dan pengamat internasional untuk latihan militer skala besar di dekat wilayah yang diperebutkan untuk mengurangi risiko eskalasi?",
               "globalMaritimeSecurity": "Haruskah satuan tugas keamanan maritim internasional dibentuk untuk melindungi pengiriman komersial di perairan internasional dari serangan bersenjata?",
@@ -620,7 +500,9 @@
               "sovereignDebtRestructuring": "Haruskah ada mekanisme restrukturisasi utang negara yang dikoordinasikan secara internasional untuk memberikan bantuan tepat waktu kepada negara-negara yang menghadapi tingkat utang yang tidak berkelanjutan?",
               "wildlifeTrafficking": "Haruskah negara-negara berkolaborasi dalam kerangka internasional khusus untuk memerangi perdagangan satwa liar ilegal, termasuk pembajakan hayati serangga dan spesies lain yang sedang berkembang?",
               "criticalMineralsExport": "Haruskah ada kerangka kerja yang terkoordinasi secara internasional untuk pengendalian ekspor mineral kritis—seperti logam tanah jarang dan logam strategis—untuk mencegah guncangan rantai pasokan dan pemaksaan geopolitik?",
-              "tradePolicyStability": "Haruskah negara-negara mengadopsi kode etik internasional yang terkoordinasi untuk kebijakan tarif guna meningkatkan prediktabilitas dan stabilitas dalam perdagangan global?"
+              "tradePolicyStability": "Haruskah negara-negara mengadopsi kode etik internasional yang terkoordinasi untuk kebijakan tarif guna meningkatkan prediktabilitas dan stabilitas dalam perdagangan global?",
+              "cyberResilienceProtocol": "Haruskah negara-negara membentuk protokol respons keamanan siber global yang terkoordinasi untuk melindungi dari serangan siber berbasis AI yang dapat mengganggu infrastruktur penting di seluruh dunia?",
+              "middleEastEscalation": "Haruskah konsorsium negara-negara independen mendukung inisiatif de-eskalasi netral di Timur Tengah untuk mengurangi risiko konflik regional?"
             }
           }
         },
@@ -642,7 +524,7 @@
               "referenceTitle": "Institut Masa Depan Kehidupan"
             },
             "longView": {
-              "title": "Surat terbuka yang meminta pemimpin dunia untuk menunjukkan kepemimpinan jangka panjang tentang ancaman eksistensial",
+              "title": "Surat Terbuka yang Meminta Pemimpin Dunia untuk Menunjukkan Kepemimpinan Jangka Panjang tentang Ancaman Eksistensial",
               "referenceTitle": "Institut Masa Depan Kehidupan"
             }
           }
@@ -650,10 +532,90 @@
         "elections": {
           "title": "Pemilu",
           "description": "Pilih perwakilan Anda",
-          "worldConstituent": {
-            "title": "Pemilihan Majelis Konstituen Dunia",
-            "description": "Pilih perwakilan untuk parlemen global pertama yang dipilih secara demokratis.",
-            "button": "Segera Hadir"
+          "testElections": {
+            "title": "Pemilu Uji Coba",
+            "description": "Bantu kami mendistribusikan subsidi partai dan meningkatkan sistem tata kelola kami",
+            "button": "Buka pemilu uji coba"
+          },
+          "currentElectionPage": {
+            "title": "Pemilu Saat Ini",
+            "testElectionTitle": "Pemilu Percobaan",
+            "testElectionSubtitle": "Bantu kami menguji sistem pemungutan suara kami",
+            "testElectionTooltip1": "Untuk informasi lebih lanjut, silakan baca ",
+            "testElectionTooltip2": "FAQ pemilu",
+            "testElectionTooltip3": ".",
+            "politicalParties": "Partai politik",
+            "searchPlaceholder": "Cari partai...",
+            "leaderPrefix": "Pemimpin: ",
+            "noActiveElection": "Tidak Ada Pemilu Aktif",
+            "noActiveElectionDescription": "Saat ini tidak ada pemilu yang sedang berlangsung",
+            "backToOverview": "Kembali ke ringkasan",
+            "buttons": {
+              "voted": "Telah Memilih",
+              "vote": "Pilih",
+              "processing": "Memproses...",
+              "cancel": "Batal"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "Konfirmasi Pilihan Anda",
+                "description": "Anda akan memberikan suara Anda untuk {{partyName}}. Tindakan ini akan dicatat di blockchain.",
+                "confirmText": "Konfirmasi pilihan"
+              },
+              "change": {
+                "title": "Ubah Pilihan Anda",
+                "description": "Apakah Anda yakin ingin mengubah suara Anda dari {{previousPartyName}} menjadi {{partyName}}?",
+                "confirmText": "Konfirmasi perubahan"
+              },
+              "remove": {
+                "title": "Hapus Pilihan Anda",
+                "description": "Apakah Anda yakin ingin menghapus suara Anda untuk {{partyName}}? Anda tidak akan memilih partai manapun.",
+                "confirmText": "Ya, hapus pilihan"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "Silakan buka aplikasi ini di World App untuk memilih.",
+              "connectWallet": "Silakan hubungkan dompet Anda terlebih dahulu.",
+              "noCurrentElection": "Tidak dapat menentukan pemilu saat ini.",
+              "fetchStatusError": "Gagal mengambil status pemungutan suara. Silakan coba lagi.",
+              "transactionFailed": "Transaksi gagal atau ditolak.",
+              "voteRemovedSuccess": "Pilihan berhasil dihapus",
+              "voteSuccess": "Berhasil memilih {{partyName}}!",
+              "voteError": "Terjadi kesalahan saat memberikan suara Anda."
+            },
+            "electionFaqPage": {
+              "title": "FAQ Pemilu",
+              "items": {
+                "electionPurpose": {
+                  "question": "Apa tujuan dari pemilu ini?",
+                  "answer": "Pemilu ini adalah bagian inti dari model tata kelola kami. Awalnya, mereka menentukan bagaimana subsidi partai didistribusikan, memberikan penghargaan kepada partai berdasarkan dukungan yang mereka terima. Seiring sistem kami matang, hasil pemilu akan memberikan tanggung jawab yang lebih signifikan kepada partai. Ini adalah proses berulang untuk membantu kami belajar dan berkembang."
+                },
+                "ballotQualification": {
+                  "question": "Bagaimana sebuah partai bisa masuk ke surat suara?",
+                  "answer": "Untuk bisa masuk ke surat suara, sebuah partai harus memiliki anggota yang setara dengan setidaknya 0,05% dari jumlah total penerima Basic Income Plus. Ini memastikan bahwa partai memiliki tingkat dukungan dasar dari anggota yang aktif dan terverifikasi."
+                },
+                "howToVote": {
+                  "question": "Bagaimana cara saya memilih?",
+                  "answer": "Di halaman pemilu, Anda dapat melihat daftar partai politik yang memenuhi syarat. Cukup ketuk tombol 'Pilih' di sebelah partai yang ingin Anda dukung. Anda akan diminta untuk mengkonfirmasi suara Anda melalui dompet Anda."
+                },
+                "canIChangeVote": {
+                  "question": "Bisakah saya mengubah suara saya?",
+                  "answer": "Ya, Anda dapat mengubah suara Anda kapan saja selama pemilu aktif. Cukup pilih partai yang berbeda, dan suara Anda sebelumnya akan diganti. Anda juga dapat menghapus suara Anda sepenuhnya."
+                },
+                "electionDeadline": {
+                  "question": "Kapan pemilu berakhir?",
+                  "answer": "Pemilu uji coba berlangsung hingga hari Minggu pukul 23:59:59 UTC. Suara harus diberikan sebelum waktu ini untuk dihitung dalam pemilu saat ini."
+                },
+                "isVoteAnonymous": {
+                  "question": "Apakah suara saya anonim?",
+                  "answer": "Pemungutan suara bersifat pseudonim. Meskipun suara Anda terhubung ke alamat dompet Anda di blockchain untuk transparansi, identitas dunia nyata Anda tidak terikat langsung padanya."
+                },
+                "whatArePartySubsidies": {
+                  "question": "Apa itu subsidi partai?",
+                  "answer": "Subsidi partai adalah imbalan yang didistribusikan kepada partai politik berdasarkan suara yang mereka terima. Program ini mendanai kegiatan partai dan membantu mereka tumbuh. Anda dapat mempelajari lebih lanjut tentang <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">Program Subsidi Partai</a>."
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -661,8 +623,8 @@
           "description": "Voting langsung terhadap isu-isu penting",
           "worldConstitutional": {
             "title": "Referendum Konstitusional Dunia",
-            "description": "Berpartisipasilah dalam pemungutan suara bersejarah tentang prinsip-prinsip yang akan memandu masa depan kolektif umat manusia.",
-            "button": "Segera Hadir"
+            "description": "Berpartisipasilah dalam pemungutan suara bersejarah tentang prinsip-prinsip yang akan memandu masa depan kolektif umat manusia",
+            "button": "Segera hadir"
           }
         },
         "politicalParties": {
@@ -675,14 +637,13 @@
       "title": "Menu",
       "sections": {
         "experimental": {
-          "title": "EKSPERIMENTAL",
+          "title": "PENGATURAN",
           "links": {
-            "verification": "Status verifikasi",
             "language": "Bahasa"
           }
         },
         "connect": {
-          "title": "HUBUNGKAN",
+          "title": "TERHUBUNG",
           "links": {
             "community": "Komunitas",
             "announcements": "Pengumuman",
@@ -692,6 +653,7 @@
         "help": {
           "title": "BANTUAN",
           "links": {
+            "support": "Dukungan",
             "faq": "FAQ"
           }
         },
@@ -713,11 +675,11 @@
         },
         "basicIncome": {
           "question": "Apa itu Pendapatan Dasar?",
-          "answer": "Pendapatan Dasar kami adalah subsidi harian sebesar 1 WDD (world drachma) yang diberikan kepada semua warga Republik Dunia. Ini terakumulasi secara real-time dan dapat diklaim kapan saja melalui aplikasi."
+          "answer": "Pendapatan Dasar kami adalah subsidi harian sebesar 0.01 WDD (drachma dunia) yang diberikan kepada semua warga Republik Dunia. Ini terakumulasi secara real-time dan dapat diklaim kapan saja melalui aplikasi."
         },
         "basicIncomePlus": {
           "question": "Bagaimana cara mengaktifkan Pendapatan Dasar Plus?",
-          "answer": "Pendapatan Dasar Plus memberikan tambahan 10 WDD per hari dan tersedia secara eksklusif untuk pengguna terverifikasi Orb. Setelah mengaktifkan Pendapatan Dasar, Anda akan melihat opsi untuk mengaktifkan Pendapatan Dasar Plus di halaman Dapatkan."
+          "answer": "Pendapatan Dasar Plus memberikan tambahan 0,19 WDD per hari dan tersedia secara eksklusif untuk pengguna terverifikasi Orb. Setelah mengaktifkan Pendapatan Dasar, Anda akan melihat opsi untuk mengaktifkan Pendapatan Dasar Plus di halaman Dapatkan."
         },
         "savings": {
           "question": "Bagaimana cara kerja Akun Tabungan?",
@@ -725,19 +687,19 @@
         },
         "referralCodes": {
           "question": "Bagaimana kode referral bekerja?",
-          "answer": "Sebagai warga Republik Dunia, Anda dapat memperoleh hadiah melalui program referral kami. Bagikan tautan referral unik Anda dengan teman, dan Anda akan menerima 50 WDD untuk setiap orang yang bergabung dan diverifikasi melalui Orb atau paspor. Belum menerima hadiah Anda? Teman Anda mungkin perlu memicunya secara manual dengan memilih opsi 'Beri Hadiah Perujuk' di bagian referral mereka."
+          "answer": "Sebagai warga Republik Dunia, Anda dapat memperoleh hadiah melalui program referral kami. Bagikan tautan referral unik Anda kepada teman, dan Anda akan menerima 10 WDD untuk setiap orang yang bergabung dengan web app kami dan menyelesaikan pemeriksaan liveness."
         },
         "drachmaValue": {
           "question": "Dari mana drachma mendapatkan nilainya?",
           "answer": "Drachma memperoleh nilainya dari statusnya sebagai mata uang resmi Republik Dunia. Seiring pertumbuhan platform tata kelola global demokratis kami, WDD memiliki potensi untuk menjadi media pertukaran yang signifikan dalam ekonomi dunia, dan pada akhirnya dapat berperan dalam distribusi manfaat yang adil dari kemajuan teknologi dan sumber daya global."
         },
         "topWallets": {
-          "question": "Siapa yang mengendalikan akun terbesar?",
-          "answer": "Tiga akun terbesar adalah <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Bendahara Republik Dunia</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Dasar</a>, dan <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Dasar Plus</a>. Saat ini, ini dikendalikan oleh pendiri proyek, tetapi kendali akan dialihkan ke komunitas setelah konstitusi kami diratifikasi. Alamat kunci lainnya termasuk <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>kontrak Akun Tabungan</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>distributor Hadiah Referral</a>, dan pool likuiditas: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, dan <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
+          "question": "Siapa yang mengendalikan akun-akun terbesar?",
+          "answer": "Tiga akun terbesar adalah <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>Perbendaharaan Republik Dunia</a>, <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Dasar</a>, dan <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Dana Pendapatan Dasar Plus</a>. Saat ini, akun-akun ini dikelola oleh pendiri proyek untuk memastikan stabilitas sambil kami secara bertahap mentransfer kontrol ke komunitas. Alamat kunci lainnya termasuk <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>kontrak Akun Tabungan</a>, <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>distributor Hadiah Referal</a>, dan kolam likuiditas: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, dan <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "Apa persyaratan untuk mengusulkan voting?",
-          "answer": "Polling dan surat terbuka saat ini hanya bersifat percontohan. Komunitas kami akan secara kolektif memutuskan sistem tata kelola kami melalui proses desain konstitusional yang dipimpin oleh Majelis Konstituen yang dipilih pada Q2 2025."
+          "question": "Bagaimana cara saya berpartisipasi dalam pemerintahan?",
+          "answer": "Anda dapat berpartisipasi dengan bergabung atau membuat partai politik. Meskipun pemungutan suara saat ini bersifat ilustratif, partai adalah fondasi model pemerintahan kami. Seiring partai menjadi profesional, mereka akan membuka area yang semakin signifikan untuk kontrol demokratis, memberi Anda suara dalam keputusan kolektif kami."
         }
       }
     },
@@ -746,26 +708,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "Status Verifikasi",
-      "levels": {
-        "document": {
-          "title": "Verifikasi Dokumen",
-          "description": "Periksa status verifikasi dokumen",
-          "buttonText": "Periksa Status"
-        },
-        "secureDocument": {
-          "title": "Verifikasi Dokumen Aman",
-          "description": "Periksa status verifikasi dokumen aman",
-          "buttonText": "Periksa Status"
-        },
-        "orb": {
-          "title": "Verifikasi Orb",
-          "description": "Periksa status verifikasi Orb",
-          "buttonText": "Periksa Status"
-        }
       }
     }
   }

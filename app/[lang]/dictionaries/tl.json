@@ -1,14 +1,18 @@
 {
   "components": {
     "walletAuth": {
-      "connect": "Ikonekta ang Wallet"
+      "connect": "Ikonekta ang wallet"
     },
-    "verifyButton": {
-      "verify": "I-verify upang Mag-claim"
+    "banners": {
+      "dalgona": {
+        "title": "Mag-ukit ng Dalgona para Kumita",
+        "description": "Sumali sa mga hamon ng pagputol ng kendi at manalo ng DAL rewards.",
+        "cta": "Maglaro ngayon"
+      }
     },
-    "pollOfTheDay": {
-      "previousPolls": "Nakaraang mga Poll",
-      "vote": "Bumoto Ngayon"
+    "pollOfTheWeek": {
+      "previousPolls": "Mga nakaraang botohan",
+      "vote": "Bumoto ngayon"
     },
     "stakeForm": {
       "deposit": "Mag-deposit",
@@ -19,8 +23,8 @@
       "max": "Max",
       "interest": "Interes:",
       "collect": "Kolektahin",
-      "depositButton": "I-deposit ang Drachma",
-      "withdrawButton": "I-withdraw ang Drachma"
+      "depositButton": "I-deposit ang drachma",
+      "withdrawButton": "I-withdraw ang drachma"
     },
     "toasts": {
       "wallet": {
@@ -51,34 +55,34 @@
     },
     "tabSwiper": {
       "tabs": {
-        "politicalParties": "Mga Partido",
-        "polls": "Mga Botohan",
-        "openLetters": "Mga Bukas na Liham",
-        "elections": "Mga Halalan",
-        "referendums": "Mga Reperendum"
+        "politicalParties": "Mga partido",
+        "polls": "Mga botohan",
+        "openLetters": "Mga bukas na liham",
+        "elections": "Mga halalan",
+        "referendums": "Mga reperendum"
       }
     },
     "politicalPartyList": {
-      "loadingIssue": "Kami ay may kamalayan sa ilang mga isyu sa paglo-load ng partido. Pakiusap na maging matiyaga habang kami ay nagsisikap na ayusin ito.",
       "myParty": "Aking partido",
       "createParty": "Lumikha ng Bagong Partido",
       "noParty": "Hindi ka pa lumilikha o sumasali sa isang partido.",
       "discover": "Tuklasin",
       "partyDetails": "Mga Detalye ng Partido",
       "description": "Paglalarawan",
-      "partyInfo": "Impormasyon ng Partido",
+      "partyInfo": "Impormasyon ng partido",
       "leader": "Pinuno",
       "website": "Website",
-      "members": "Mga Miyembro",
-      "noMembers": "Wala pang mga miyembro",
-      "bannedMembers": "Mga Pinagbawal na Miyembro",
+      "members": "Mga miyembro",
+      "noMembers": "Wala pang miyembro",
+      "approvalNote": "Ang mga partido na may gumaganang opisyal na link at/o lumalaking membership ay binibigyan ng priyoridad para sa pag-apruba.",
+      "bannedMembers": "Mga banid na miyembro",
       "errorLoading": "May Error sa Paglo-load ng Partido",
       "partyNotFound": "Hindi Nahanap ang Partido",
       "partyNotFoundDescription": "Ang partido na hinahanap mo ay hindi umiiral o inalis na.",
       "backToParties": "Bumalik sa Mga Partido",
       "joining": "Sumasali...",
-      "joinParty": "Sumali sa Partido",
-      "shareParty": "Ibahagi ang Partido",
+      "joinParty": "Sumali sa partido",
+      "shareParty": "Ibahagi ang partido",
       "copied": "Nakopya ang link sa clipboard",
       "status": {
         "pending": "Nakabinbin",
@@ -99,9 +103,9 @@
         "pending": "Nakabinbin",
         "deleted": "Tinanggal",
         "actions": {
-          "leaveParty": "Umalis sa Partido",
-          "joinParty": "Sumali sa Partido",
-          "joinPendingParty": "Sumali sa Nakabinbing Partido"
+          "leaveParty": "Umalis sa partido",
+          "joinParty": "Sumali sa partido",
+          "joinPendingParty": "Sumali sa nakabinbing partido"
         },
         "management": {
           "title": "Pamamahala ng Partido",
@@ -139,14 +143,14 @@
           },
           "button": {
             "creating": "Lumilikha...",
-            "create": "Lumikha ng Partido"
+            "create": "Lumikha ng partido"
           }
         },
         "update": {
           "title": "I-update ang mga Detalye ng Partido",
           "button": {
             "update": "I-update",
-            "updateDescription": "I-update ang Paglalarawan"
+            "updateDescription": "I-update ang paglalarawan"
           }
         },
         "transferLeadership": {
@@ -170,7 +174,7 @@
           },
           "button": {
             "processing": "Pinoproseso...",
-            "transfer": "Ilipat ang Pamumuno"
+            "transfer": "Ilipat ang pamumuno"
           }
         },
         "leave": {
@@ -197,8 +201,8 @@
           "confirm": "Sigurado ka ba na gusto mong tanggalin ang partido na ito?",
           "button": {
             "processing": "Pinoproseso...",
-            "deletePending": "Tanggalin ang Nakabinbing Partido",
-            "delete": "Tanggalin ang Partido"
+            "deletePending": "Tanggalin ang nakabinbing partido",
+            "delete": "Tanggalin ang partido"
           }
         },
         "memberManagement": {
@@ -212,21 +216,21 @@
             "description": "Ilagay ang wallet address ng miyembro na gusto mong tanggalin o maghanap gamit ang username.",
             "button": {
               "processing": "Pinoproseso...",
-              "remove": "Tanggalin ang Miyembro"
+              "remove": "Tanggalin ang miyembro"
             }
           },
           "ban": {
             "description": "Ilagay ang username o wallet address ng miyembro na gusto mong i-ban sa partido.",
             "button": {
               "processing": "Pinoproseso...",
-              "ban": "I-ban ang Miyembro"
+              "ban": "I-ban ang miyembro"
             }
           },
           "unban": {
             "description": "Ilagay ang username o wallet address ng na-ban na miyembro na gusto mong payagang bumalik sa partido.",
             "button": {
               "processing": "Pinoproseso...",
-              "unban": "I-unban ang Miyembro"
+              "unban": "I-unban ang miyembro"
             }
           }
         }
@@ -242,7 +246,12 @@
           "title": "Basic Income",
           "subtitle": "Mag-sign in para makuha ang iyong basic income",
           "setupSubtitle": "I-setup ang iyong basic income",
-          "claimableSubtitle": "Maaaring kunin na drachma",
+          "claimableSubtitle": "Naa-claim na drachma",
+          "claimableTooltip1": "Bilang bahagi ng aming",
+          "claimableTooltip2": "programa ng buyback",
+          "claimableTooltip3": ", kami ay nag-fine-tune ng mga antas ng basic income upang lumikha ng sustainable, pangmatagalang benepisyo para sa aming komunidad. Tingnan ang",
+          "claimableTooltip4": "FAQ",
+          "claimableTooltip5": "para sa kasalukuyang rate.",
           "activateButton": "I-activate ang Basic Income",
           "claimButton": "Kunin",
           "plus": {
@@ -255,13 +264,10 @@
               "subtitle": "Extra income para sa mga verified na user",
               "features": {
                 "rate": {
-                  "title": "Dagdagan ng 10 WDD bawat araw"
+                  "title": "Dagdagan ng 0.19 WDD bawat araw"
                 },
                 "verification": {
                   "title": "Eksklusibo para sa mga Orb-verified na user para masiguro ang patas na distribusyon"
-                },
-                "rewards": {
-                  "title": "Ang mga rewards ay lilipat sa Plus sa paglipas ng panahon habang pinapanatili ang total na 11 WDD/araw"
                 }
               },
               "activateButton": "I-activate ang Basic Income Plus",
@@ -278,158 +284,61 @@
         },
         "invite": {
           "title": "Mag-imbita",
-          "subtitle": "Makakuha ng 50 WDD para sa bawat kaibigan na sasali",
-          "tooltip": "Ang mga kaibigan ay dapat na-verify sa pamamagitan ng Orb o pasaporte.",
+          "subtitle": "Kumita ng 10 WDD sa bawat kaibigang sasali",
+          "tooltip": "Dapat sumali ang mga kaibigan sa bago naming web app.",
           "learnMore": "Matuto nang higit pa",
           "stats": {
-            "title": "Mga Referral Stats Mo",
+            "title": "Mga referral stats mo",
             "invites": "Mga tinanggap na imbitasyon",
             "rewards": "Kabuuang rewards"
           },
           "actions": {
-            "copyLink": "Kopyahin ang Referral Link",
+            "copyLink": "Kopyahin ang referral link",
             "copied": "Na-kopya na ang referral link sa clipboard!",
             "connectWallet": "Mangyaring i-konekta ang iyong wallet para magenerate ng referral link",
-            "rewardReferrer": "Reward ang Referrer",
-            "share": "Ibahagi ang Imbitasyon"
-          },
-          "drawer": {
-            "title": "Reward ang Referrer",
-            "subtitle": "Mag-trigger ng libreng 50 WDD reward para sa iyong referrer",
-            "passportSubtitle": "Patunayan ang iyong passport verification at mag-trigger ng libreng 50 WDD reward para sa iyong referrer",
-            "invitedBy": "Inimbita ka ni: {{username}}",
-            "input": {
-              "placeholder": "Ilagay ang username (hal. username.0000)",
-              "lookupButton": "Hanapin ang User",
-              "sendingTo": "Nagpapadala ng reward kay:",
-              "editButton": "I-edit",
-              "sendButton": "Ipadala ang Reward",
-              "proveReward": "Patunayan at Gantimpalaan"
-            },
-            "errors": {
-              "enterUsername": "Mangyaring maglagay ng username",
-              "usernameNotFound": "Hindi nahanap ang username",
-              "lookupFailed": "Hindi matagumpay ang paghahanap ng username. Subukan mo ulit.",
-              "installMiniKit": "Mangyaring i-install ang MiniKit para makita ang mga username",
-              "connectWallet": "Mangyaring i-konekta muna ang iyong wallet",
-              "transactionCanceled": "Na-cancel ang transaction"
-            },
-            "success": {
-              "rewardSent": "Matagumpay na naipadala ang reward kay {{username}}!"
-            }
+            "share": "Ibahagi ang imbitasyon"
           },
           "share": {
             "title": "Sumali ka sa World Republic",
             "text": "Gamitin ang aking invite link para sumali sa World Republic at magkasamang kumita ng rewards!"
-          },
-          "passportDrawer": {
-            "title": "Programa ng Referral na Beripikado sa Pasaporte",
-            "subtitle": "Mag-imbita ng mga may hawak ng pasaporte at kumita ng 50 WDD",
-            "features": {
-              "countries": {
-                "title": "Ang pag-verify ng pasaporte ay kasalukuyang available sa Argentina, Australia, Chile, Colombia, Croatia, Japan, Philippines, Portugal, South Korea, at United States"
-              },
-              "rewards": {
-                "title": "Ang mga kaibigan ay nakakakuha ng WLD sa pag-verify ng kanilang pasaporte sa World App"
-              },
-              "basicIncome": {
-                "title": "Ang karagdagang basic income para sa mga taong na-verify sa pamamagitan ng pasaporte ay malapit nang dumating"
-              }
-            },
-            "trigger": {
-              "titleText": "Ngayon ay available din pagkatapos ng mga kaibigan na na-verify sa pasaporte!",
-              "titleDetails": "Mga Detalye"
-            }
           }
         },
         "contribute": {
           "title": "Mag-ambag",
           "subtitle": "Makiisa, makatanggap ng reward",
-          "contests": {
-            "ended": "Natapos na",
-            "weekly": "Weekly",
-            "topPrize": "Pinakamataas na premyo",
-            "xPost": {
-              "title": "X Post Contest",
-              "description": "Sumulat ng mga engaging na post, manalo ng premyo"
-            },
-            "poll": {
-              "title": "Poll Contest",
-              "description": "Mangalap ng community feedback at kumita"
-            },
-            "pollContest": {
-              "title": "Paligsahan sa Botohan",
-              "weeklyTitle": "Pang-araw-araw na Paligsahan sa Botohan",
-              "description": "Mangolekta ng feedback mula sa komunidad at manalo ng mga premyo",
-              "prizes": {
-                "title": "Mga Premyo",
-                "viewWinners": "Tingnan ang mga nakaraang nagwagi",
-                "wdd": "WDD"
-              },
-              "howTo": {
-                "title": "Paano Sumali",
-                "steps": {
-                  "step1": {
-                    "number": "1",
-                    "text": "Gumawa ng poll na may kinalaman sa World Republic o global governance sa pangkalahatan"
-                  },
-                  "step2": {
-                    "number": "2",
-                    "text": "I-set up ito para sa mga verified na tao lamang ang makakaboto"
-                  },
-                  "step3": {
-                    "number": "3",
-                    "text": "Ibahagi ang iyong botohan sa aming",
-                    "link": {
-                      "text": "Paligsahan sa Botohan Telegram Channel",
-                      "url": "https://t.me/worldrepubliccommunity/32368"
-                    }
-                  }
-                }
-              },
-              "rules": {
-                "title": "Mga Patakaran ng Paligsahan",
-                "list": {
-                  "rule1": "Ang mga botohan na sinimulan sa kasalukuyang linggo lamang ang maaaring sumali",
-                  "rule2": "Nagtatapos ang paligsahan tuwing Linggo sa 11:59 PM UTC",
-                  "rule3": "Ang mga nagwagi ay pinipili batay sa kabuuang boto at kinokontact sa pamamagitan ng Telegram sa loob ng 24 na oras"
-                }
-              },
-              "cta": {
-                "create": "Gumawa ng Botohan",
-                "submit": "Ipadala ang Botohan"
-              },
-              "winners": {
-                "title": "Mga Nagwagi sa Paligsahan",
-                "weekOf": "Linggo ng",
-                "votes": "boto"
-              }
-            },
-            "testing": {
-              "title": "Pagsubok ng Bagong Feature",
-              "description": "Bukas sa mga miyembrong na-verify ng passport ngunit hindi sa pamamagitan ng Orb"
-            },
-            "oneOff": "Isang beses lang",
-            "limited": "50 slots"
-          },
-          "earlyAccess": {
-            "title": "Programa ng Maagang Pag-access",
-            "description": "Kumita ng WDD sa pamamagitan ng pagsubok ng aming mga paparating na feature"
-          },
           "buybackProgram": {
             "topnav": "Programa ng Muling Pagbili",
             "title": "Programa ng Muling Pagbili ng Token",
             "subtitle": "Sama-samang pagpapalakas ng halaga ng WDD",
             "sections": {
-              "devRewards": {
-                "title": "Programa ng Gantimpala para sa mga Developer",
-                "startDate": "Nagsimula noong Abril 1, 2025",
-                "description": "Sinusubukan ng World ang gantimpala para sa mga developer batay sa paggamit ng app ng mga beripikadong tao.",
-                "learnMore": "Alamin pa ang tungkol sa programa"
+              "fundingSources": {
+                "title": "Mga pinagmumulan ng pondo",
+                "devRewards": {
+                  "title": "Mga Gantimpala ng World Dev",
+                  "weekProgress": "Linggo 7 ng 12"
+                },
+                "worldRetro": {
+                  "title": "Pondo ng World Retro"
+                },
+                "optimism": {
+                  "title": "Pondo ng Optimism Retro"
+                },
+                "affiliate": {
+                  "title": "Komisyon ng afiliados"
+                }
               },
               "commitment": {
-                "title": "Ang aming 50% na pangako",
-                "body": "Nangangako kaming gamitin ang hindi bababa sa 50% ng aming mga gantimpala mula sa programa para sa mga WDD buyback."
+                "title": "Ang aming pangako",
+                "description": "Nangangako kaming gagamitin ang hindi bababa sa 50% ng lahat ng pondong ito para sa muling pagbili ng WDD.",
+                "viewAccount": "Tingnan ang account ng muling pagbili"
+              },
+              "valueCycle": {
+                "title": "Ang Positibong Siklo ng Halaga",
+                "steps": {
+                  "step1": "Mas maraming gumagamit at paggamit ng app",
+                  "step2": "Mas mataas na gantimpala",
+                  "step3": "Mas maraming muling pagbili ng token"
+                }
               },
               "helpSection": {
                 "title": "Paano ka makakatulong",
@@ -437,100 +346,64 @@
                 "steps": {
                   "invite": {
                     "title": "Mag-imbita ng iba na sumali",
-                    "description": "Palawakin ang aming komunidad ng beripikadong miyembro"
+                    "description": "Palawakin ang aming komunidad ng mga verified na miyembro"
                   },
                   "useApp": {
                     "title": "Regular na gamitin ang app",
                     "description": "Isulong ang mabuting siklo ng ekonomiya"
                   }
                 }
-              },
-              "valueCycle": {
-                "title": "Ang Positibong Siklo ng Halaga",
-                "steps": {
-                  "step1": "Mas maraming gumagamit at paggamit ng app",
-                  "step2": "Mas mataas na gantimpala para sa mga developer",
-                  "step3": "Mas maraming muling pagbili ng token"
-                }
               }
             },
             "actions": {
-              "share": "Ibahagi ang Imbitasyon"
+              "share": "Ibahagi ang imbitasyon"
             },
-            "cta": "Tingnan ang Mga Istatistika ng Mini App"
+            "cta": "Tingnan ang mga gantimpala ng mini app"
           },
           "buybackLink": {
             "title": "Programa ng Buyback",
             "description": "Community-powered na pagtaas ng halaga ng WDD"
-          },
-          "xContest": {
-            "title": "X Post Contest",
-            "weeklyTitle": "Weekly X Post Contest",
-            "description": "Sumulat ng mga engaging na post, manalo ng premyo",
-            "prizes": {
-              "title": "Mga Premyo",
-              "viewWinners": "Tingnan ang mga nakaraang nanalo",
-              "wdd": "WDD"
-            },
-            "howTo": {
-              "title": "Paano sumali",
-              "step1": "Sumulat ng X post tungkol sa World Republic",
-              "step2": "I-tag si @WorldRepublicEN",
-              "step3": {
-                "prefix": "Ibahagi ang link ng iyong post sa aming",
-                "link": "X Post Contest Telegram channel"
-              }
-            },
-            "rules": {
-              "title": "Mga patakaran ng contest",
-              "rule1": "Ang mga post lang na na-publish sa kasalukuyang linggo ang eligible",
-              "rule2": "Nagtatapos ang contest tuwing Linggo ng 11:59 PM UTC",
-              "rule3": "Ang mga nanalo ay pinipili batay sa kabuuang organic engagement (likes + reposts + comments) at kinokontact sa pamamagitan ng Telegram sa loob ng 24 na oras"
-            },
-            "cta": {
-              "post": "Simulan ang Pagpo-post Ngayon",
-              "submit": "I-submit ang Iyong Post"
-            },
-            "winners": {
-              "title": "Mga Nanalo sa Contest",
-              "weekOf": "Linggo ng",
-              "engagements": "mga engagement"
-            }
           },
           "partySubsidy": {
             "topnav": "Programa ng Subsidy",
             "title": "Programa ng Subsidy para sa Partido",
             "subtitle": "Bumuo ng iyong pulitikal na kilusan at kumita",
             "weeklyPool": {
-              "title": "100,000 WDD",
-              "subtitle": "Nakatakdang lingguhang pool"
+              "old": "100,000",
+              "new": "250,000 WDD",
+              "subtitle": "Nakatakdang pool"
             },
             "devRewards": {
               "title": "10% ng aming Dev Rewards",
-              "subtitle": "Variable na reward pool",
+              "subtitle": "Variable na pool",
               "tooltip": "Ang World ay namamahagi ng mga gantimpala para sa mga developer batay sa paggamit ng app ng mga beripikadong tao.",
               "checkOutRewards": "Tingnan ang mga gantimpala"
             },
             "howItWorks": {
-              "title": "Paano Ito Gumagana",
+              "title": "Paano ito gumagana",
               "steps": {
                 "createParty": {
-                  "title": "Gumawa ng Partido",
+                  "title": "Gumawa ng partido",
                   "description": "Simulan ang iyong pulitikal na kilusan sa World Republic app"
                 },
                 "growMembership": {
-                  "title": "Palaguin ang Iyong Membership",
-                  "description": "Mag-recruit ng mga miyembro at bumuo ng iyong komunidad"
+                  "title": "Mapasama sa balota",
+                  "description": "Palakihin ang iyong membership para maging kwalipikado sa lingguhang halalan"
                 },
                 "earnRewards": {
-                  "title": "Kumita ng Mga Gantimpala",
-                  "description": "Ang mga lider ng nangungunang 50 partido ay tumatanggap ng lingguhang subsidya"
+                  "title": "Makatanggap ng pondo",
+                  "description": "Kumita ng mga subsidy na katumbas ng mga botong natatanggap ng iyong partido"
                 }
               }
             },
             "cta": {
-              "createJoin": "Gumawa o Sumali sa isang Partido",
-              "leaderGroup": "Sumali sa Party Leader Group"
+              "createJoin": "Gumawa o sumali sa isang partido",
+              "leaderGroup": "Sumali sa party leader group"
+            },
+            "payouts": {
+              "title": "Mga Bayad",
+              "week": "Linggo",
+              "showAll": "Ipakita lahat"
             }
           }
         }
@@ -546,13 +419,21 @@
       },
       "sections": {
         "polls": {
-          "title": "Poll ng Araw",
-          "description": "Mabilisang boto sa mga kasalukuyang paksa",
+          "title": "Poll ng Linggo",
+          "description": "Mabilis na boto sa mga kasalukuyang paksa",
           "previous": {
             "title": "Mga Nakaraang Poll",
-            "backToGovern": "Bumalik sa Govern",
+            "backToGovern": "Bumalik sa Pamamahala",
             "polls": {
-              "heatAdaptation": "Dapat bang magtatag ang mga bansa ng isang mekanismo sa pandaigdigang koordinasyon para sa mga maagang babala sa heat wave at mga pagsisikap sa magkasamang tulong upang protektahan ang mga mahihinang populasyon sa panahon ng mga kaganapan sa matinding init?",
+              "digitalGovernance": "Habang mabilis na umuunlad ang artificial intelligence at mga digital na teknolohiya, dapat bang sama-samang tiyakin ng mga bansa ang responsableng pag-unlad at pamamahala upang maiwasan ang malawakang pagkagambala sa lipunan?",
+              "nuclearEscalationRisk": "Dapat bang magtatag ng isang pandaigdigang balangkas upang mabawasan ang panganib ng pag-igting ng nukleyar sa mga rehiyon na may mataas na tensiyon sa heopolitika?",
+              "middleEastEscalation": "Dapat bang suportahan ng isang malayang kasunduan ng mga bansa ang isang neutral na hakbangin para sa de-eskalasyon sa Gitnang Silangan upang mabawasan ang panganib ng alitan sa rehiyon?",
+              "nuclearDisarmamentTalks": "Dahil sa mga ulat ng pagtaas ng produksyon ng nuclear material, dapat bang muling simulan ng mga pandaigdigang kapangyarihan ang komprehensibong negosasyon sa nuclear disarmament?",
+              "pandemicPreparednessFund": "Dapat bang magtatag ng permanenteng pandaigdigang pondo upang matiyak ang tuloy-tuloy at patas na pag-access sa mga mapagkukunan para sa hinaharap na paghahanda at pagtugon sa pandemya sa buong mundo?",
+              "globalAidCuts": "Dapat bang muling suriin ng mga bansa ang mga pagbawas sa dayuhang tulong na maaaring baligtarin ang mga dekada ng pag-unlad laban sa mga sakit tulad ng AIDS at malaria?",
+              "coralCrisisAction": "Dapat ba na mangako ang mga bansa sa isang koordinadong pandaigdigang estratehiya upang protektahan ang mga coral reef sa gitna ng pinakamasamang coral bleaching event sa naitalang kasaysayan?",
+              "aiSafetyTreaty": "Dapat ba na sumang-ayon ang mga bansa sa isang maipapatupad na pandaigdigang kasunduan sa kaligtasan ng AI?",
+              "heatAdaptation": "Dapat ba na magtatag ang mga bansa ng isang pandaigdigang mekanismo ng koordinasyon para sa mga maagang babala sa heat wave at mga pinagsamang pagsisikap sa pagsagip upang protektahan ang mga bulnerableng populasyon sa panahon ng matinding init?",
               "globalMilitaryExerciseProtocol": "Dapat bang sumang-ayon ang mga bansa sa isang internasyonal na protokol para sa pagbibigay-abiso at pagmamasid para sa malalaking pagsasanay ng militar malapit sa mga pinagtatalunang rehiyon upang mabawasan ang panganib ng pagtaas ng mga tensyon?",
               "globalMaritimeSecurity": "Dapat bang magtatag ng isang internasyonal na task force sa seguridad maritima upang protektahan ang komersyal na paghahatid sa pandaigdigang katubigan mula sa mga armadong pag-atake?",
               "globalNuclearDialogue": "Dapat bang obligahin ang malalaking kapangyarihan sa ilalim ng isang internasyonal na kasunduan na makisali sa tuluy-tuloy na negosasyon sa antas ng eksperto tungkol sa nuklear kasama ang mga kalabang estado upang mapigilan ang eskalasyon at matiyak ang diplomatikong pangangasiwa?",
@@ -618,7 +499,8 @@
               "sovereignDebtRestructuring": "Dapat bang magkaroon ng internasyonal na koordinadong mekanismo sa muling pagbabalangkas ng utang ng mga bansa upang magbigay ng napapanahong tulong sa mga bansa na humaharap sa hindi mapapangalagaang antas ng utang?",
               "wildlifeTrafficking": "Dapat bang magtulungan ang mga bansa sa isang nakalaang internasyonal na balangkas upang labanan ang ilegal na kalakalan ng wildlife, kabilang ang umuusbong na biopiracy ng mga insekto at iba pang mga species?",
               "criticalMineralsExport": "Dapat ba magkaroon ng isang koordinadong internasyonal na balangkas para sa mga kontrol sa pag-export ng kritikal na mga mineral—tulad ng rare earths at strategic metals—upang maiwasan ang mga shock sa supply-chain at geopolitical coercion?",
-              "tradePolicyStability": "Dapat bang magpatibay ang mga bansa ng isang coordinated na international code of conduct para sa mga patakaran sa taripa upang mapahusay ang predictability at stability sa global trade?"
+              "tradePolicyStability": "Dapat bang magpatibay ang mga bansa ng isang coordinated na international code of conduct para sa mga patakaran sa taripa upang mapahusay ang predictability at stability sa global trade?",
+              "cyberResilienceProtocol": "Dapat bang magtatag ang mga bansa ng isang magkakaugnay na pandaigdigang cybersecurity protocol upang ipagtanggol laban sa mga AI-powered na cyberattack na maaaring magdulot ng pagkaantala sa mahahalagang imprastraktura sa buong mundo?"
             }
           }
         },
@@ -640,18 +522,98 @@
               "referenceTitle": "Future of Life Institute"
             },
             "longView": {
-              "title": "Open letter na nananawagan sa mga world leaders na magpakita ng long-view leadership sa existential threats",
+              "title": "Open Letter na Nananawagan sa Mga World Leaders na Magpakita ng Long-view Leadership sa Existential Threats",
               "referenceTitle": "Future of Life Institute"
             }
           }
         },
         "elections": {
-          "title": "Mga Eleksyon",
+          "title": "Halalan",
           "description": "Piliin ang iyong mga kinatawan",
-          "worldConstituent": {
-            "title": "World Constituent Assembly Election",
-            "description": "Pumili ng mga kinatawan para sa unang demokratikong hinalal na pandaigdigang parlamento.",
-            "button": "Malapit Na"
+          "testElections": {
+            "title": "Mga Pansubok na Halalan",
+            "description": "Tulungan kaming ipamahagi ang mga subsidy ng partido at pagbutihin ang aming sistema ng pamamahala",
+            "button": "Buksan ang pagsubok na halalan"
+          },
+          "currentElectionPage": {
+            "title": "Kasalukuyang Halalan",
+            "testElectionTitle": "Pagsubok na Halalan",
+            "testElectionSubtitle": "Tulungan kaming subukan ang aming sistema ng pagboto",
+            "testElectionTooltip1": "Para sa karagdagang impormasyon, pakibasa ang ",
+            "testElectionTooltip2": "FAQ ng halalan",
+            "testElectionTooltip3": ".",
+            "politicalParties": "Mga partido pulitikal",
+            "searchPlaceholder": "Maghanap ng mga partido...",
+            "leaderPrefix": "Pinuno: ",
+            "noActiveElection": "Walang Aktibong Halalan",
+            "noActiveElectionDescription": "Kasalukuyang walang halalan na isinasagawa",
+            "backToOverview": "Bumalik sa pangkalahatang-ideya",
+            "buttons": {
+              "voted": "Nakaboto na",
+              "vote": "Bumoto",
+              "processing": "Pinoproseso...",
+              "cancel": "Kanselahin"
+            },
+            "confirmation": {
+              "vote": {
+                "title": "Kumpirmahin ang Iyong Boto",
+                "description": "Malapit mo nang irehistro ang iyong boto para sa {{partyName}}. Ang aksyon na ito ay itatala sa blockchain.",
+                "confirmText": "Kumpirmahin ang boto"
+              },
+              "change": {
+                "title": "Palitan ang Iyong Boto",
+                "description": "Sigurado ka bang gusto mong palitan ang iyong boto mula sa {{previousPartyName}} patungo sa {{partyName}}?",
+                "confirmText": "Kumpirmahin ang pagbabago"
+              },
+              "remove": {
+                "title": "Alisin ang Iyong Boto",
+                "description": "Sigurado ka bang gusto mong alisin ang iyong boto para sa {{partyName}}? Hindi ka na boboto para sa anumang partido.",
+                "confirmText": "Oo, alisin ang boto"
+              }
+            },
+            "toasts": {
+              "connectInWorldApp": "Pakibuksan ang app na ito sa World App para bumoto.",
+              "connectWallet": "Pakikonekta muna ang iyong wallet.",
+              "noCurrentElection": "Hindi matukoy ang kasalukuyang halalan.",
+              "fetchStatusError": "Nabigo ang pagkuha ng katayuan ng boto. Pakisubukang muli.",
+              "transactionFailed": "Nabigo o tinanggihan ang transaksyon.",
+              "voteRemovedSuccess": "Matagumpay na naalis ang boto",
+              "voteSuccess": "Matagumpay na nairehistro ang boto para sa {{partyName}}!",
+              "voteError": "May naganap na error habang inirerehistro ang iyong boto."
+            },
+            "electionFaqPage": {
+              "title": "FAQ ng Halalan",
+              "items": {
+                "electionPurpose": {
+                  "question": "Ano ang layunin ng mga halalan na ito?",
+                  "answer": "Ang mga halalan na ito ay isang pangunahing bahagi ng aming modelo ng pamamahala. Sa simula, tinutukoy nila kung paano ipapamahagi ang mga subsidy ng partido, na nagbibigay ng gantimpala sa mga partido batay sa suportang natatanggap nila. Habang umuunlad ang aming sistema, ang mga resulta ng halalan ay magbibigay ng mas makabuluhang mga responsibilidad sa mga partido. Ito ay isang paulit-ulit na proseso upang matulungan kaming matuto at mag-improve."
+                },
+                "ballotQualification": {
+                  "question": "Paano nakakasama sa balota ang isang partido?",
+                  "answer": "Upang mapasama sa balota, ang isang partido ay dapat magkaroon ng mga miyembro na katumbas ng hindi bababa sa 0.05% ng kabuuang bilang ng mga tumatanggap ng Basic Income Plus. Tinitiyak nito na ang mga partido ay may pangunahing antas ng suporta mula sa mga aktibo at na-verify na miyembro."
+                },
+                "howToVote": {
+                  "question": "Paano ako boboto?",
+                  "answer": "Sa pahina ng halalan, makikita mo ang isang listahan ng mga karapat-dapat na partido pulitikal. I-tap lamang ang pindutan ng 'Bumoto' sa tabi ng partido na gusto mong suportahan. Sasabihan kang kumpirmahin ang iyong boto sa pamamagitan ng iyong wallet."
+                },
+                "canIChangeVote": {
+                  "question": "Maaari ko bang palitan ang aking boto?",
+                  "answer": "Oo, maaari mong palitan ang iyong boto anumang oras habang aktibo ang halalan. Bumoto lamang para sa ibang partido, at ang iyong nakaraang boto ay papalitan. Maaari mo ring alisin nang tuluyan ang iyong boto."
+                },
+                "electionDeadline": {
+                  "question": "Kailan nagtatapos ang mga halalan?",
+                  "answer": "Ang mga pagsubok na halalan ay tumatakbo hanggang Linggo, 23:59:59 UTC. Ang mga boto ay dapat isumite bago ang oras na ito upang mabilang para sa kasalukuyang halalan."
+                },
+                "isVoteAnonymous": {
+                  "question": "Anonymous ba ang aking boto?",
+                  "answer": "Ang pagboto ay pseudonymous. Habang ang iyong boto ay naka-link sa iyong wallet address sa blockchain para sa transparency, ang iyong tunay na pagkakakilanlan ay hindi direktarg nakakonekta dito."
+                },
+                "whatArePartySubsidies": {
+                  "question": "Ano ang mga subsidiya ng partido?",
+                  "answer": "Ang mga subsidiya ng partido ay mga gantimpala na ipinamamahagi sa mga partido pulitikal batay sa mga botong natatanggap nila. Ang programang ito ay nagpopondo sa mga aktibidad ng partido at tumutulong sa kanila na lumago. Maaari kang matuto nang higit pa tungkol sa <a href=\"/{{lang}}/earn/contribute/party-subsidy\" class=\"font-medium text-gray-900 underline\">Programa ng Subsidiya ng Partido</a>."
+                }
+              }
+            }
           }
         },
         "referendums": {
@@ -659,8 +621,8 @@
           "description": "Direktang boto sa mga mahalagang isyu",
           "worldConstitutional": {
             "title": "World Constitutional Referendum",
-            "description": "Lumahok sa isang makasaysayang pagboto sa mga prinsipyo na gagabay sa kolektibong kinabukasan ng sangkatauhan.",
-            "button": "Malapit Na"
+            "description": "Lumahok sa isang makasaysayang pagboto sa mga prinsipyo na gagabay sa kolektibong kinabukasan ng sangkatauhan",
+            "button": "Malapit na"
           }
         },
         "politicalParties": {
@@ -673,23 +635,23 @@
       "title": "Menu",
       "sections": {
         "experimental": {
-          "title": "EXPERIMENTAL",
+          "title": "MGA SETTING",
           "links": {
-            "verification": "Verification status",
             "language": "Wika"
           }
         },
         "connect": {
           "title": "KUMONEKTA",
           "links": {
-            "community": "Community",
-            "announcements": "Mga Anunsyo",
+            "community": "Komunidad",
+            "announcements": "Mga anunsyo",
             "x": "X"
           }
         },
         "help": {
           "title": "TULONG",
           "links": {
+            "support": "Suporta",
             "faq": "FAQ"
           }
         },
@@ -711,11 +673,11 @@
         },
         "basicIncome": {
           "question": "Ano ang Basic Income?",
-          "answer": "Ang aming Basic Income ay isang pang-araw-araw na subsidy na 1 WDD (world drachma) na ibinibigay sa lahat ng mamamayan ng World Republic. Ito ay naaaccumulate sa real-time at maaaring kunin sa anumang oras sa pamamagitan ng app."
+          "answer": "Ang aming Basic Income ay isang pang-araw-araw na subsidy na 0.01 WDD (world drachma) na ibinibigay sa lahat ng mamamayan ng World Republic. Ito ay naaaccumulate sa real-time at maaaring kunin sa anumang oras sa pamamagitan ng app."
         },
         "basicIncomePlus": {
           "question": "Paano ko i-activate ang Basic Income Plus?",
-          "answer": "Ang Basic Income Plus ay nagbibigay ng karagdagang 10 WDD bawat araw at available lamang sa mga Orb-verified na user. Pagkatapos i-activate ang Basic Income, makakakita ka ng option para i-activate ang Basic Income Plus sa Earn page."
+          "answer": "Ang Basic Income Plus ay nagbibigay ng karagdagang 0.19 WDD bawat araw at available lamang sa mga Orb-verified na user. Pagkatapos i-activate ang Basic Income, makakakita ka ng option para i-activate ang Basic Income Plus sa Earn page."
         },
         "savings": {
           "question": "Paano gumagana ang Savings Account?",
@@ -723,19 +685,19 @@
         },
         "referralCodes": {
           "question": "Paano gumagana ang mga referral code?",
-          "answer": "Bilang isang mamamayan ng World Republic, maaari kang kumita ng mga reward sa pamamagitan ng aming referral program. Ibahagi ang iyong natatanging referral link sa mga kaibigan, at makakatanggap ka ng 50 WDD para sa bawat taong sumali at na-verify sa pamamagitan ng Orb o pasaporte. Hindi mo pa natatanggap ang iyong reward? Maaaring kailanganin ng iyong kaibigan na manu-manong i-trigger ito sa pamamagitan ng pagpili ng opsyong 'Reward Referrer' sa kanilang referral section."
+          "answer": "Bilang mamamayan ng World Republic, maaari kang kumita ng mga reward sa pamamagitan ng aming referral program. Ibahagi ang iyong natatanging referral link sa mga kaibigan, at makakatanggap ka ng 10 WDD para sa bawat taong sasali sa aming web app at makakumpleto ng liveness check."
         },
         "drachmaValue": {
           "question": "Saan nagmumula ang halaga ng drachma?",
           "answer": "Ang drachma ay kumukuha ng halaga mula sa pagiging opisyal na currency ng World Republic. Habang lumalago ang aming demokratikong global governance platform, ang WDD ay may potensyal na maging significant na medium of exchange sa world economy, at maaaring kalaunan ay magkaroon ng papel sa equitable distribution ng mga benepisyo mula sa technological advancements at global resources."
         },
         "topWallets": {
-          "question": "Sino ang kumokontrol sa mga pinakamalaking account?",
-          "answer": "Ang tatlong pinakamalaking account ay ang <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>World Republic Treasury</a>, ang <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Fund</a>, at ang <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Plus Fund</a>. Sa kasalukuyan, ang mga ito ay kontrolado ng project founder, ngunit ililipat ang kontrol sa community pagkatapos ma-ratify ang aming constitution. Ang iba pang mahalagang addresses ay kinabibilangan ng <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>Savings Account contract</a>, ang <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>Referral Rewards distributor</a>, at liquidity pools: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, at <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
+          "question": "Sino ang kumokontrol sa pinakamalalaking account?",
+          "answer": "Ang tatlong pinakamalalaking account ay ang <a href='https://worldscan.org/address/0xa3C2c8CE6Be1C55401b5F1EfB6112A86F6374429' target='_blank' rel='noopener noreferrer' class='underline'>World Republic Treasury</a>, ang <a href='https://worldscan.org/address/0x02c3B99D986ef1612bAC63d4004fa79714D00012' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Fund</a>, at ang <a href='https://worldscan.org/address/0x52DFEe61180A0BCEBe007E5a9Cfd466948aCCA46' target='_blank' rel='noopener noreferrer' class='underline'>Basic Income Plus Fund</a>. Ang mga ito ay kasalukuyang pinamamahalaan ng tagapagtatag ng proyekto upang matiyak ang katatagan habang unti-unti nating inililipat ang kontrol sa komunidad. Kasama sa iba pang mahahalagang address ang <a href='https://worldscan.org/address/0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7' target='_blank' rel='noopener noreferrer' class='underline'>Savings Account contract</a>, ang <a href='https://worldscan.org/address/0x372dCA057682994568be074E75a03Ced3dD9E60d' target='_blank' rel='noopener noreferrer' class='underline'>Referral Rewards distributor</a>, at mga liquidity pool: <a href='https://worldscan.org/address/0xaaEF72194E42aF8f641e90c3e48a7F01e9547097' target='_blank' rel='noopener noreferrer' class='underline'>WLD/WDD</a>, <a href='https://worldscan.org/address/0x24Cda46262Ee6b777416997c52FE140A0B3f6FeA' target='_blank' rel='noopener noreferrer' class='underline'>USDC/WDD</a>, at <a href='https://worldscan.org/address/0x3226d525Bb0EA2346D512215ca8df7d81801786E' target='_blank' rel='noopener noreferrer' class='underline'>ETH/WDD</a>."
         },
         "voteRequirements": {
-          "question": "Ano ang mga requirements para magpropose ng mga boto?",
-          "answer": "Ang kasalukuyang mga poll at open letters ay showcase lamang. Ang aming community ay sama-samang magdedesisyon sa aming sistema ng governance sa pamamagitan ng constitutional design process na pinamumunuan ng Constituent Assembly na ihahalal sa Q2 2025."
+          "question": "Paano ako makakasali sa pamamahala?",
+          "answer": "Maaari kang lumahok sa pamamagitan ng pagsali o paglikha ng isang partidong pampulitika. Bagama't ang mga kasalukuyang boto ay naglalarawan lamang, ang mga partido ang pundasyon ng ating modelo ng pamamahala. Habang nagiging propesyonal ang mga partido, magbubukas sila ng mas maraming mahahalagang lugar para sa demokratikong kontrol, na magbibigay sa iyo ng boses sa ating mga kolektibong desisyon."
         }
       }
     },
@@ -744,26 +706,6 @@
       "options": {
         "english": "English",
         "spanish": "Español"
-      }
-    },
-    "verification": {
-      "title": "Verification Status",
-      "levels": {
-        "document": {
-          "title": "Document Verification",
-          "description": "I-check ang document verification status",
-          "buttonText": "I-check ang Status"
-        },
-        "secureDocument": {
-          "title": "Secure Document Verification",
-          "description": "I-check ang secure document verification status",
-          "buttonText": "I-check ang Status"
-        },
-        "orb": {
-          "title": "Orb Verification",
-          "description": "I-check ang Orb verification status",
-          "buttonText": "I-check ang Status"
-        }
       }
     }
   }
